@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tools on Gildas Cuisinier</title>
-    <link>http://example.org/tags/tools/index.xml</link>
+    <link>https://gcuisinier.github.io/tags/tools/index.xml</link>
     <description>Recent content in Tools on Gildas Cuisinier</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <atom:link href="http://example.org/tags/tools/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://gcuisinier.github.io/tags/tools/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Analysing HTTP trafic with MITMProxy</title>
-      <link>http://example.org/post/2017.01-Analyse.HTTP.Trafic.with.MITMProxy/</link>
+      <link>https://gcuisinier.github.io/post/2017.01-Analyse.HTTP.Trafic.with.MITMProxy/</link>
       <pubDate>Wed, 01 Mar 2017 10:47:53 +0100</pubDate>
       
-      <guid>http://example.org/post/2017.01-Analyse.HTTP.Trafic.with.MITMProxy/</guid>
+      <guid>https://gcuisinier.github.io/post/2017.01-Analyse.HTTP.Trafic.with.MITMProxy/</guid>
       <description>&lt;div class=&#34;sect1&#34;&gt;
 &lt;h2 id=&#34;_tldr&#34;&gt;tldr;&lt;/h2&gt;
 &lt;div class=&#34;sectionbody&#34;&gt;

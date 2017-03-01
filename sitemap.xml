@@ -2,41 +2,41 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://example.org/post/2017.01-Analyse.HTTP.Trafic.with.MITMProxy/</loc>
+    <loc>https://gcuisinier.github.io/post/2017.01-Analyse.HTTP.Trafic.with.MITMProxy/</loc>
     <lastmod>2017-03-01T10:47:53+01:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/tags/english/</loc>
-    <lastmod>2017-03-01T10:47:53+01:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://example.org/</loc>
+    <loc>https://gcuisinier.github.io/tags/english/</loc>
     <lastmod>2017-03-01T10:47:53+01:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://example.org/tags/memo/</loc>
+    <loc>https://gcuisinier.github.io/</loc>
     <lastmod>2017-03-01T10:47:53+01:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://example.org/post/</loc>
+    <loc>https://gcuisinier.github.io/tags/memo/</loc>
     <lastmod>2017-03-01T10:47:53+01:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://example.org/tags/</loc>
+    <loc>https://gcuisinier.github.io/post/</loc>
+    <lastmod>2017-03-01T10:47:53+01:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://example.org/tags/tools/</loc>
+    <loc>https://gcuisinier.github.io/tags/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://gcuisinier.github.io/tags/tools/</loc>
     <lastmod>2017-03-01T10:47:53+01:00</lastmod>
     <priority>0</priority>
   </url>
