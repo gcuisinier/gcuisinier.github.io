@@ -4,23 +4,19 @@
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
     <meta name="description" content="">
-    <meta property="og:title" content="Analysing HTTP trafic with MITMProxy">
+    <meta property="og:title" content="jEnv : Java Environment Manager">
     
     <meta property="og:type" content="article">
-    <meta property="article:published_time" content="2017-03-01">
+    <meta property="article:published_time" content="2017-03-02">
     
     <meta property="og:description" content="">
-    <meta property="og:url" content="https://gcuisinier.github.io/post/2017.01-AnalysingHTTPWithMITM/">
+    <meta property="og:url" content="https://gcuisinier.github.io/projects/jenv/">
     <meta property="og:site_name" content="Gildas Cuisinier">
     
-    <meta property="og:tags" content="tools">
-    
-    <meta property="og:tags" content="english">
-    
-    <meta property="og:tags" content="memo">
+    <meta property="og:tags" content="projects">
     
     <meta name="generator" content="Hugo 0.19" />
-    <title>Analysing HTTP trafic with MITMProxy &middot; Gildas Cuisinier</title>
+    <title>jEnv : Java Environment Manager &middot; Gildas Cuisinier</title>
     
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
     
@@ -106,46 +102,131 @@
 
 <main>
 	<header>
-		<h1>Analysing HTTP trafic with MITMProxy</h1>
+		<h1>jEnv : Java Environment Manager</h1>
 	</header>
 
 	<article>
-		<div class="sect1">
-<h2 id="_tldr">tldr;</h2>
-<div class="sectionbody">
+		<div class="sect2">
+<h3 id="_project_information">Project information</h3>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 28.5714%;">
+<col style="width: 71.4286%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Website</strong></p></td>
+<td class="tableblock halign-left valign-top"><div><div class="paragraph">
+<p><a href="https://www.jenv.be" class="bare">https://www.jenv.be</a></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Source</strong></p></td>
+<td class="tableblock halign-left valign-top"><div><div class="paragraph">
+<p><a href="https://www.github.com/gcuisinier/jenv" class="bare">https://www.github.com/gcuisinier/jenv</a></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Stars</strong></p></td>
+<td class="tableblock halign-left valign-top"><div><div class="paragraph">
+<p><span class="image"><img src="https://img.shields.io/github/stars/gcuisinier/jenv.svg" alt="Company Logo" height="16"></span></p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="_what_s_jenv">What&#8217;s jEnv ?</h3>
 <div class="paragraph">
-<p>If you need to sniff HTTP trafic, first run the MITMProxy (and his companion MITMWeb). Thanks to Docker, this is quite simple</p>
+<p>jEnv is a command line tool to help you forget how to set the JAVA_HOME environment variable.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_quick_start">Quick start</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_installation">1. Installation</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash">git clone https://github.com/gcuisinier/jenv.git ~/.jenv</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>or on a Mac :</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-Bash" data-lang="Bash">docker run --rm -d --name mitmproxy -p 8080:8080 -p 127.0.0.1:8081:8081 mitmproxy/mitmproxy mitmweb --web-iface 0.0.0.0</code></pre>
+<pre class="highlight"><code class="language-bash" data-lang="bash">brew install jenv</code></pre>
 </div>
 </div>
+</div>
+<div class="sect2">
+<h3 id="_enabling_jenv_in_your_shell">2. Enabling jEnv in your shell</h3>
 <div class="paragraph">
-<p></p>
+<p>Bash</p>
 </div>
-<div class="paragraph">
-<p>Then, configure your software to use the proxy on localhost:8080 ( or the docker-machine IP).</p>
-</div>
-<div class="paragraph">
-<p>And that&#8217;s it !
-Now you can go to <a href="http://localhost:8081">http://localhost:8081</a>, to see the MITM Web interface that wil show you every request :</p>
-</div>
-<div class="imageblock">
+<div class="listingblock">
 <div class="content">
-<img src="/img/post/2017.01-AnalysingHTTPWithMITM/mitmweb1.png" alt="mitmweb1" width="800">
+<pre class="highlight"><code class="language-bash" data-lang="bash">$ echo 'export PATH="$HOME/.jenv/bin:$PATH"' &gt;&gt; ~/.bash_profile
+$ echo 'eval "$(jenv init -)"' &gt;&gt; ~/.bash_profile</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>You can also see the content of them :</p>
+<p>Zsh</p>
 </div>
-<div class="imageblock">
+<div class="listingblock">
 <div class="content">
-<img src="/img/post/2017.01-AnalysingHTTPWithMITM/mitmweb2.png" alt="mitmweb2" width="800">
+<pre class="highlight"><code class="language-bash" data-lang="bash">$ echo 'export PATH="$HOME/.jenv/bin:$PATH"' &gt;&gt; ~/.zshrc
+$ echo 'eval "$(jenv init -)"' &gt;&gt; ~/.zshrc</code></pre>
 </div>
 </div>
 </div>
+<div class="sect2">
+<h3 id="_configuration_of_jdks_installation">3. Configuration of JDKs Installation</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash">$ jenv add /System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home
+  oracle64-1.6.0.39 added
+$ jenv add /Library/Java/JavaVirtualMachines/jdk17011.jdk/Contents/Home
+  oracle64-1.7.0.11 added</code></pre>
 </div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_usage">4. Usage</h3>
+<div class="paragraph">
+<p>You can configure a global (default one) JDKs :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash">jenv global 1.7</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>But also by directory (and so, by project) :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash">jenv local 1.6</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This will add a <code>.java-version</code> file in this directory</p>
+</div>
+<div class="paragraph">
+<p>And if you want to have the <code>JAVA_HOME</code> environment variable set automatically, you just have to enable the <strong>export plugin</strong> :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash">jenv enable-plugin export</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>jEnv can also manage the JAVA_OPTS, MAVEN_OPTS !</p>
+</div>
+</div>
+
 	</article>
 </main>
 
@@ -154,23 +235,6 @@ Now you can go to <a href="http://localhost:8081">http://localhost:8081</a>, to 
 </div>
 
 
-	
-
- 	 <div id="disqus_thread"></div>
-<script type="text/javascript">
-    var disqus_shortname = 'gcuisinier-github';
-    var disqus_identifier = 'https:\/\/gcuisinier.github.io\/post\/2017.01-AnalysingHTTPWithMITM\/';
-    var disqus_title = 'Analysing HTTP trafic with MITMProxy';
-    var disqus_url = 'https:\/\/gcuisinier.github.io\/post\/2017.01-AnalysingHTTPWithMITM\/';
-
-    (function() {
-        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
 	
 
 
@@ -199,8 +263,6 @@ Now you can go to <a href="http://localhost:8081">http://localhost:8081</a>, to 
   <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
   
   <script src="https://gcuisinier.github.io//js/App.js"></script>
-  
-  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/languages/go.min.js"></script>
   
 </body>
 </html>
