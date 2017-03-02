@@ -118,32 +118,28 @@
 <h2 id="_tldr">tldr;</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>If you need to sniffing HTTP, first run the MITMProxy (and his companion MITMWeb) thank to Docker</p>
+<p>If you need to sniff HTTP trafic, first run the MITMProxy (and his companion MITMWeb). Thanks to Docker, this is quite simple</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-Bash" data-lang="Bash"># test
-docker run --rm -it -p 8080:8080 -p 127.0.0.1:8081:8081 mitmproxy/mitmproxy mitmweb --web-iface 0.0.0.0</code></pre>
+<pre class="highlight"><code class="language-Bash" data-lang="Bash">docker run --rm -d --name mitmproxy -p 8080:8080 -p 127.0.0.1:8081:8081 mitmproxy/mitmproxy mitmweb --web-iface 0.0.0.0</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Then, configure your software to use the proxy on localhost:8080 ( or the docker-machine IP).</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="/image/post/2017.01-mitmweb1.png" alt="2017.01 mitmweb1">
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<a class="image" href="/img/20161231/2017.01-mitmweb2.png"><img src="/img/20161231/2017.01-mitmweb2.png" alt="2017.01 mitmweb2" width="800"></a>
 </div>
 </div>
 <div class="paragraph">
 <p></p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-java" data-lang="java">// File: User.groovy
-class User {
-    String username
-}</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-sql" data-lang="sql">CREATE TABLE USER (
-    ID INT NOT NULL,
-    USERNAME VARCHAR(40) NOT NULL
-);</code></pre>
-</div>
 </div>
 </div>
 </div>

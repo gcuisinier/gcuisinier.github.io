@@ -2,7 +2,12 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://gcuisinier.github.io/post/2017.01-Analyse.HTTP.Trafic.with.MITMProxy/</loc>
+    <loc>https://gcuisinier.github.io/about/</loc>
+    <lastmod>2017-03-01T10:47:53+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://gcuisinier.github.io/post/2017.01-AnalysingHTTPWithMITM/</loc>
     <lastmod>2017-03-01T10:47:53+01:00</lastmod>
   </url>
   

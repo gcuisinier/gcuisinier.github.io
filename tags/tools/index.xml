@@ -9,40 +9,120 @@
     <atom:link href="https://gcuisinier.github.io/tags/tools/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>Analysing HTTP trafic with MITMProxy</title>
-      <link>https://gcuisinier.github.io/post/2017.01-Analyse.HTTP.Trafic.with.MITMProxy/</link>
+      <title>About Me</title>
+      <link>https://gcuisinier.github.io/about/</link>
       <pubDate>Wed, 01 Mar 2017 10:47:53 +0100</pubDate>
       
-      <guid>https://gcuisinier.github.io/post/2017.01-Analyse.HTTP.Trafic.with.MITMProxy/</guid>
+      <guid>https://gcuisinier.github.io/about/</guid>
+      <description>&lt;div class=&#34;sect2&#34;&gt;
+&lt;h3 id=&#34;_software_engineer&#34;&gt;Software Engineer&lt;/h3&gt;
+&lt;div class=&#34;paragraph&#34;&gt;
+&lt;p&gt;Since the end of my studies, I worked as Software Engineer.
+As everybody, I&amp;#8217;ve started as developer, on several Java projects.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&#34;sect2&#34;&gt;
+&lt;h3 id=&#34;_speaker&#34;&gt;Speaker&lt;/h3&gt;
+&lt;div class=&#34;ulist&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Spring Framework&lt;/p&gt;
+&lt;div class=&#34;ulist&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;LorraineJUG&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;MarsJUG&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;BreizhJUG&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;ParisJUG&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;WaJUG&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Devoxx France&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;DevOps Mercs&lt;/p&gt;
+&lt;div class=&#34;ulist&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Devoxx France&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Docker&lt;/p&gt;
+&lt;div class=&#34;ulist&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;WaJUG&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class=&#34;paragraph&#34;&gt;
+&lt;p&gt;LorraineJUG / YaJUG / MarsJUG / ParisJUG / Devoxx France&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&#34;sect2&#34;&gt;
+&lt;h3 id=&#34;_conference_organizer&#34;&gt;Conference organizer&lt;/h3&gt;
+&lt;div class=&#34;paragraph&#34;&gt;
+&lt;p&gt;&lt;a href=&#34;http://www.yajug.lu&#34;&gt;YaJUG&lt;/a&gt; / &lt;a href=&#34;http://www.meetup.com/fr-FR/Docker-Luxembourg/&#34;&gt;Docker Meetup&lt;/a&gt; / &lt;a href=&#34;https://voxxeddays.com/luxembourg/&#34;&gt;VoxxedDays Luxembourg&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Analysing HTTP trafic with MITMProxy</title>
+      <link>https://gcuisinier.github.io/post/2017.01-AnalysingHTTPWithMITM/</link>
+      <pubDate>Wed, 01 Mar 2017 10:47:53 +0100</pubDate>
+      
+      <guid>https://gcuisinier.github.io/post/2017.01-AnalysingHTTPWithMITM/</guid>
       <description>&lt;div class=&#34;sect1&#34;&gt;
 &lt;h2 id=&#34;_tldr&#34;&gt;tldr;&lt;/h2&gt;
 &lt;div class=&#34;sectionbody&#34;&gt;
 &lt;div class=&#34;paragraph&#34;&gt;
-&lt;p&gt;If you need to sniffing HTTP, first run the MITMProxy (and his companion MITMWeb) thank to Docker&lt;/p&gt;
+&lt;p&gt;If you need to sniff HTTP trafic, first run the MITMProxy (and his companion MITMWeb). Thanks to Docker, this is quite simple&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class=&#34;listingblock&#34;&gt;
 &lt;div class=&#34;content&#34;&gt;
-&lt;pre class=&#34;highlight&#34;&gt;&lt;code class=&#34;language-Bash&#34; data-lang=&#34;Bash&#34;&gt;# test
-docker run --rm -it -p 8080:8080 -p 127.0.0.1:8081:8081 mitmproxy/mitmproxy mitmweb --web-iface 0.0.0.0&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;highlight&#34;&gt;&lt;code class=&#34;language-Bash&#34; data-lang=&#34;Bash&#34;&gt;docker run --rm -d --name mitmproxy -p 8080:8080 -p 127.0.0.1:8081:8081 mitmproxy/mitmproxy mitmweb --web-iface 0.0.0.0&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div class=&#34;paragraph&#34;&gt;
 &lt;p&gt;&lt;/p&gt;
 &lt;/div&gt;
-&lt;div class=&#34;listingblock&#34;&gt;
+&lt;div class=&#34;paragraph&#34;&gt;
+&lt;p&gt;Then, configure your software to use the proxy on localhost:8080 ( or the docker-machine IP).&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;paragraph&#34;&gt;
+&lt;p&gt;And that&amp;#8217;s it !
+Now you can go to &lt;a href=&#34;http://localhost:8081&#34;&gt;http://localhost:8081&lt;/a&gt;, to see the MITM Web interface that wil show you every request :&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;imageblock&#34;&gt;
 &lt;div class=&#34;content&#34;&gt;
-&lt;pre class=&#34;highlight&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;// File: User.groovy
-class User {
-    String username
-}&lt;/code&gt;&lt;/pre&gt;
+&lt;img src=&#34;https://gcuisinier.github.io/img/post/2017.01-AnalysingHTTPWithMITM/mitmweb1.png&#34; alt=&#34;mitmweb1&#34; width=&#34;800&#34;&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div class=&#34;listingblock&#34;&gt;
+&lt;div class=&#34;paragraph&#34;&gt;
+&lt;p&gt;You can also see the content of them :&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;imageblock&#34;&gt;
 &lt;div class=&#34;content&#34;&gt;
-&lt;pre class=&#34;highlight&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;CREATE TABLE USER (
-    ID INT NOT NULL,
-    USERNAME VARCHAR(40) NOT NULL
-);&lt;/code&gt;&lt;/pre&gt;
+&lt;img src=&#34;https://gcuisinier.github.io/img/post/2017.01-AnalysingHTTPWithMITM/mitmweb2.png&#34; alt=&#34;mitmweb2&#34; width=&#34;800&#34;&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
