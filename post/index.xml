@@ -11,10 +11,10 @@
     
     <item>
       <title>Analysing HTTP trafic with MITMProxy</title>
-      <link>https://gcuisinier.github.io/post/2017.01-AnalysingHTTPWithMITM/</link>
+      <link>https://gcuisinier.github.io/2017/03/analysing-http-trafic-with-mitmproxy/</link>
       <pubDate>Wed, 01 Mar 2017 10:47:53 +0100</pubDate>
       
-      <guid>https://gcuisinier.github.io/post/2017.01-AnalysingHTTPWithMITM/</guid>
+      <guid>https://gcuisinier.github.io/2017/03/analysing-http-trafic-with-mitmproxy/</guid>
       <description>&lt;div class=&#34;sect1&#34;&gt;
 &lt;h2 id=&#34;_tldr&#34;&gt;tldr;&lt;/h2&gt;
 &lt;div class=&#34;sectionbody&#34;&gt;
