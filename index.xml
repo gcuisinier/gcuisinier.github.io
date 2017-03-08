@@ -147,8 +147,8 @@ $ jenv add /Library/Java/JavaVirtualMachines/jdk17011.jdk/Contents/Home
       <description>&lt;div class=&#34;sect2&#34;&gt;
 &lt;h3 id=&#34;_software_engineer&#34;&gt;Software Engineer&lt;/h3&gt;
 &lt;div class=&#34;paragraph&#34;&gt;
-&lt;p&gt;Since the end of my studies, I worked as Software Engineer.
-As everybody, I&amp;#8217;ve started as developer, on several Java projects.&lt;/p&gt;
+&lt;p&gt;I have been a professional developer since 2006 after graduating with a Bacherlor degree from Haute Ecole Rennequin Sualem à Seraing (INPRES).
+I mainly develop in Java, and I quickly find a real interest in the development of framework or development tools to improve the quality and the development speed.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div class=&#34;sect2&#34;&gt;
@@ -225,46 +225,282 @@ As everybody, I&amp;#8217;ve started as developer, on several Java projects.&lt;
     
     <item>
       <title>Analysing HTTP trafic with MITMProxy</title>
-      <link>https://gcuisinier.github.io/2017/03/analysing-http-trafic-with-mitmproxy/</link>
+      <link></link>
       <pubDate>Wed, 01 Mar 2017 10:47:53 +0100</pubDate>
       
-      <guid>https://gcuisinier.github.io/2017/03/analysing-http-trafic-with-mitmproxy/</guid>
+      <guid></guid>
       <description>&lt;div class=&#34;sect1&#34;&gt;
 &lt;h2 id=&#34;_tldr&#34;&gt;tldr;&lt;/h2&gt;
 &lt;div class=&#34;sectionbody&#34;&gt;
 &lt;div class=&#34;paragraph&#34;&gt;
-&lt;p&gt;If you need to sniff HTTP trafic, first run the MITMProxy (and his companion MITMWeb). Thanks to Docker, this is quite simple&lt;/p&gt;
+&lt;p&gt;If you need to sniffing HTTP, first run the MITMProxy (and his companion MITMWeb) thank to Docker&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class=&#34;listingblock&#34;&gt;
 &lt;div class=&#34;content&#34;&gt;
-&lt;pre class=&#34;highlight&#34;&gt;&lt;code class=&#34;language-Bash&#34; data-lang=&#34;Bash&#34;&gt;docker run --rm -d --name mitmproxy -p 8080:8080 -p 127.0.0.1:8081:8081 mitmproxy/mitmproxy mitmweb --web-iface 0.0.0.0&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;highlight&#34;&gt;&lt;code class=&#34;language-Bash&#34; data-lang=&#34;Bash&#34;&gt;# test
+docker run --rm -it -p 8080:8080 -p 127.0.0.1:8081:8081 mitmproxy/mitmproxy mitmweb --web-iface 0.0.0.0&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div class=&#34;paragraph&#34;&gt;
 &lt;p&gt;&lt;/p&gt;
 &lt;/div&gt;
-&lt;div class=&#34;paragraph&#34;&gt;
-&lt;p&gt;Then, configure your software to use the proxy on localhost:8080 ( or the docker-machine IP).&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&#34;paragraph&#34;&gt;
-&lt;p&gt;And that&amp;#8217;s it !
-Now you can go to &lt;a href=&#34;http://localhost:8081&#34;&gt;http://localhost:8081&lt;/a&gt;, to see the MITM Web interface that wil show you every request :&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&#34;imageblock&#34;&gt;
+&lt;div class=&#34;listingblock&#34;&gt;
 &lt;div class=&#34;content&#34;&gt;
-&lt;img src=&#34;https://gcuisinier.github.io/img/post/2017.01-AnalysingHTTPWithMITM/mitmweb1.png&#34; alt=&#34;mitmweb1&#34; width=&#34;800&#34;&gt;
+&lt;pre class=&#34;highlight&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;// File: User.groovy
+class User {
+    String username
+}&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div class=&#34;paragraph&#34;&gt;
-&lt;p&gt;You can also see the content of them :&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&#34;imageblock&#34;&gt;
+&lt;div class=&#34;listingblock&#34;&gt;
 &lt;div class=&#34;content&#34;&gt;
-&lt;img src=&#34;https://gcuisinier.github.io/img/post/2017.01-AnalysingHTTPWithMITM/mitmweb2.png&#34; alt=&#34;mitmweb2&#34; width=&#34;800&#34;&gt;
+&lt;pre class=&#34;highlight&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;CREATE TABLE USER (
+    ID INT NOT NULL,
+    USERNAME VARCHAR(40) NOT NULL
+);&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>Les agents Java</title>
+      <link></link>
+      <pubDate>Fri, 15 Jun 2012 08:00:00 +0100</pubDate>
+      
+      <guid></guid>
+      <description>&lt;p&gt;Les Agents Java ? Pas la moindre idée de ce que c&amp;rsquo;est ?
+Mais si, vous en avez certainement déja vu, ils se cachent dans la ligne de commande Java via ce paramètre &lt;code&gt;-javaagent:vers/mon/agent.jar&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Ceux-ci interviennent lors du chargement des classes par un classloader, et ont la possiblité de venir modifier la classe en cours de chargement. Ce mécanisme est utilisé par divers outils et frameworks :&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;AspectJ pour faire du tissage d&amp;rsquo;Aspect au chargement&lt;/li&gt;
+&lt;li&gt;Par des outils de Profiling pour venir ajouter du code permettant de tracer les appels&lt;/li&gt;
+&lt;li&gt;&amp;hellip; et plein d&amp;rsquo;autres&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;getting-started&#34;&gt;Getting started !&lt;/h2&gt;
+
+&lt;p&gt;Pour mieux comprendre comment fonctionne un agent, le plus simple est de tenter d&amp;rsquo;en faire un simple.&lt;/p&gt;
+
+&lt;h3 id=&#34;créer-la-classe-de-l-agent&#34;&gt;Créer la classe de l&amp;rsquo;agent&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;package be.hikage.agent;
+
+import java.lang.instrument.Instrumentation;
+
+public class AgentSimple {
+
+	public static void premain(String agentArgument, Instrumentation instrumentation){		
+		System.out.println(&amp;quot;Hello, Agent Smith ! [ &amp;quot; + agentArgument + &amp;quot;]&amp;quot;);
+	}
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;La méthode &lt;code&gt;premain(String agentArgument, Instrumentation instrumentation)&lt;/code&gt; est pour un agent ce qu&amp;rsquo;est la méthode &lt;code&gt;main(String &amp;hellip; arguments)&lt;/code&gt; est pour une application Java.&lt;/p&gt;
+
+&lt;p&gt;Cette méthode appelée lors du chargement de l&amp;rsquo;agent, et possède deux arguments :&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;String agentArguments&lt;/code&gt; : Ce sont les options passée en paramètre dans la ligne de commande pour l&amp;rsquo;agent. &lt;code&gt;-javaagent:jarpath=parametre&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Instrumentation instrumentation&lt;/code&gt;, est un service qui va fournir des méthodes pour modifier les classes.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;préparer-le-packaging&#34;&gt;Préparer le packaging&lt;/h3&gt;
+
+&lt;p&gt;Mais avoir la classe ne suffit pas pour avoir un agent utilisable. En effet, un agent doit obligatoirement un jar, avec un manifest correctement configuré.&lt;/p&gt;
+
+&lt;p&gt;Celui-ci doit contenir une entrée &lt;code&gt;Premain-Class&lt;/code&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Manifest-Version: 1.0
+Premain-Class: be.hikage.agent.AgentSimple
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;tester-l-agent&#34;&gt;Tester l&amp;rsquo;Agent&lt;/h3&gt;
+
+&lt;p&gt;Une fois le &lt;strong&gt;Jar&lt;/strong&gt; prêt, il faut le tester. Pour cela créer un petit programme simple :&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;public class TestMain {
+
+	public static void main(String[] args) {
+		System.out.println(&amp;quot;Mon Programme&amp;quot;);
+	}
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Et lançons celui-ci en fournissant l&amp;rsquo;agent :&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;$ java -javaagent:AgentSimple.jar=&amp;quot;Mes paramètres&amp;quot; be.hikage.agent.TestMain
+Hello, Agent Smith ! [ Mes paramètres]
+Mon Programme
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;On remarque que l&amp;rsquo;agent est bien lancé avant l&amp;rsquo;application, et qu&amp;rsquo;il a bien reçu les paramètres que l&amp;rsquo;on lui a fourni.&lt;/p&gt;
+
+&lt;h2 id=&#34;interception-des-chargements-de-classes&#34;&gt;Interception des chargements de classes&lt;/h2&gt;
+
+&lt;p&gt;Voyons maintenant à quoi sert le deuxième paramètre fourni à la méthode &lt;em&gt;Premain&lt;/em&gt; : Instrumentation.
+La principale fonctionnalité de celui-ci est de permettre d&amp;rsquo;enregistrer un &lt;em&gt;ClassFileTransformer&lt;/em&gt;. Cette interface oblige à implémenter une unique méthode :&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;byte[]
+    transform(  ClassLoader         loader,
+                String              className,
+                Class            classBeingRedefined,
+                ProtectionDomain    protectionDomain,
+                byte[]              classfileBuffer)
+        throws IllegalClassFormatException;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Le premier paramètre étant le classloader impliqué pour le chargement de la classe. Les deux suivant, le nom de la classe et l&amp;rsquo;instance de Class représentant la classe en train d&amp;rsquo;être chargée.
+Le dernier est le bytecode brut de la classe, sous la forme d&amp;rsquo;un tableau de bytes.&lt;/p&gt;
+
+&lt;p&gt;Modifions maintenant notre agent pour afficher les classes en cours de chargement :&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;package be.hikage.agent;
+
+import java.lang.instrument.ClassFileTransformer;
+import java.lang.instrument.IllegalClassFormatException;
+import java.lang.instrument.Instrumentation;
+import java.security.ProtectionDomain;
+
+public class AgentSimple {
+
+	public static void premain(String agentArgument, Instrumentation instrumentation){		
+		System.out.println(&amp;quot;Hello, Agent Smith ! [ &amp;quot; + agentArgument + &amp;quot;]&amp;quot;);
+
+        instrumentation.addTransformer( new ClassFileTransformer() {
+            @Override
+            public byte[] transform(ClassLoader loader, String className, Class&amp;lt;?&amp;gt; classBeingRedefined, ProtectionDomain protectionDomain, byte[] classfileBuffer) throws IllegalClassFormatException {
+                System.out.println(&amp;quot;Tu es en train de charger la classe :&amp;quot; + className);
+                return classfileBuffer;
+            }
+        });
+	}
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Le résultat sera le suivant :&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Hello, Agent Smith ! [ Mes paramètres]
+Tu es en train de charger la classe : sun/launcher/LauncherHelper
+Tu es en train de charger la classe : java/lang/Enum
+Tu es en train de charger la classe : be/hikage/agent/TestMain
+Tu es en train de charger la classe : java/lang/Void
+Mon Programme
+Tu es en train de charger la classe : java/lang/Shutdown
+Tu es en train de charger la classe : java/lang/Shutdown$Lock
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;modification-de-classe&#34;&gt;Modification de classe&lt;/h2&gt;
+
+&lt;p&gt;Passons maintenant la seconde, et tentons de venir modifier les classes en cours de chargement afin d&amp;rsquo;avoir des statistiques sur le nombre d&amp;rsquo;instance.
+Pour cela, il suffit d&amp;rsquo;ajouter un champ statique qui servira de compteur, et de modifier les constructeurs pour y ajouter une incrémentation de celui-ci ainsi que de l&amp;rsquo;afficher dans les logs.&lt;/p&gt;
+
+&lt;p&gt;Pour cela, il faut utiliser un outil de manipulation de bytecode tels que &lt;a href=&#34;http://www.jboss.org/javassist&#34;&gt;Javassist&lt;/a&gt;.
+Voici une implémentation d&amp;rsquo;un ClassFileTransformer possible :&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;package be.hikage.agent;
+
+import javassist.ClassPool;
+import javassist.CtBehavior;
+import javassist.CtClass;
+import javassist.CtField;
+
+import java.lang.instrument.ClassFileTransformer;
+import java.lang.instrument.IllegalClassFormatException;
+import java.security.ProtectionDomain;
+
+public class CountInstanceTransformer implements ClassFileTransformer {
+
+
+    @Override
+    public byte[] transform(ClassLoader loader, String className, Class&amp;lt;?&amp;gt; classBeingRedefined, ProtectionDomain protectionDomain, byte[] classfileBuffer) throws IllegalClassFormatException {
+        return visitClass(className, classBeingRedefined, classfileBuffer);
+
+    }
+
+    private byte[] visitClass(String className, Class&amp;lt;?&amp;gt; classBeingRedefined, byte[] classfileBuffer) {
+        ClassPool pool = ClassPool.getDefault();
+        CtClass cl = null;
+        try {
+            cl = pool.makeClass(new java.io.ByteArrayInputStream(classfileBuffer));
+            if (cl.isInterface() == false) {
+
+                // Ajout d&#39;un champ static dans la classe
+                CtField field = CtField.make(&amp;quot;private static long _instanceCount;&amp;quot;, cl);
+
+                cl.addField(field);
+
+                CtBehavior[] constructors = cl.getDeclaredConstructors();
+                for (int i = 0; i &amp;lt; constructors.length; i++) {
+                    // On incrémente le compteur et on l&#39;affiche
+                    constructors[i].insertAfter(&amp;quot;_instanceCount++;&amp;quot;);
+                    constructors[i].insertAfter(&amp;quot;System.out.println(\&amp;quot;&amp;quot; + className + &amp;quot; : \&amp;quot; + _instanceCount);&amp;quot;);
+
+
+                }
+
+                // Génération du bytecode modifié
+                classfileBuffer = cl.toBytecode();
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+
+        } finally {
+            if (cl != null) {
+                cl.detach();
+            }
+        }
+        return classfileBuffer;
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Et un petit programme de tests :&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;public class TestMain {
+
+	public static void main(String[] args) {
+		System.out.println(&amp;quot;Mon Programme&amp;quot;);
+        List test = new ArrayList();
+        test.add(new MonObject()) ;
+        test.add(new MonObject()) ;
+        test.add(new MonObject()) ;
+        test.add(new MonObject()) ;
+	}
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Le lancement de l&amp;rsquo;agent se fait de la même manière qu&amp;rsquo;auparavant. Cependant, celui-ci apporte une dépendance supplémentaire, Javassist, au runtime.
+Il faut donc que celui-ci soit disponible dans le classpath :&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ java -classpath &amp;quot;path/to/javassist-3.14.0-GA.jar:./&amp;quot; -javaagent:AgentSimple.jar=&amp;quot;Mes paramètres&amp;quot; be.hikage.agent.TestMain
+Hello, Agent Smith ! [ Mes paramètres]
+java/lang/Enum : 1
+sun/launcher/LauncherHelper : 1
+Mon Programme
+be/hikage/agent/MonObject : 1
+be/hikage/agent/MonObject : 2
+be/hikage/agent/MonObject : 3
+be/hikage/agent/MonObject : 4
+java/lang/Shutdown$Lock : 1
+java/lang/Shutdown$Lock : 2
+java/lang/Shutdown$Lock : 3
+java/lang/Shutdown$Lock : 4
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h1 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h1&gt;
+
+&lt;p&gt;Les Agents Java sont assez simple à mettre en place, et les possibilités sont assez nombreuses.
+Cependant, cela nécessite d&amp;rsquo;avoir déclarer celui-ci au démarrage de l&amp;rsquo;application.&lt;/p&gt;
+
+&lt;p&gt;Et parfois, on aimerait avoir la possibilité d&amp;rsquo;activer un agent plus tard, au besoin.
+Pour cela, il existe une API, l&amp;rsquo;Attach API.
+Celle-ci fera l&amp;rsquo;objet d&amp;rsquo;un prochain article.&lt;/p&gt;</description>
     </item>
     
   </channel>

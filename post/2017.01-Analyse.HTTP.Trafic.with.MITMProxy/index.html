@@ -10,7 +10,7 @@
     <meta property="article:published_time" content="2017-03-01">
     
     <meta property="og:description" content="">
-    <meta property="og:url" content="https://gcuisinier.github.io/post/2017.01-Analyse.HTTP.Trafic.with.MITMProxy/">
+    <meta property="og:url" content="">
     <meta property="og:site_name" content="Gildas Cuisinier">
     
     <meta property="og:tags" content="tools">
@@ -57,11 +57,9 @@
 				
 					<li><a href="https://gcuisinier.github.io/about/">About</a></li>
 				
-					<li><a href="https://gcuisinier.github.io/posts/">Blog</a></li>
+					<li><a href="https://gcuisinier.github.io/post/">Blog</a></li>
 				
 					<li><a href="https://gcuisinier.github.io/projects/">Projects</a></li>
-				
-					<li><a href="https://gcuisinier.github.io/conferences/">Conf</a></li>
 				
 			</ul>
 		</div>
@@ -94,11 +92,9 @@
 			
 				<a href="https://gcuisinier.github.io/about/">About</a>
 			
-				<a href="https://gcuisinier.github.io/posts/">Blog</a>
+				<a href="https://gcuisinier.github.io/post/">Blog</a>
 			
 				<a href="https://gcuisinier.github.io/projects/">Projects</a>
-			
-				<a href="https://gcuisinier.github.io/conferences/">Conf</a>
 			
 		</div>
 	</div>
@@ -118,28 +114,32 @@
 <h2 id="_tldr">tldr;</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>If you need to sniff HTTP trafic, first run the MITMProxy (and his companion MITMWeb). Thanks to Docker, this is quite simple</p>
+<p>If you need to sniffing HTTP, first run the MITMProxy (and his companion MITMWeb) thank to Docker</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-Bash" data-lang="Bash">docker run --rm -d --name mitmproxy -p 8080:8080 -p 127.0.0.1:8081:8081 mitmproxy/mitmproxy mitmweb --web-iface 0.0.0.0</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Then, configure your software to use the proxy on localhost:8080 ( or the docker-machine IP).</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="/image/post/2017.01-mitmweb1.png" alt="2017.01 mitmweb1">
-</div>
-</div>
-<div class="imageblock">
-<div class="content">
-<a class="image" href="/img/20161231/2017.01-mitmweb2.png"><img src="/img/20161231/2017.01-mitmweb2.png" alt="2017.01 mitmweb2" width="800"></a>
+<pre class="highlight"><code class="language-Bash" data-lang="Bash"># test
+docker run --rm -it -p 8080:8080 -p 127.0.0.1:8081:8081 mitmproxy/mitmproxy mitmweb --web-iface 0.0.0.0</code></pre>
 </div>
 </div>
 <div class="paragraph">
 <p></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-java" data-lang="java">// File: User.groovy
+class User {
+    String username
+}</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-sql" data-lang="sql">CREATE TABLE USER (
+    ID INT NOT NULL,
+    USERNAME VARCHAR(40) NOT NULL
+);</code></pre>
+</div>
 </div>
 </div>
 </div>
@@ -151,12 +151,14 @@
 </div>
 
 
-  <div id="disqus_thread"></div>
+	
+
+ 	 <div id="disqus_thread"></div>
 <script type="text/javascript">
     var disqus_shortname = 'gcuisinier-github';
-    var disqus_identifier = 'https:\/\/gcuisinier.github.io\/post\/2017.01-Analyse.HTTP.Trafic.with.MITMProxy\/';
+    var disqus_identifier = '';
     var disqus_title = 'Analysing HTTP trafic with MITMProxy';
-    var disqus_url = 'https:\/\/gcuisinier.github.io\/post\/2017.01-Analyse.HTTP.Trafic.with.MITMProxy\/';
+    var disqus_url = '';
 
     (function() {
         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
@@ -166,6 +168,7 @@
 </script>
 <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+	
 
 
 						</div>

@@ -106,32 +106,15 @@
 	<div class="panel panel-default">
 	<div class="panel-header">
 		<h3>
-			<a href="https://gcuisinier.github.io/2017/03/analysing-http-trafic-with-mitmproxy/">Analysing HTTP trafic with MITMProxy</a>
+			<a href="">Analysing HTTP trafic with MITMProxy</a>
 			<br>
 			<small>
 				1 March 2017
 			</small>
-		</h3>
-	</div>
-	<div class="panel-body">
-		<div class="sect1">
-<h2 id="_tldr">tldr;</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>If you need to sniff HTTP trafic, first run the MITMProxy (and his companion MITMWeb). Thanks to Docker, this is quite simple</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-Bash" data-lang="Bash">docker run --rm -d --name mitmproxy -p 8080:8080 -p 127.0.0.1:8081:8081 mitmproxy/mitmproxy mitmweb --web-iface 0.0.0.0</code></pre>
-</div>
-</div>
-		
-			... <a href="https://gcuisinier.github.io/2017/03/analysing-http-trafic-with-mitmproxy/">Read More</a>
-		
-	</div>
-	<div class="panel-footer">
-		
-		<small class="text-muted">
+			
+			<br/>
+			
+		<small class="text-muted" style="font-size:14px">
 			
 			
 				<a href="https://gcuisinier.github.io/tags/tools"><span class="label label-success">tools</span></a>
@@ -141,6 +124,68 @@
 				<a href="https://gcuisinier.github.io/tags/memo"><span class="label label-success">memo</span></a>
 			
 		</small>
+			
+		
+		</h3>
+	</div>
+	<div class="panel-body">
+		<div class="sect1">
+<h2 id="_tldr">tldr;</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>If you need to sniffing HTTP, first run the MITMProxy (and his companion MITMWeb) thank to Docker</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-Bash" data-lang="Bash"># test
+docker run --rm -it -p 8080:8080 -p 127.0.0.1:8081:8081 mitmproxy/mitmproxy mitmweb --web-iface 0.0.0.0</code></pre>
+</div>
+</div>
+		
+			... <a href="">Read More</a>
+		
+	</div>
+</div>
+
+
+	<div class="panel panel-default">
+	<div class="panel-header">
+		<h3>
+			<a href="">Les agents Java</a>
+			<br>
+			<small>
+				15 June 2012
+			</small>
+			
+			<br/>
+			
+		<small class="text-muted" style="font-size:14px">
+			
+			
+				<a href="https://gcuisinier.github.io/tags/french"><span class="label label-success">french</span></a>
+			
+				<a href="https://gcuisinier.github.io/tags/java"><span class="label label-success">java</span></a>
+			
+		</small>
+			
+		
+		</h3>
+	</div>
+	<div class="panel-body">
+		<p>Les Agents Java ? Pas la moindre idée de ce que c&rsquo;est ?
+Mais si, vous en avez certainement déja vu, ils se cachent dans la ligne de commande Java via ce paramètre <code>-javaagent:vers/mon/agent.jar</code>.</p>
+
+<p>Ceux-ci interviennent lors du chargement des classes par un classloader, et ont la possiblité de venir modifier la classe en cours de chargement. Ce mécanisme est utilisé par divers outils et frameworks :</p>
+
+<ul>
+<li>AspectJ pour faire du tissage d&rsquo;Aspect au chargement</li>
+<li>Par des outils de Profiling pour venir ajouter du code permettant de tracer les appels</li>
+<li>&hellip; et plein d&rsquo;autres</li>
+</ul>
+
+<p></p>
+		
+			... <a href="">Read More</a>
 		
 	</div>
 </div>
