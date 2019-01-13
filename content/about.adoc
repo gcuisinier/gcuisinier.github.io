@@ -1,0 +1,53 @@
++++
+title = "About Me"
+description = ""
+draft = false
+showcomments = false
+showpagemeta = false
+scripts = [
+"//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/languages/go.min.js",
+]
+
+date = "2017-03-01T10:47:53+01:00"
+highlight = true
+
++++
+
+=== Software Engineer
+
+I have been a professional developer since 2006 after graduating with a Bacherlor degree from Haute Ecole Rennequin Sualem à Seraing (INPRES). 
+I mainly develop in Java, and I quickly find a real interest in the development of framework or development tools to improve the quality and the development speed.
+
+
+I am currently Software Engineer at Banque Internationale à Luxembourg, where I am in charge of the software factory.
+My daily tools are Jenkins, Nexus, Gitlab, SonarQube, XLDeploy, and more recently Docker.
+But I am also involved in some transversal technical components like Single Sign On.
+
+
+
+=== Speaker
+
+Aside of my job, I really like to attend conferences (Devoxx, Devoxx France, Google I/O, DockerCon) , but also to particape to some of them as speaker.
+
+
+
+* Spring Framework 3.0 / Spring Framework 3.1
+** BreizhJUG / http://www.lorrainejug.org/2009/10/01/soir%C3%A9e-spring.html[LorraineJUG] / MarsJUG (https://fr.slideshare.net/gcuisinier/marsjug-spring-30-10636076[slides]) / YaJUG 
+* Spring XML est mort, Vive Spring NoXML 
+** https://www.parisjug.org/xwiki/wiki/oldversion/view/Meeting/20121113[ParisJUG] (https://www.youtube.com/watch?v=SLNs_NYkuKk[video] / https://fr.slideshare.net/gcuisinier/springltxml-est-mort-vive-spring-noxml[slides])
+** Devoxx France 2012 (https://www.slideshare.net/gcuisinier/spring-est-mort-vive-spring-devoxx-france[slides])
+* Les 5 mercenaires du DevOps
+** Devoxx France 2012 (https://www.youtube.com/watch?v=S6BigliKhOY[video] ; https://fr.slideshare.net/dbaeli/devoxx-devops-university2012[slides])
+* Quoi de neuf, Docker?
+** http://www.wajug.be/talk/2016/quoi-de-neuf-docker[WaJUG] (https://speakerdeck.com/gcuisinier/wajug-introduction-a-docker[slides])
+** BrownBagLunches (presentation on demand inside companies)
+* jEnv
+** VoxxedDays Luxembourg 2016 (https://fr.slideshare.net/GildasCuisinier/jenvbe-voxxeddays[slides])
+
+
+
+=== Conference organizer
+
+And finally, I am also involved in some Community or Conference organisation in Luxembourg.
+
+http://www.yajug.lu[YaJUG] / http://www.meetup.com/fr-FR/Docker-Luxembourg/[Docker Meetup] / https://voxxeddays.com/luxembourg/[VoxxedDays Luxembourg]

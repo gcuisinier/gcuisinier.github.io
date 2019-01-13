@@ -1,0 +1,47 @@
+baseURL = "http://example.org/"
+languageCode = "en-us"
+title = "Gildas Cuisinier"
+
+
+theme = "custom-hyde"
+
+
+[permalinks]
+  posts = "blog/:year/:month/:title/"
+
+[params]
+    subtitle = "<dev>SomeWhere<ops>"
+    authorimage = "/img/gcuisinier.jpg"
+
+    highlightjs = true
+    highlightjsstyle = "default"
+    showBuiltWith = true
+
+
+[params.social]
+	twitter = "gcuisinier"
+	keybase = "gcuisinier"
+	github = "gcuisinier"
+    email = "contact [at] gcuisinier.net"
+    aboutme = "gcuisinier"
+    docker = "gcuisinier"
+    # flickr = "gcuisinier"
+    # fiftyPX = "gcuisinier"
+    
+[[menu.main]]
+    name = "About"
+    identifier = "about"
+    weight = 100
+    url = "/about/"
+
+[[menu.main]]
+    name = "Projects"
+    identifier = "Projects"
+    weight = 200
+    url = "/portfolio/"
+
+[[menu.main]]
+    name = "Blog"
+    identifier = "blog"
+    weight = 200
+    url = "/posts/"
