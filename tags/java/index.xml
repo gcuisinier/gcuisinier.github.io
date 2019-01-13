@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Java on Gildas Cuisinier</title>
-    <link>http://example.org/tags/java/</link>
+    <link>http://www.gcuisinier.net/tags/java/</link>
     <description>Recent content in Java on Gildas Cuisinier</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 15 Jun 2012 08:00:00 +0100</lastBuildDate>
     
-	<atom:link href="http://example.org/tags/java/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://www.gcuisinier.net/tags/java/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Les agents Java</title>
-      <link>http://example.org/blog/2012/06/les-agents-java/</link>
+      <link>http://www.gcuisinier.net/blog/2012/06/les-agents-java/</link>
       <pubDate>Fri, 15 Jun 2012 08:00:00 +0100</pubDate>
       
-      <guid>http://example.org/blog/2012/06/les-agents-java/</guid>
+      <guid>http://www.gcuisinier.net/blog/2012/06/les-agents-java/</guid>
       <description>&lt;p&gt;Les Agents Java ? Pas la moindre idée de ce que c&amp;rsquo;est ?
 Mais si, vous en avez certainement déja vu, ils se cachent dans la ligne de commande Java via ce paramètre &lt;code&gt;-javaagent:vers/mon/agent.jar&lt;/code&gt;.&lt;/p&gt;
 
@@ -31,10 +31,10 @@ Mais si, vous en avez certainement déja vu, ils se cachent dans la ligne de com
     
     <item>
       <title>Mon retour sur Devoxx France, en tant que conférencier</title>
-      <link>http://example.org/blog/2012/04/mon-retour-sur-devoxx-france-en-tant-que-conf%C3%A9rencier/</link>
+      <link>http://www.gcuisinier.net/blog/2012/04/mon-retour-sur-devoxx-france-en-tant-que-conf%C3%A9rencier/</link>
       <pubDate>Mon, 30 Apr 2012 08:00:00 +0100</pubDate>
       
-      <guid>http://example.org/blog/2012/04/mon-retour-sur-devoxx-france-en-tant-que-conf%C3%A9rencier/</guid>
+      <guid>http://www.gcuisinier.net/blog/2012/04/mon-retour-sur-devoxx-france-en-tant-que-conf%C3%A9rencier/</guid>
       <description>&lt;h2 id=&#34;le-début-du-rêve&#34;&gt;Le début du rêve&lt;/h2&gt;
 
 &lt;p&gt;L’histoire a commencé à Anvers, durant une keynote à Devoxx de Stefan Janssens où il lance une bombe atomique. En collaboration avec l’équipe du ParisJUG, ils ont commencé à préparer en secret LA conférence de France : &lt;a href=&#34;http://devoxx.fr/display/FR12/Accueil&#34;&gt;Devoxx France&lt;/a&gt;.&lt;/p&gt;
