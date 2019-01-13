@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr-FR">
+<html lang="en-us">
     
     
 
@@ -22,12 +22,20 @@
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Créer un namespace Spring"/>
-<meta name="twitter:description" content="Comment créer un namespace personnalisé pour Spring"/>
+<meta name="twitter:description" content="Une des fonctionnalités fort pratique avec Spring est la notion de namespace. Ceux-ci permettre de simplifier et réduire de manière significative une configuration XML.
+
+Spring en possède plusieurs de bases : jms, jee, scheduling, jdbc, mvc, &hellip;
+
+Cependant, il est tout à fait possible d&rsquo;en créer des spécifiques à nos propres besoins, et sans trop de difficulté."/>
 
 <meta property="og:title" content="Créer un namespace Spring" />
-<meta property="og:description" content="Comment créer un namespace personnalisé pour Spring" />
+<meta property="og:description" content="Une des fonctionnalités fort pratique avec Spring est la notion de namespace. Ceux-ci permettre de simplifier et réduire de manière significative une configuration XML.
+
+Spring en possède plusieurs de bases : jms, jee, scheduling, jdbc, mvc, &hellip;
+
+Cependant, il est tout à fait possible d&rsquo;en créer des spécifiques à nos propres besoins, et sans trop de difficulté." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://www.gcuisinier.net/blog/2010/04/cr%C3%A9er-un-namespace-spring/" /><meta property="article:published_time" content="2010-04-24T08:00:00&#43;01:00"/>
+<meta property="og:url" content="http://example.org/blog/2010/04/cr%C3%A9er-un-namespace-spring/" /><meta property="article:published_time" content="2010-04-24T08:00:00&#43;01:00"/>
 <meta property="article:modified_time" content="2010-04-24T08:00:00&#43;01:00"/>
 
 
@@ -43,10 +51,10 @@
 
 
 
-<link rel="stylesheet" href="/scss/hyde-hyde.0786983f701ad8eb94d014cbcb5bc557a6ee54e59bbffee32fdf38bd149af9fb.css" >
+<link rel="stylesheet" href="/scss/hyde-hyde.7072060d53bb48055d87c305b463893090a2798b2a73a12efc03502e8e2a245d.css" integrity="sha256-cHIGDVO7SAVdh8MFtGOJMJCieYsqc6Eu/ANQLo4qJF0=">
 
 
-<link rel="stylesheet" href="/scss/print.5aa4005c7565ec5b66c62cd79012c5cad1081f3332793145a8d3861a26391697.css"  media="print">
+<link rel="stylesheet" href="/scss/print.5aa4005c7565ec5b66c62cd79012c5cad1081f3332793145a8d3861a26391697.css" integrity="sha256-WqQAXHVl7FtmxizXkBLFytEIHzMyeTFFqNOGGiY5Fpc=" media="print">
 
 
 
@@ -69,7 +77,7 @@
   <div class="container  vertical-center">
     <div class="sidebar-about">
       <span class="site__title">
-        <a href="http://www.gcuisinier.net/">Gildas Cuisinier</a>
+        <a href="http://example.org/">Gildas Cuisinier</a>
       </span>
       <small class="text-center center-block">&lt;dev&gt;SomeWhere&lt;ops&gt;</small>
       
@@ -78,7 +86,7 @@
         
         
         <div class="author-image">
-          <img src="http://www.gcuisinier.net//img/gcuisinier.jpg" alt="Author Image" class="img--circle img--headshot element--center">
+          <img src="http://example.org//img/gcuisinier.jpg" alt="Author Image" class="img--circle img--headshot element--center">
         </div>
         
       
@@ -211,8 +219,9 @@ Built with <a href="https://gohugo.io">Hugo</a> ❤️ <a href="https://github.c
 
 <p>Cependant, il est tout à fait possible d&rsquo;en créer des spécifiques à nos propres besoins, et sans trop de difficulté.</p>
 
-<p>##Créer le schéma xml
-Lorsqu&rsquo;on créer un namespace pour Spring, la toute première chose à faire est de définir les éléments de celui-ci.
+<h2 id="créer-le-schéma-xml">Créer le schéma xml</h2>
+
+<p>Lorsqu&rsquo;on créer un namespace pour Spring, la toute première chose à faire est de définir les éléments de celui-ci.
 Et comme on parle de namespace XML, cela se traduit par un schema XSD.</p>
 
 <p>Le plus simple pour créer une XSD est de préparer un exemple de XML valide, et d&rsquo;ensuite créer le XSD à partir de celui-ci.
@@ -268,8 +277,9 @@ Dans mon cas, il s&rsquo;agira de <strong><a href="http://www.hikage.be/schema/i
 
 <p>On enregistre cette classe dans les sources du projets, par exemple dans le package be.hikage.namespaces.schemas.</p>
 
-<p>##Créer un NamespaceHandler
-Une fois le schéma défini, il faut encore dire à Spring comment l&rsquo;utiliser.
+<h2 id="créer-un-namespacehandler">Créer un NamespaceHandler</h2>
+
+<p>Une fois le schéma défini, il faut encore dire à Spring comment l&rsquo;utiliser.
 Pour cela, il faut implémenter un NamespaceHandler, le plus souvent en étendant la classe NamespaceHandlerSupport :</p>
 
 <pre><code class="language-java">public class TemplateNamespaceHandler extends NamespaceHandlerSupport {
@@ -287,8 +297,9 @@ Pour cela, il faut implémenter un NamespaceHandler, le plus souvent en étendan
 
 <p>Etendre NamespaceHandlerSupport nécessite d&rsquo;implémenter une méthode init dans laquelle il est nécessaire de lier les éléments racines (import-template dans notre cas) à un BeanDefinitionParser.</p>
 
-<p>##Créer le BeanDefinitionParser
-Les BeanDefinitionParser sont certainements les classes les plus importantes dans la création d&rsquo;un namespace car ce sont elles qui vont véritablement dire à Spring quel Beans devront être ajoutés dans le contexte.</p>
+<h2 id="créer-le-beandefinitionparser">Créer le BeanDefinitionParser</h2>
+
+<p>Les BeanDefinitionParser sont certainements les classes les plus importantes dans la création d&rsquo;un namespace car ce sont elles qui vont véritablement dire à Spring quel Beans devront être ajoutés dans le contexte.</p>
 
 <p>Dans notre cas, la classe ImportTemplateBeanDefinitionParser va être responable de</p>
 
@@ -335,8 +346,9 @@ Les BeanDefinitionParser sont certainements les classes les plus importantes dan
 
 <p>Dans le cas de la méthode loadTemplateBeans, j&rsquo;utilise la classe XmlBeanDefinitionReader de Spring qui va lire et créer les BeanDefinitions à ma place. Un BeanDefinition est le modèle interne à Spring pour représenter un Bean : son nom, la classe, les variables constructeurs, les propriétés à configurer, &hellip;</p>
 
-<p>##Enregistrer le NamespaceHandler et le schéma
-Nous avons maintenant notre schéma ainsi que les classes nécessaire pour que Spring puisse traiter correctement un fichier de ce type  :</p>
+<h2 id="enregistrer-le-namespacehandler-et-le-schéma">Enregistrer le NamespaceHandler et le schéma</h2>
+
+<p>Nous avons maintenant notre schéma ainsi que les classes nécessaire pour que Spring puisse traiter correctement un fichier de ce type  :</p>
 
 <pre><code class="language-xml">&lt;beans xmlns=&quot;http://www.springframework.org/schema/beans&quot;
       xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
@@ -378,8 +390,9 @@ Nous avons maintenant notre schéma ainsi que les classes nécessaire pour que S
 <li>Valeur : Le chemin de la XSD dans le classpath</li></li>
 </ul>
 
-<p>##Compléments
-Cela dit, cet exemple est assez basique. Les possibilités d&rsquo;un namespace sont plus étendue. Il est également possible d&rsquo;améliorer le schema XSD et le code du BeanDefinitionParser pour mieux s&rsquo;intégrer dans les IDEs.</p>
+<h2 id="compléments">Compléments</h2>
+
+<p>Cela dit, cet exemple est assez basique. Les possibilités d&rsquo;un namespace sont plus étendue. Il est également possible d&rsquo;améliorer le schema XSD et le code du BeanDefinitionParser pour mieux s&rsquo;intégrer dans les IDEs.</p>
 
 <p>En attendant, pour plus d&rsquo;informations :
 <ul></p>
@@ -387,7 +400,6 @@ Cela dit, cet exemple est assez basique. Les possibilités d&rsquo;un namespace 
 <p></ul>
     <li>Le code complet de l&rsquo;<a href="http://code.google.com/p/spring-import-template/">Import-Template</a> vous permettra de voir en détail comment créer un namespace</li>
     <li>La <a href="http://static.springsource.org/spring/docs/3.0.x/spring-framework-reference/html/extensible-xml.html">documentation officielle </a>sur la création d&rsquo;un namespace</li></p>
-
   </div>
   
 

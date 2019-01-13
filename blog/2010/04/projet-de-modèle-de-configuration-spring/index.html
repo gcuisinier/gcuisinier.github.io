@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr-FR">
+<html lang="en-us">
     
     
 
@@ -27,7 +27,7 @@
 <meta property="og:title" content="Projet de modèle de configuration Spring" />
 <meta property="og:description" content="Présentation d&#39;un projet qui permet d&#39;avoir des modèles de configuration XML pour Spring Framework" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://www.gcuisinier.net/blog/2010/04/projet-de-mod%C3%A8le-de-configuration-spring/" /><meta property="article:published_time" content="2010-04-08T08:00:00&#43;01:00"/>
+<meta property="og:url" content="http://example.org/blog/2010/04/projet-de-mod%C3%A8le-de-configuration-spring/" /><meta property="article:published_time" content="2010-04-08T08:00:00&#43;01:00"/>
 <meta property="article:modified_time" content="2010-04-08T08:00:00&#43;01:00"/>
 
 
@@ -43,10 +43,10 @@
 
 
 
-<link rel="stylesheet" href="/scss/hyde-hyde.0786983f701ad8eb94d014cbcb5bc557a6ee54e59bbffee32fdf38bd149af9fb.css" >
+<link rel="stylesheet" href="/scss/hyde-hyde.7072060d53bb48055d87c305b463893090a2798b2a73a12efc03502e8e2a245d.css" integrity="sha256-cHIGDVO7SAVdh8MFtGOJMJCieYsqc6Eu/ANQLo4qJF0=">
 
 
-<link rel="stylesheet" href="/scss/print.5aa4005c7565ec5b66c62cd79012c5cad1081f3332793145a8d3861a26391697.css"  media="print">
+<link rel="stylesheet" href="/scss/print.5aa4005c7565ec5b66c62cd79012c5cad1081f3332793145a8d3861a26391697.css" integrity="sha256-WqQAXHVl7FtmxizXkBLFytEIHzMyeTFFqNOGGiY5Fpc=" media="print">
 
 
 
@@ -69,7 +69,7 @@
   <div class="container  vertical-center">
     <div class="sidebar-about">
       <span class="site__title">
-        <a href="http://www.gcuisinier.net/">Gildas Cuisinier</a>
+        <a href="http://example.org/">Gildas Cuisinier</a>
       </span>
       <small class="text-center center-block">&lt;dev&gt;SomeWhere&lt;ops&gt;</small>
       
@@ -78,7 +78,7 @@
         
         
         <div class="author-image">
-          <img src="http://www.gcuisinier.net//img/gcuisinier.jpg" alt="Author Image" class="img--circle img--headshot element--center">
+          <img src="http://example.org//img/gcuisinier.jpg" alt="Author Image" class="img--circle img--headshot element--center">
         </div>
         
       
@@ -205,8 +205,9 @@ Built with <a href="https://gohugo.io">Hugo</a> ❤️ <a href="https://github.c
   
   
   <div class="post">
-    <p>##Problème
-Sur certains projets, j&rsquo;ai eu l&rsquo;occasion de voir des fichiers de configuration Spring de ce type :</p>
+    <h2 id="problème">Problème</h2>
+
+<p>Sur certains projets, j&rsquo;ai eu l&rsquo;occasion de voir des fichiers de configuration Spring de ce type :</p>
 
 <pre><code class="language-xml">&lt;import resource=&quot;monitoring-environnement1.xml&quot;/&gt;
 &lt;import resource=&quot;monitoring-environnement2.xml&quot;/&gt;
@@ -218,8 +219,9 @@ Si demain, un nouvel environnement devait être ajouté, je vous le donne dans l
 
 <p>Même si cela fonctionne bien, ce n&rsquo;est pas la solution la plus propre : Si le système de monitoring devait être modifié, il faudrait éditer X fichiers, avec le risque d&rsquo;oublier un fichier, ou un valeur&hellip;</p>
 
-<p>##Solution 1 : Créer un namepace dédié au monitoring
-Une première solution possible serait de remplacer ces imports par un namespace dédié au monitoring. Il suffirait dès lors d&rsquo;utiliser une configuration de ce type :</p>
+<h1 id="solution-1-créer-un-namepace-dédié-au-monitoring">#Solution 1 : Créer un namepace dédié au monitoring</h1>
+
+<p>Une première solution possible serait de remplacer ces imports par un namespace dédié au monitoring. Il suffirait dès lors d&rsquo;utiliser une configuration de ce type :</p>
 
 <pre><code class="language-xml">&lt;monitoring:environnement name=&quot;environnement1&quot;/&gt;
 &lt;monitoring:environnement name=&quot;environnement2&quot;/&gt;
@@ -233,9 +235,11 @@ Une première solution possible serait de remplacer ces imports par un namespace
 <li>Le namespace va cacher aux utilisateurs les beans réellement instanciés</li>
 </ul>
 
-<p>Bref, c&rsquo;est déjà mieux mais pas encore suffisamment claire et simple.
-##Solution 2 : Créer un namepace d&rsquo;importation de modèles de configuration
-Afin de répondre à ces problématique, il est possible de créer un namespace beaucoup plus générique. Celui qui permettrait d&rsquo;importer une configuration classique (un modèle), mais en remplaçant certaines variables par des valeurs.</p>
+<p>Bref, c&rsquo;est déjà mieux mais pas encore suffisamment claire et simple.</p>
+
+<h1 id="solution-2-créer-un-namepace-d-importation-de-modèles-de-configuration">#Solution 2 : Créer un namepace d&rsquo;importation de modèles de configuration</h1>
+
+<p>Afin de répondre à ces problématique, il est possible de créer un namespace beaucoup plus générique. Celui qui permettrait d&rsquo;importer une configuration classique (un modèle), mais en remplaçant certaines variables par des valeurs.</p>
 
 <p>Le modèle serait un fichier de configuration Spring tout à fait compréhensible par des habitués de Spring, mais dans laquelle des variables seraient définies :</p>
 
@@ -270,25 +274,22 @@ Afin de répondre à ces problématique, il est possible de créer un namespace 
     &lt;/hikage:import-template&gt;
 </code></pre>
 
-<p>##Conclusion
-Cette solution possède donc plusieurs avantages :
+<h2 id="conclusion">Conclusion</h2>
+
+<p>Cette solution possède donc plusieurs avantages :
 <ul>
     <li>En cas de modification du modèle, un seul fichier devra être modifié.</li>
     <li>Le namespace pourra être utilisé pour différent domaine ( monotoring, etc .. )</li>
     <li>Le modèle sera modifiable par n&rsquo;importe quel développeur connaissant Spring, et tout à fait lisible</li>
 </ul></p>
 
-<p>##Informations
-Ce projet est disponible sous licence Apache 2 sur <a href="http://code.google.com/p/spring-import-template">http://code.google.com/p/spring-import-template/</a></p>
+<h2 id="informations">Informations</h2>
+
+<p>Ce projet est disponible sous licence Apache 2 sur <a href="http://code.google.com/p/spring-import-template">http://code.google.com/p/spring-import-template/</a></p>
   </div>
   
 
 <div class="navigation navigation-single">
-    
-    <a href="/blog/2010/04/critique-apache-maven/" class="navigation-prev">
-      <i aria-hidden="true" class="fa fa-chevron-left"></i>
-      <span class="navigation-tittle">Critique : Apache Maven</span>
-    </a>
     
     
     <a href="/blog/2010/04/cr%C3%A9er-un-namespace-spring/" class="navigation-next">

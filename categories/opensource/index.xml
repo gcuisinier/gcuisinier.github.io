@@ -2,33 +2,52 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Opensource on Gildas Cuisinier</title>
-    <link>http://www.gcuisinier.net/categories/opensource/</link>
+    <link>http://example.org/categories/opensource/</link>
     <description>Recent content in Opensource on Gildas Cuisinier</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>fr-FR</language>
+    <language>en-us</language>
     <lastBuildDate>Thu, 15 Mar 2012 08:00:00 +0100</lastBuildDate>
     
-	<atom:link href="http://www.gcuisinier.net/categories/opensource/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://example.org/categories/opensource/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Présentation de xdt4j</title>
-      <link>http://www.gcuisinier.net/blog/2012/03/pr%C3%A9sentation-de-xdt4j/</link>
+      <link>http://example.org/blog/2012/03/pr%C3%A9sentation-de-xdt4j/</link>
       <pubDate>Thu, 15 Mar 2012 08:00:00 +0100</pubDate>
       
-      <guid>http://www.gcuisinier.net/blog/2012/03/pr%C3%A9sentation-de-xdt4j/</guid>
-      <description>Introduction Chez mon client, nous avons eu un besoin particulier : celui de pouvoir étendre des archetypes Maven. Autrement dit, pouvoir créer un archetype qui se baserait sur un autre, et qui apporterait uniquement le delta de différence.
-Pour certain fichier, nous n&amp;rsquo;avons pas eu le choix, nous avons été obliger de fournir une nouvelle version qui remplacerait la version initiale, par exemple les fichiers binaires tels que les images.</description>
+      <guid>http://example.org/blog/2012/03/pr%C3%A9sentation-de-xdt4j/</guid>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+
+&lt;p&gt;Chez mon client, nous avons eu un besoin particulier : celui de pouvoir étendre des archetypes Maven.
+Autrement dit, pouvoir créer un archetype qui se baserait sur un autre, et qui apporterait uniquement le delta de différence.&lt;/p&gt;
+
+&lt;p&gt;Pour certain fichier, nous n&amp;rsquo;avons pas eu le choix, nous avons été obliger de fournir une nouvelle version qui remplacerait la version initiale, par exemple les fichiers binaires tels que les images.&lt;/p&gt;
+
+&lt;p&gt;Par contre, pour le fichiers XML, et en particulier les fichiers pom.xml ou encore le fichier archetype-metadata.xml, c&amp;rsquo;était plus problématique. En effet, en cas de modification de l&amp;rsquo;un des ces fichiers dans l&amp;rsquo;archetype de base, nous aurions été obligé de copier ceux-ci, et ré-introduire les delta à la main&amp;hellip; ce qui ne serait pas très productifs.&lt;/p&gt;
+
+&lt;p&gt;Partant du fait que ces fichiers sont du XML, il me semblait plus logique de partir du fichier de base et de ne décrire que les transformations à lui apporter. Quand on parle de transformation en XML, on pense tout de suite à XSLT.
+Mais il faut avouer que s&amp;rsquo;il est très puissant, il n&amp;rsquo;est pas forcément le plus simple à appréhender.&lt;/p&gt;
+
+&lt;p&gt;J&amp;rsquo;ai donc cherché des alternatives plus simples. En discutant avec un consultant .Net, celui-ci m&amp;rsquo;a présenté le système qui est utilisé par Microsoft pour gérer les fichiers de configuration de IIS : XML Document Transform.
+J&amp;rsquo;ai tout de suite trouvé cette solution élégante pour répondre à notre problème.&lt;/p&gt;
+
+&lt;p&gt;Par chance, quelqu&amp;rsquo;un a eu la bonne idée de faire une première implémentation OpenSource (&lt;a href=&#34;http://code.google.com/p/xdt/&#34; title=&#34;XDT sur GoogleCode&#34; target=&#34;_blank&#34;&gt;&lt;/a&gt; en se basant sur tout les exemples qu&amp;rsquo;il à trouvé dans la documentation et sur internet.
+Son implémentation se basait sur des spécificités .Net, donc impossible de le porter tel quel en Java.
+Cependant, son jeu de test était assez complet.&lt;/p&gt;
+
+&lt;p&gt;Grâce à celui-ci tests, j&amp;rsquo;ai pu développer en TDD une implémentation en Java : &lt;a href=&#34;https://github.com/hikage/xdt4j&#34; target=&#34;_blank&#34;&gt;xdt4j&lt;/a&gt;.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Projet de modèle de configuration Spring</title>
-      <link>http://www.gcuisinier.net/blog/2010/04/projet-de-mod%C3%A8le-de-configuration-spring/</link>
+      <link>http://example.org/blog/2010/04/projet-de-mod%C3%A8le-de-configuration-spring/</link>
       <pubDate>Thu, 08 Apr 2010 08:00:00 +0100</pubDate>
       
-      <guid>http://www.gcuisinier.net/blog/2010/04/projet-de-mod%C3%A8le-de-configuration-spring/</guid>
-      <description>&lt;p&gt;##Problème
-Sur certains projets, j&amp;rsquo;ai eu l&amp;rsquo;occasion de voir des fichiers de configuration Spring de ce type :&lt;/p&gt;
+      <guid>http://example.org/blog/2010/04/projet-de-mod%C3%A8le-de-configuration-spring/</guid>
+      <description>&lt;h2 id=&#34;problème&#34;&gt;Problème&lt;/h2&gt;
+
+&lt;p&gt;Sur certains projets, j&amp;rsquo;ai eu l&amp;rsquo;occasion de voir des fichiers de configuration Spring de ce type :&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-xml&#34;&gt;&amp;lt;import resource=&amp;quot;monitoring-environnement1.xml&amp;quot;/&amp;gt;
 &amp;lt;import resource=&amp;quot;monitoring-environnement2.xml&amp;quot;/&amp;gt;

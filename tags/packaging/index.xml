@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Packaging on Gildas Cuisinier</title>
-    <link>http://www.gcuisinier.net/tags/packaging/</link>
+    <link>http://example.org/tags/packaging/</link>
     <description>Recent content in Packaging on Gildas Cuisinier</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>fr-FR</language>
+    <language>en-us</language>
     <lastBuildDate>Wed, 11 May 2011 08:00:00 +0100</lastBuildDate>
     
-	<atom:link href="http://www.gcuisinier.net/tags/packaging/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://example.org/tags/packaging/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Tutoriel : Comment créer un DMG</title>
-      <link>http://www.gcuisinier.net/blog/2011/05/tutoriel-comment-cr%C3%A9er-un-dmg/</link>
+      <link>http://example.org/blog/2011/05/tutoriel-comment-cr%C3%A9er-un-dmg/</link>
       <pubDate>Wed, 11 May 2011 08:00:00 +0100</pubDate>
       
-      <guid>http://www.gcuisinier.net/blog/2011/05/tutoriel-comment-cr%C3%A9er-un-dmg/</guid>
+      <guid>http://example.org/blog/2011/05/tutoriel-comment-cr%C3%A9er-un-dmg/</guid>
       <description>&lt;p&gt;Les utilisateurs de Mac utilisent souvent de type de fichier, qui sont en fait des images disques (comme des .iso) qui peuvent être montées et qui apparaitront comme un nouveau disque sous Mac OS X.&lt;/p&gt;
 
 &lt;p&gt;Ce type de fichier est très souvent utilisé sous Mac comme moyen d&amp;rsquo;installer des logiciels.
