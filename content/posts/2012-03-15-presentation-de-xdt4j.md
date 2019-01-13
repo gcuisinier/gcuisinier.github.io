@@ -2,7 +2,6 @@
 layout: post
 date : "2012-03-15T08:00:00+01:00"
 title: Présentation de xdt4j
-description : Présentation de xdt4j, un projet permettant de fusionner des fichiers XML
 categories :
 - Java
 - OpenSource
@@ -29,7 +28,7 @@ Son implémentation se basait sur des spécificités .Net, donc impossible de le
 Cependant, son jeu de test était assez complet.
 
 Grâce à celui-ci tests, j'ai pu développer en TDD une implémentation en Java : <a href="https://github.com/hikage/xdt4j" target="_blank">xdt4j</a>.
-
+<!--more-->
 
 ## Utilisation
 

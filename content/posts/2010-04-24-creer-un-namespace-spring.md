@@ -1,7 +1,6 @@
 ---
 layout: post
 title: Créer un namespace Spring
-description : Comment créer un namespace personnalisé pour Spring
 date: "2010-04-24T08:00:00+01:00"
 
 categories:
@@ -13,8 +12,8 @@ Une des fonctionnalités fort pratique avec Spring est la notion de namespace. C
 Spring en possède plusieurs de bases : jms, jee, scheduling, jdbc, mvc, ...
 
 Cependant, il est tout à fait possible d'en créer des spécifiques à nos propres besoins, et sans trop de difficulté.
-
-##Créer le schéma xml
+<!--more-->
+## Créer le schéma xml
 Lorsqu'on créer un namespace pour Spring, la toute première chose à faire est de définir les éléments de celui-ci.
 Et comme on parle de namespace XML, cela se traduit par un schema XSD.
 
@@ -73,7 +72,7 @@ La XSD complètée sera donc :
 ```
 On enregistre cette classe dans les sources du projets, par exemple dans le package be.hikage.namespaces.schemas.
 
-##Créer un NamespaceHandler
+## Créer un NamespaceHandler
 Une fois le schéma défini, il faut encore dire à Spring comment l'utiliser.
 Pour cela, il faut implémenter un NamespaceHandler, le plus souvent en étendant la classe NamespaceHandlerSupport :
 ```java
@@ -92,7 +91,7 @@ public class TemplateNamespaceHandler extends NamespaceHandlerSupport {
 
 Etendre NamespaceHandlerSupport nécessite d'implémenter une méthode init dans laquelle il est nécessaire de lier les éléments racines (import-template dans notre cas) à un BeanDefinitionParser.
 
-##Créer le BeanDefinitionParser
+## Créer le BeanDefinitionParser
 Les BeanDefinitionParser sont certainements les classes les plus importantes dans la création d'un namespace car ce sont elles qui vont véritablement dire à Spring quel Beans devront être ajoutés dans le contexte.
 
 Dans notre cas, la classe ImportTemplateBeanDefinitionParser va être responable de
@@ -140,7 +139,7 @@ J'ai volontairement simplié le code concernant les méthodes loadTemplateBeans(
 Dans le cas de la méthode loadTemplateBeans, j'utilise la classe XmlBeanDefinitionReader de Spring qui va lire et créer les BeanDefinitions à ma place. Un BeanDefinition est le modèle interne à Spring pour représenter un Bean : son nom, la classe, les variables constructeurs, les propriétés à configurer, ...
 
 
-##Enregistrer le NamespaceHandler et le schéma
+## Enregistrer le NamespaceHandler et le schéma
 Nous avons maintenant notre schéma ainsi que les classes nécessaire pour que Spring puisse traiter correctement un fichier de ce type  :
 
 ```xml
@@ -181,7 +180,7 @@ http://www.hikage.be/schema/import-template/import-template.xsd=be/hikage/spring
 * Valeur : Le chemin de la XSD dans le classpath</li>
 
 
-##Compléments
+## Compléments
 Cela dit, cet exemple est assez basique. Les possibilités d'un namespace sont plus étendue. Il est également possible d'améliorer le schema XSD et le code du BeanDefinitionParser pour mieux s'intégrer dans les IDEs. 
 
 En attendant, pour plus d'informations :

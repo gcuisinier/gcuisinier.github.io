@@ -9,7 +9,7 @@ type: post
 date: "2010-04-08T08:00:00+01:00"
 
 ---
-##Problème
+## Problème
 Sur certains projets, j'ai eu l'occasion de voir des fichiers de configuration Spring de ce type :
 ```xml
 <import resource="monitoring-environnement1.xml"/>
@@ -22,7 +22,7 @@ Si demain, un nouvel environnement devait être ajouté, je vous le donne dans l
 
 Même si cela fonctionne bien, ce n'est pas la solution la plus propre : Si le système de monitoring devait être modifié, il faudrait éditer X fichiers, avec le risque d'oublier un fichier, ou un valeur...
 <!--more-->
-##Solution 1 : Créer un namepace dédié au monitoring
+# #Solution 1 : Créer un namepace dédié au monitoring
 Une première solution possible serait de remplacer ces imports par un namespace dédié au monitoring. Il suffirait dès lors d'utiliser une configuration de ce type :
 ```xml
 <monitoring:environnement name="environnement1"/>
@@ -35,7 +35,7 @@ C'est déjà beaucoup plus propre, mais cette solution n'est pas des plus pratiq
 * Le namespace va cacher aux utilisateurs les beans réellement instanciés
 
 Bref, c'est déjà mieux mais pas encore suffisamment claire et simple.
-##Solution 2 : Créer un namepace d'importation de modèles de configuration
+# #Solution 2 : Créer un namepace d'importation de modèles de configuration
 Afin de répondre à ces problématique, il est possible de créer un namespace beaucoup plus générique. Celui qui permettrait d'importer une configuration classique (un modèle), mais en remplaçant certaines variables par des valeurs.
 
 Le modèle serait un fichier de configuration Spring tout à fait compréhensible par des habitués de Spring, mais dans laquelle des variables seraient définies :
@@ -70,7 +70,7 @@ Ici, <span style="font-family: Consolas, Monaco, 'Courier New', Courier, monosp
         <hikage:variable name="environnement" value="environnement1"/>
     </hikage:import-template>
 ```
-##Conclusion
+## Conclusion
 Cette solution possède donc plusieurs avantages :
 <ul>
 	<li>En cas de modification du modèle, un seul fichier devra être modifié.</li>
@@ -78,6 +78,6 @@ Cette solution possède donc plusieurs avantages :
 	<li>Le modèle sera modifiable par n'importe quel développeur connaissant Spring, et tout à fait lisible</li>
 </ul>
 
-##Informations
+## Informations
 Ce projet est disponible sous licence Apache 2 sur [http://code.google.com/p/spring-import-template/](http://code.google.com/p/spring-import-template)
 

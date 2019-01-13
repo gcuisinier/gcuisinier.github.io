@@ -1,7 +1,6 @@
 ---
 layout: post
 title: "Installer CRaSH sous Mac OS X"
-description : Comment installer CraSH, LE shell pour accèder à une JVM
 date : "2012-04-03T08:00:00+01:00"
 
 comments: true
@@ -9,13 +8,14 @@ categories:
 - OSX
 - Java
 ---
-##CRaSH, c'est quoi ?
+## CRaSH, c'est quoi ?
 Derrière un nom qui ferait fuir n'importe qui, se cache un outil assez prometteur. CRaSH est un projet Open Source, sous licence LGPL, créé par Julien Viet. Et plus exactement un Shell qui permet de se connecter à une JVM et de la contrôler à l'aide de commande développée en Groovy.
 
 Il est assez extensible, mais de base il vient avec des commandes pour JDBC, le logging, les Thread.
 Pour en savoir plus, je vous recommande la lecture de la [documentation](http://julienviet.com/crash/), de regarder [un screencast](http://blog.julienviet.com/2012/04/13/crash-standalone/) ou de parcourir [les slides](http://www.slideshare.net/jviet/crash-12638600) de Julien lors de son quickies à Devoxx France
+<!--more-->
 
-##Comment l'installer ?
+## Comment l'installer ?
 CrAsh est disponible sous la forme d'une [archive tar.gz](http://code.google.com/p/crsh/downloads/detail?name=crsh-1.0.0.tar.gz). Mais sous Mac OS X, il est maintenant possible de l'installer facilement via Homebrew.
 
 Si vous n'avez pas encore installer ce package manager pour Mac OS X, il vous faudra tout d'abord installer

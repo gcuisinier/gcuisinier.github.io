@@ -24,7 +24,7 @@ Mais Devoxx France était pour moi la solution idéale, et je me voyais bien un 
 De retour d'Anvers, l'idée me trotte dans la tête, mais ma présentation sur les nouveautés de Spring 3.0 n'est plus d'actualité... Et je ne maitrise pas d'autre sujet  suffisement pour être prêt dans les temps.
 
 Bref, je me dis que Devoxx France, c’est pas encore pour tout de suite !
-
+<!--more-->
 ## Coup de pouce !
 
 Mais quelques semaines plus tard, SpringSource annonce la sortie de Spring 3.1 !

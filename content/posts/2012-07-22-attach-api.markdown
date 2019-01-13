@@ -1,7 +1,6 @@
 ---
 layout: post
 title: "Attach API"
-description : Introduction à l'Attach API qui permet de venir greffer un Agent Java sur une application déjà lancée.
 date: "2010-07-22T08:00:00+01:00"
 
 comments: true

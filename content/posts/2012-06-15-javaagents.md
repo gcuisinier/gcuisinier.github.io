@@ -1,15 +1,13 @@
-+++
-tags = ["french","java"]
-date = "2012-06-15T08:00:00+01:00"
-draft = false
-scripts = []
-css = []
+---
 
-title = "Les agents Java"
-description = "Introduction au Java Agents"
-lang = "fr"
-shortTitle="javaagents"
-+++
+tags : ["french","java"]
+date : "2012-06-15T08:00:00+01:00"
+draft : false
+
+title : "Les agents Java"
+lang : "fr"
+shortTitle : "javaagents"
+---
 
 
 Les Agents Java ? Pas la moindre idée de ce que c'est ?

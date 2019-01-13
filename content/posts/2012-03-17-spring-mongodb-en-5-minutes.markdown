@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Spring MongoDB en 5 minutes"
-description : Introduction à Spring MongoDB, un projet du portfolio Spring simplifiant les accès à MongoDB
+
 date: "2012-03-17T08:00:00+01:00"
 
 comments: true
@@ -10,7 +10,7 @@ categories:
 - Spring
 ---
 
-##Créer sa base MongoDB
+## Créer sa base MongoDB
 
 Bien qu'il soit assez simple d'installer MongoDB sur un poste de développement, avec l'arrivée du cloud et des SaaS, il est très simple et très rapide d'avoir une instance de Mongo. 
 <a href="https://mongohq.com" target="_blank">MongoHQ</a> offre des solutions d'hébergement de Mongo à la demande, à plusieurs tarifs.
@@ -19,9 +19,9 @@ L'offre <strong>starter</strong> est gratuite, mais apporte une limite de 16 Mo.
 En plus d'héberger l'instance, <a href="https://mongohq.com" target="_blank">MongoHQ</a> offre également une interface graphique très pratique pour parcourir votre base, vos collections et leurs données, ou encore gérer les indexes.
 
 
-##Utiliser Spring Data MongoDB
+## Utiliser Spring Data MongoDB
 
-###Ajout des dépendances
+### Ajout des dépendances
 La première chose à faire est d'ajouter la dépendance vers le projet Spring Mongo.
 Avec un projet Maven, cela se fera très simplement comme ceci :
 
@@ -33,7 +33,7 @@ Avec un projet Maven, cela se fera très simplement comme ceci :
 </dependency>
 ```
 
-###Configuration de Spring Data MongoDB
+### Configuration de Spring Data MongoDB
 Il faut ensuite configurer votre application Spring afin d'y ajouter les beans nécessaires pour utiliser Spring Data MongoDB. Ce dernier fournit une classe de configuration qu'il suffit d'étendre pour configurer le stricte nécessaire :
 
 ``` java
@@ -67,7 +67,7 @@ La deuxième est le nom de la base à utiliser, celui que vous avez fournit à l
 La troisième quand à elle ne soit être surchargée que lorsqu'on utilise des bases sécurisées et donc pour lesquelles il faut s'authentifier.
 Une fois de plus, mongohq offre la possibilité de gérer les utilisateurs et leur mot de passe via l'interface web.
 
-###Enregistrer et lire des documents
+### Enregistrer et lire des documents
 
 Une fois la configuration préparée, il est possible d'injecter un bean de type <code>MongoTemplate</code>.
 Celui ci propose une série de méthodes pour accéder à MongoDB.
