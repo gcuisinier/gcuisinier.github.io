@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Conference on Gildas Cuisinier</title>
+    <link>http://www.gcuisinier.net/tags/conference/</link>
+    <description>Recent content in Conference on Gildas Cuisinier</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>fr-FR</language>
+    <lastBuildDate>Mon, 30 Apr 2012 08:00:00 +0100</lastBuildDate>
+    
+	<atom:link href="http://www.gcuisinier.net/tags/conference/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Mon retour sur Devoxx France, en tant que conférencier</title>
+      <link>http://www.gcuisinier.net/blog/2012/04/mon-retour-sur-devoxx-france-en-tant-que-conf%C3%A9rencier/</link>
+      <pubDate>Mon, 30 Apr 2012 08:00:00 +0100</pubDate>
+      
+      <guid>http://www.gcuisinier.net/blog/2012/04/mon-retour-sur-devoxx-france-en-tant-que-conf%C3%A9rencier/</guid>
+      <description>Le début du rêve L’histoire a commencé à Anvers, durant une keynote à Devoxx de Stefan Janssens où il lance une bombe atomique. En collaboration avec l’équipe du ParisJUG, ils ont commencé à préparer en secret LA conférence de France : Devoxx France.
+Cette conférence reprend les mêmes concepts de l’original, mais en plus court : 1 jour d’université, 2 jours de conférences. Mais France oblige, une majorité de présentation seront en français.</description>
+    </item>
+    
+  </channel>
+</rss>

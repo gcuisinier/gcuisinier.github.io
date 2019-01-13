@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="fr-FR">
+    
+    
+
+
+    <head>
+    <link href="https://gmpg.org/xfn/11" rel="profile">
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta http-equiv="Cache-Control" content="public" />
+<!-- Enable responsiveness on mobile devices -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="generator" content="Hugo 0.53" />
+
+    
+    
+    
+
+<title>Critique : Apache Maven • Gildas Cuisinier</title>
+
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Critique : Apache Maven"/>
+<meta name="twitter:description" content="Critique du livre Apache Maven de Nicolas de Loof et Arnaud Héritier"/>
+
+<meta property="og:title" content="Critique : Apache Maven" />
+<meta property="og:description" content="Critique du livre Apache Maven de Nicolas de Loof et Arnaud Héritier" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://www.gcuisinier.net/blog/2010/04/critique-apache-maven/" /><meta property="article:published_time" content="2010-04-06T08:00:00&#43;01:00"/>
+<meta property="article:modified_time" content="2010-04-06T08:00:00&#43;01:00"/>
+
+
+    
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/scss/hyde-hyde.7072060d53bb48055d87c305b463893090a2798b2a73a12efc03502e8e2a245d.css" >
+
+
+<link rel="stylesheet" href="/scss/print.5aa4005c7565ec5b66c62cd79012c5cad1081f3332793145a8d3861a26391697.css"  media="print">
+
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <!-- Icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+    <link rel="shortcut icon" href="/favicon.png">
+    
+
+</head>
+
+
+    <body class=" ">
+    
+<div class="sidebar">
+  <div class="container  vertical-center">
+    <div class="sidebar-about">
+      <span class="site__title">
+        <a href="http://www.gcuisinier.net/">Gildas Cuisinier</a>
+      </span>
+      <small class="text-center center-block">&lt;dev&gt;SomeWhere&lt;ops&gt;</small>
+      
+      
+        
+        
+        
+        <div class="author-image">
+          <img src="http://www.gcuisinier.net//img/gcuisinier.jpg" alt="Author Image" class="img--circle img--headshot element--center">
+        </div>
+        
+      
+      
+      <p class="site__description">
+        
+      </p>
+    </div>
+    <div class="collapsible-menu">
+      <input type="checkbox" id="menuToggle">
+      <label for="menuToggle">Gildas Cuisinier</label>
+      <div class="menu-content">
+        <div>
+	<ul class="sidebar-nav">
+		 
+		 
+			 
+				<li>
+					<a href="/about/">
+						<span>About</span>
+					</a>
+				</li>
+			 
+		 
+			 
+				<li>
+					<a href="/posts/">
+						<span>Blog</span>
+					</a>
+				</li>
+			 
+		 
+			 
+				<li>
+					<a href="/portfolio/">
+						<span>Projects</span>
+					</a>
+				</li>
+			 
+		
+		</li>
+	</ul>
+</div>
+
+        <section class="social">
+	
+	<a href="https://twitter.com/gcuisinier" rel="me"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a>
+	
+	
+	
+	<a href="https://github.com/gcuisinier" rel="me"><i class="fab fa-github fa-lg" aria-hidden="true"></i></a>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<a href="https://keybase.io/gcuisinier" rel="me"><i class="fab fa-keybase fa-lg" aria-hidden="true"></i></a>
+	
+	
+	
+	&nbsp;<a href="https://about.me/gcuisinier"><i class="fas fa-address-card fa-lg" aria-hidden="true"></i></a>
+	
+	
+	&nbsp;<a href="https://hub.docker.com/u/gcuisinier"><i class="fab fa-docker fa-lg" aria-hidden="true"></i></a>
+	
+	
+	
+	
+	<a href="mailto:contact%20[at]%20gcuisinier.net" rel="me"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a>
+	
+</section>
+
+      </div>
+    </div>
+    
+
+<div class="builtwith">
+Built with <a href="https://gohugo.io">Hugo</a> ❤️ <a href="https://github.com/htr3n/hyde-hyde">hyde-hyde</a>.
+</div>
+
+
+  </div>
+</div>
+
+        <div class="content container">
+            
+    <article>
+  <header>
+    <h1>Critique : Apache Maven</h1>
+    
+    
+<div class="post__meta">
+    
+    
+      <i class="fas fa-calendar-alt"></i> Apr 06, 2010
+    
+    
+    
+      
+      
+          in
+          
+          
+              <a class="badge badge-category" href="/categories/java">JAVA</a>
+              •
+          
+              <a class="badge badge-category" href="/categories/livres">LIVRES</a>
+              
+          
+      
+    
+    
+    
+    <br/>
+    <i class="fas fa-clock"></i> 4 min read
+</div>
+
+
+  </header>
+  
+  
+  <div class="post">
+    <p><a href="http://blog.hikage.be/wp-content/uploads/2010/03/ApacheMaven.gif"><img class="size-medium wp-image-28" title="Apache Maven" src="http://blog.hikage.be/wp-content/uploads/2010/03/ApacheMaven-243x300.gif" alt="Apache Maven" width="243" height="300" /></a></p>
+
+<p>#Informations</p>
+
+<ul>
+<li>Public : Débutants / Initiés</li>
+<li>ISBN : <a href="http://www.amazon.fr/Apache-Maven-Nicolas-loof/dp/274402337X/">274402337X</a> / <a href="http://www.amazon.fr/Apache-Maven-Nicolas-loof/dp/274402337X/">978-2744023378</a></li>
+<li>Prix Amazon : 30,39 €</li>
+</ul>
+
+<p>#Sommaire
+* Premiers pas avec Maven
+    * Introduction
+    * Au-delà de java.lang
+    * Un peu plus que compiler
+    * Mettre en place des tests unitaires
+    * Mettre en place des tests d’intégration
+* Maven en entreprise
+    * Gestion avancée des dépendances
+    * Quand le projet devient trop lourd
+    * Maven et JEE
+    * Maven et les IDE
+    * Le jour J : la livraison
+* Encore un peu plus loin avec Maven
+    * Utiliser un outil non supporté
+    * L’assurance qualité
+    * Respecter un format de distribution
+    * Un nouveau projet démarre
+    * Avons-nous fait le bon choix
+    * Nos recommandations
+    * Épilogue
+    * Lexique</p>
+
+<p>#Résumé de l&rsquo;éditeur
+Maven, l&rsquo;outil open-source de gestion et d&rsquo;automatisation de développement Java, a le vent en poupe. Les raisons : il systématise, rationalise et simplifie le développement collaboratif de projets Java, faisant gagner aux entreprises comme aux développeurs du temps et de l&rsquo;argent !</p>
+
+<p>Les auteurs, membres de l&rsquo;équipe de développement Maven, aidés par toute la communauté francophone, ont imaginé de présenter Maven 2 sous un angle original et didactique, à travers un projet fictif, inspiré de leurs expériences sur le terrain, dont ils détaillent toutes les phases successives. Ce projet évolue au fil des besoins et de la contribution de développeurs aux profils différents, vous familiarisant avec les concepts fondamentaux de Maven et leur mise en œuvre pratique, mais aussi avec les fonctionnalités plus avancées. Vous profitez également des recommandations et bonnes pratiques pour optimiser votre utilisation de Maven.
+Vous découvrez ainsi de manière ludique et grâce à des exemples concrets le potentiel de Maven, et tous les avantages qu&rsquo;il peut apporter à vos propres projets.
+#Ma critique
+##La forme
+e livre est une vraie merveille au niveau de la présentation. Il se démarque clairement de la plupart des livres d&rsquo;informatique que j&rsquo;ai pu lire. Contrairement à ceux-ci (qui sont beaucoup plus formels, présentant de manière tout à fait neutre leur sujet) Apache Maven est beaucoup plus vivant et dynamique.</p>
+
+<p>Ici, le livre est écrit comme une retranscription de la vie d&rsquo;une équipe qui a choisi Maven. Nous avons droit à une dose d&rsquo;humour, mais aussi à des débats où chacun défend son point de vue.
+Et le résultat est étonnant, car il nous donne l&rsquo;impression de vivre cette aventure avec eux, nous donnant envie de continuer d&rsquo;avancer dans le livre sans attendre.
+##Le contenu
+Du point de vue du contenu, Apache Maven couvre les fonctionnalités les plus importantes et/ou les plus intéressantes de Maven, le tout réparti en trois parties :
+###Premiers pas avec Maven
+Dans cette partie, c&rsquo;est tout d&rsquo;abord le choix de Maven face à d&rsquo;autres outils similaires qui est introduit. Sa force principale est les conventions apportées car elles permettent à n&rsquo;importe quel développeur connaissant Maven de retrouver ses repères rapidement sur n&rsquo;importe quel projet basé sur Maven.</p>
+
+<p>Dans cette partie on découvre également la gestion de dépendances, les premiers plug-ins et comment générer des livrables.
+###Maven en entreprise
+Dans cette seconde partie, l&rsquo;intégration de Maven dans les trois plus importants IDE (Eclipse, Netbeans et Idea)
+est présentée, le tout sous la forme d&rsquo;un débat, dont la conclusion est particulièrement intéressante ! La notion de dépôt d&rsquo;entreprise est également introduite, permettant de réduire considérablement la bande passante vers Internet, mais également d&rsquo;avoir une gestion plus fine de ce qui est permis ou non au sein des projets.</p>
+
+<p>Et pour finir, les auteurs présentent un plug-in permettant de simplifier considérablement la livraison d&rsquo;un livrable (deux commandes !)
+###Encore plus loin avec Maven
+Maven, c&rsquo;est aussi tous ses plug-ins.
+Mais comment faire quand il n&rsquo;en existe aucun qui correspond à nos besoins ? Les auteurs nous montrent qu&rsquo;il n&rsquo;est pas sorcier de créer nos propres plug-ins Maven.</p>
+
+<p>C&rsquo;est ensuite la notion d&rsquo;archétype qui est présentée : ceux-ci sont une espèce de template de projet préconfiguré. Exit le copier-coller d&rsquo;un projet et de renommer à la main les fichiers qui vont bien. Les archétypes proposent une solution beaucoup plus élégante !</p>
+
+<p>Les auteurs terminent finalement par le chapitre certainement le plus intéressant : des best practices basées sur leurs propres expériences
+#Conclusion
+Au final, j&rsquo;ai réellement dévoré ce livre. Je connaissais et utilisais déjà Maven mais sans avoir pris le temps de regarder
+toutes ses possibilités. À la fin de ce livre, j&rsquo;avais qu&rsquo;une seule envie : tester par moi-même ! Je conseille donc vivement ce livre à toute
+personne ne connaissant pas (ou mal) Maven. Par contre pour les très bons connaisseurs, je doute que ce livre soit très intéressant,
+sauf pour convaincre leur management d&rsquo;utiliser Maven.</p>
+  </div>
+  
+
+<div class="navigation navigation-single">
+    
+    
+    <a href="/blog/2010/04/projet-de-mod%C3%A8le-de-configuration-spring/" class="navigation-next">
+      <span class="navigation-tittle">Projet de modèle de configuration Spring</span>
+      <i aria-hidden="true" class="fa fa-chevron-right"></i>
+    </a>
+    
+</div>
+
+
+  
+
+  
+    
+
+
+</article>
+
+
+        </div>
+        
+    
+<script defer src="https://use.fontawesome.com/releases/v5.5.0/js/all.js" integrity="sha384-GqVMZRt5Gn7tB9D9q7ONtcp4gtHIUEW/yG7h98J7IpE3kpi+srfFyyB/04OV6pG0" crossorigin="anonymous"></script>
+
+
+    
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/highlight.min.js"></script>
+        
+    
+    <script type="text/javascript">
+        
+        hljs.initHighlightingOnLoad();
+    </script>
+    
+
+
+
+
+    
+
+
+
+    </body>
+</html>

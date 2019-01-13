@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Xml on Gildas Cuisinier</title>
+    <link>http://www.gcuisinier.net/categories/xml/</link>
+    <description>Recent content in Xml on Gildas Cuisinier</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>fr-FR</language>
+    <lastBuildDate>Thu, 15 Mar 2012 08:00:00 +0100</lastBuildDate>
+    
+	<atom:link href="http://www.gcuisinier.net/categories/xml/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Présentation de xdt4j</title>
+      <link>http://www.gcuisinier.net/blog/2012/03/pr%C3%A9sentation-de-xdt4j/</link>
+      <pubDate>Thu, 15 Mar 2012 08:00:00 +0100</pubDate>
+      
+      <guid>http://www.gcuisinier.net/blog/2012/03/pr%C3%A9sentation-de-xdt4j/</guid>
+      <description>Introduction Chez mon client, nous avons eu un besoin particulier : celui de pouvoir étendre des archetypes Maven. Autrement dit, pouvoir créer un archetype qui se baserait sur un autre, et qui apporterait uniquement le delta de différence.
+Pour certain fichier, nous n&amp;rsquo;avons pas eu le choix, nous avons été obliger de fournir une nouvelle version qui remplacerait la version initiale, par exemple les fichiers binaires tels que les images.</description>
+    </item>
+    
+    <item>
+      <title>Créer un namespace Spring</title>
+      <link>http://www.gcuisinier.net/blog/2010/04/cr%C3%A9er-un-namespace-spring/</link>
+      <pubDate>Sat, 24 Apr 2010 08:00:00 +0100</pubDate>
+      
+      <guid>http://www.gcuisinier.net/blog/2010/04/cr%C3%A9er-un-namespace-spring/</guid>
+      <description>Une des fonctionnalités fort pratique avec Spring est la notion de namespace. Ceux-ci permettre de simplifier et réduire de manière significative une configuration XML.
+Spring en possède plusieurs de bases : jms, jee, scheduling, jdbc, mvc, &amp;hellip;
+Cependant, il est tout à fait possible d&amp;rsquo;en créer des spécifiques à nos propres besoins, et sans trop de difficulté.
+##Créer le schéma xml Lorsqu&amp;rsquo;on créer un namespace pour Spring, la toute première chose à faire est de définir les éléments de celui-ci.</description>
+    </item>
+    
+  </channel>
+</rss>
