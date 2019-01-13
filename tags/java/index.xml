@@ -2,18 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Java on Gildas Cuisinier</title>
-    <link>https://gcuisinier.github.io/tags/java/index.xml</link>
+    <link>http://example.org/tags/java/</link>
     <description>Recent content in Java on Gildas Cuisinier</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <atom:link href="https://gcuisinier.github.io/tags/java/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 15 Jun 2012 08:00:00 +0100</lastBuildDate>
+    
+	<atom:link href="http://example.org/tags/java/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>Les agents Java</title>
-      <link></link>
+      <link>http://example.org/blog/2012/06/les-agents-java/</link>
       <pubDate>Fri, 15 Jun 2012 08:00:00 +0100</pubDate>
       
-      <guid></guid>
+      <guid>http://example.org/blog/2012/06/les-agents-java/</guid>
       <description>&lt;p&gt;Les Agents Java ? Pas la moindre idée de ce que c&amp;rsquo;est ?
 Mais si, vous en avez certainement déja vu, ils se cachent dans la ligne de commande Java via ce paramètre &lt;code&gt;-javaagent:vers/mon/agent.jar&lt;/code&gt;.&lt;/p&gt;
 
@@ -23,228 +26,17 @@ Mais si, vous en avez certainement déja vu, ils se cachent dans la ligne de com
 &lt;li&gt;AspectJ pour faire du tissage d&amp;rsquo;Aspect au chargement&lt;/li&gt;
 &lt;li&gt;Par des outils de Profiling pour venir ajouter du code permettant de tracer les appels&lt;/li&gt;
 &lt;li&gt;&amp;hellip; et plein d&amp;rsquo;autres&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;getting-started&#34;&gt;Getting started !&lt;/h2&gt;
-
-&lt;p&gt;Pour mieux comprendre comment fonctionne un agent, le plus simple est de tenter d&amp;rsquo;en faire un simple.&lt;/p&gt;
-
-&lt;h3 id=&#34;créer-la-classe-de-l-agent&#34;&gt;Créer la classe de l&amp;rsquo;agent&lt;/h3&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;package be.hikage.agent;
-
-import java.lang.instrument.Instrumentation;
-
-public class AgentSimple {
-
-	public static void premain(String agentArgument, Instrumentation instrumentation){		
-		System.out.println(&amp;quot;Hello, Agent Smith ! [ &amp;quot; + agentArgument + &amp;quot;]&amp;quot;);
-	}
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;La méthode &lt;code&gt;premain(String agentArgument, Instrumentation instrumentation)&lt;/code&gt; est pour un agent ce qu&amp;rsquo;est la méthode &lt;code&gt;main(String &amp;hellip; arguments)&lt;/code&gt; est pour une application Java.&lt;/p&gt;
-
-&lt;p&gt;Cette méthode appelée lors du chargement de l&amp;rsquo;agent, et possède deux arguments :&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;String agentArguments&lt;/code&gt; : Ce sont les options passée en paramètre dans la ligne de commande pour l&amp;rsquo;agent. &lt;code&gt;-javaagent:jarpath=parametre&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;Instrumentation instrumentation&lt;/code&gt;, est un service qui va fournir des méthodes pour modifier les classes.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&#34;préparer-le-packaging&#34;&gt;Préparer le packaging&lt;/h3&gt;
-
-&lt;p&gt;Mais avoir la classe ne suffit pas pour avoir un agent utilisable. En effet, un agent doit obligatoirement un jar, avec un manifest correctement configuré.&lt;/p&gt;
-
-&lt;p&gt;Celui-ci doit contenir une entrée &lt;code&gt;Premain-Class&lt;/code&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;Manifest-Version: 1.0
-Premain-Class: be.hikage.agent.AgentSimple
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&#34;tester-l-agent&#34;&gt;Tester l&amp;rsquo;Agent&lt;/h3&gt;
-
-&lt;p&gt;Une fois le &lt;strong&gt;Jar&lt;/strong&gt; prêt, il faut le tester. Pour cela créer un petit programme simple :&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;public class TestMain {
-
-	public static void main(String[] args) {
-		System.out.println(&amp;quot;Mon Programme&amp;quot;);
-	}
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Et lançons celui-ci en fournissant l&amp;rsquo;agent :&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;$ java -javaagent:AgentSimple.jar=&amp;quot;Mes paramètres&amp;quot; be.hikage.agent.TestMain
-Hello, Agent Smith ! [ Mes paramètres]
-Mon Programme
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;On remarque que l&amp;rsquo;agent est bien lancé avant l&amp;rsquo;application, et qu&amp;rsquo;il a bien reçu les paramètres que l&amp;rsquo;on lui a fourni.&lt;/p&gt;
-
-&lt;h2 id=&#34;interception-des-chargements-de-classes&#34;&gt;Interception des chargements de classes&lt;/h2&gt;
-
-&lt;p&gt;Voyons maintenant à quoi sert le deuxième paramètre fourni à la méthode &lt;em&gt;Premain&lt;/em&gt; : Instrumentation.
-La principale fonctionnalité de celui-ci est de permettre d&amp;rsquo;enregistrer un &lt;em&gt;ClassFileTransformer&lt;/em&gt;. Cette interface oblige à implémenter une unique méthode :&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;byte[]
-    transform(  ClassLoader         loader,
-                String              className,
-                Class            classBeingRedefined,
-                ProtectionDomain    protectionDomain,
-                byte[]              classfileBuffer)
-        throws IllegalClassFormatException;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Le premier paramètre étant le classloader impliqué pour le chargement de la classe. Les deux suivant, le nom de la classe et l&amp;rsquo;instance de Class représentant la classe en train d&amp;rsquo;être chargée.
-Le dernier est le bytecode brut de la classe, sous la forme d&amp;rsquo;un tableau de bytes.&lt;/p&gt;
-
-&lt;p&gt;Modifions maintenant notre agent pour afficher les classes en cours de chargement :&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;package be.hikage.agent;
-
-import java.lang.instrument.ClassFileTransformer;
-import java.lang.instrument.IllegalClassFormatException;
-import java.lang.instrument.Instrumentation;
-import java.security.ProtectionDomain;
-
-public class AgentSimple {
-
-	public static void premain(String agentArgument, Instrumentation instrumentation){		
-		System.out.println(&amp;quot;Hello, Agent Smith ! [ &amp;quot; + agentArgument + &amp;quot;]&amp;quot;);
-
-        instrumentation.addTransformer( new ClassFileTransformer() {
-            @Override
-            public byte[] transform(ClassLoader loader, String className, Class&amp;lt;?&amp;gt; classBeingRedefined, ProtectionDomain protectionDomain, byte[] classfileBuffer) throws IllegalClassFormatException {
-                System.out.println(&amp;quot;Tu es en train de charger la classe :&amp;quot; + className);
-                return classfileBuffer;
-            }
-        });
-	}
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Le résultat sera le suivant :&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;Hello, Agent Smith ! [ Mes paramètres]
-Tu es en train de charger la classe : sun/launcher/LauncherHelper
-Tu es en train de charger la classe : java/lang/Enum
-Tu es en train de charger la classe : be/hikage/agent/TestMain
-Tu es en train de charger la classe : java/lang/Void
-Mon Programme
-Tu es en train de charger la classe : java/lang/Shutdown
-Tu es en train de charger la classe : java/lang/Shutdown$Lock
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;modification-de-classe&#34;&gt;Modification de classe&lt;/h2&gt;
-
-&lt;p&gt;Passons maintenant la seconde, et tentons de venir modifier les classes en cours de chargement afin d&amp;rsquo;avoir des statistiques sur le nombre d&amp;rsquo;instance.
-Pour cela, il suffit d&amp;rsquo;ajouter un champ statique qui servira de compteur, et de modifier les constructeurs pour y ajouter une incrémentation de celui-ci ainsi que de l&amp;rsquo;afficher dans les logs.&lt;/p&gt;
-
-&lt;p&gt;Pour cela, il faut utiliser un outil de manipulation de bytecode tels que &lt;a href=&#34;http://www.jboss.org/javassist&#34;&gt;Javassist&lt;/a&gt;.
-Voici une implémentation d&amp;rsquo;un ClassFileTransformer possible :&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;package be.hikage.agent;
-
-import javassist.ClassPool;
-import javassist.CtBehavior;
-import javassist.CtClass;
-import javassist.CtField;
-
-import java.lang.instrument.ClassFileTransformer;
-import java.lang.instrument.IllegalClassFormatException;
-import java.security.ProtectionDomain;
-
-public class CountInstanceTransformer implements ClassFileTransformer {
-
-
-    @Override
-    public byte[] transform(ClassLoader loader, String className, Class&amp;lt;?&amp;gt; classBeingRedefined, ProtectionDomain protectionDomain, byte[] classfileBuffer) throws IllegalClassFormatException {
-        return visitClass(className, classBeingRedefined, classfileBuffer);
-
-    }
-
-    private byte[] visitClass(String className, Class&amp;lt;?&amp;gt; classBeingRedefined, byte[] classfileBuffer) {
-        ClassPool pool = ClassPool.getDefault();
-        CtClass cl = null;
-        try {
-            cl = pool.makeClass(new java.io.ByteArrayInputStream(classfileBuffer));
-            if (cl.isInterface() == false) {
-
-                // Ajout d&#39;un champ static dans la classe
-                CtField field = CtField.make(&amp;quot;private static long _instanceCount;&amp;quot;, cl);
-
-                cl.addField(field);
-
-                CtBehavior[] constructors = cl.getDeclaredConstructors();
-                for (int i = 0; i &amp;lt; constructors.length; i++) {
-                    // On incrémente le compteur et on l&#39;affiche
-                    constructors[i].insertAfter(&amp;quot;_instanceCount++;&amp;quot;);
-                    constructors[i].insertAfter(&amp;quot;System.out.println(\&amp;quot;&amp;quot; + className + &amp;quot; : \&amp;quot; + _instanceCount);&amp;quot;);
-
-
-                }
-
-                // Génération du bytecode modifié
-                classfileBuffer = cl.toBytecode();
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
-
-        } finally {
-            if (cl != null) {
-                cl.detach();
-            }
-        }
-        return classfileBuffer;
-    }
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Et un petit programme de tests :&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;public class TestMain {
-
-	public static void main(String[] args) {
-		System.out.println(&amp;quot;Mon Programme&amp;quot;);
-        List test = new ArrayList();
-        test.add(new MonObject()) ;
-        test.add(new MonObject()) ;
-        test.add(new MonObject()) ;
-        test.add(new MonObject()) ;
-	}
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Le lancement de l&amp;rsquo;agent se fait de la même manière qu&amp;rsquo;auparavant. Cependant, celui-ci apporte une dépendance supplémentaire, Javassist, au runtime.
-Il faut donc que celui-ci soit disponible dans le classpath :&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;$ java -classpath &amp;quot;path/to/javassist-3.14.0-GA.jar:./&amp;quot; -javaagent:AgentSimple.jar=&amp;quot;Mes paramètres&amp;quot; be.hikage.agent.TestMain
-Hello, Agent Smith ! [ Mes paramètres]
-java/lang/Enum : 1
-sun/launcher/LauncherHelper : 1
-Mon Programme
-be/hikage/agent/MonObject : 1
-be/hikage/agent/MonObject : 2
-be/hikage/agent/MonObject : 3
-be/hikage/agent/MonObject : 4
-java/lang/Shutdown$Lock : 1
-java/lang/Shutdown$Lock : 2
-java/lang/Shutdown$Lock : 3
-java/lang/Shutdown$Lock : 4
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h1 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h1&gt;
-
-&lt;p&gt;Les Agents Java sont assez simple à mettre en place, et les possibilités sont assez nombreuses.
-Cependant, cela nécessite d&amp;rsquo;avoir déclarer celui-ci au démarrage de l&amp;rsquo;application.&lt;/p&gt;
-
-&lt;p&gt;Et parfois, on aimerait avoir la possibilité d&amp;rsquo;activer un agent plus tard, au besoin.
-Pour cela, il existe une API, l&amp;rsquo;Attach API.
-Celle-ci fera l&amp;rsquo;objet d&amp;rsquo;un prochain article.&lt;/p&gt;</description>
+&lt;/ul&gt;</description>
+    </item>
+    
+    <item>
+      <title>Mon retour sur Devoxx France, en tant que conférencier</title>
+      <link>http://example.org/blog/2012/04/mon-retour-sur-devoxx-france-en-tant-que-conf%C3%A9rencier/</link>
+      <pubDate>Mon, 30 Apr 2012 08:00:00 +0100</pubDate>
+      
+      <guid>http://example.org/blog/2012/04/mon-retour-sur-devoxx-france-en-tant-que-conf%C3%A9rencier/</guid>
+      <description>Le début du rêve L’histoire a commencé à Anvers, durant une keynote à Devoxx de Stefan Janssens où il lance une bombe atomique. En collaboration avec l’équipe du ParisJUG, ils ont commencé à préparer en secret LA conférence de France : Devoxx France.
+Cette conférence reprend les mêmes concepts de l’original, mais en plus court : 1 jour d’université, 2 jours de conférences. Mais France oblige, une majorité de présentation seront en français.</description>
     </item>
     
   </channel>

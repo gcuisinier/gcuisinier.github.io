@@ -1,44 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Gildas Cuisinier</title>
-    <link>http://example.org/</link>
-    <description>Recent content on Gildas Cuisinier</description>
+    <title>Posts on Gildas Cuisinier</title>
+    <link>http://example.org/posts/</link>
+    <description>Recent content in Posts on Gildas Cuisinier</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 01 Sep 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 15 Jun 2012 08:00:00 +0100</lastBuildDate>
     
-	<atom:link href="http://example.org/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://example.org/posts/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>Les Archers Arlonais</title>
-      <link>http://example.org/portfolio/les-archers-arlonais/</link>
-      <pubDate>Sat, 01 Sep 2018 00:00:00 +0000</pubDate>
-      
-      <guid>http://example.org/portfolio/les-archers-arlonais/</guid>
-      <description>Création du logo du club de tir des Archers Arlonais</description>
-    </item>
-    
-    <item>
-      <title>jEnv</title>
-      <link>http://example.org/portfolio/jenv/</link>
-      <pubDate>Tue, 02 Jan 2018 00:00:00 +0000</pubDate>
-      
-      <guid>http://example.org/portfolio/jenv/</guid>
-      <description>When you work with multiple JDK version, you probably have to change JAVA_HOME frequently. jEnv is a solution to help you !
-It allows you to configure which version to use for a specific folder, and jEnv will change JAVA_HOME each time you change of directory.</description>
-    </item>
-    
-    <item>
-      <title>About Me</title>
-      <link>http://example.org/about/</link>
-      <pubDate>Wed, 01 Mar 2017 10:47:53 +0100</pubDate>
-      
-      <guid>http://example.org/about/</guid>
-      <description>Software Engineer I have been a professional developer since 2006 after graduating with a Bacherlor degree from Haute Ecole Rennequin Sualem à Seraing (INPRES). I mainly develop in Java, and I quickly find a real interest in the development of framework or development tools to improve the quality and the development speed.
- I am currently Software Engineer at Banque Internationale à Luxembourg, where I am in charge of the software factory.</description>
-    </item>
     
     <item>
       <title>Les agents Java</title>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Livres on Gildas Cuisinier</title>
+    <link>http://example.org/categories/livres/</link>
+    <description>Recent content in Livres on Gildas Cuisinier</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 06 Apr 2010 08:00:00 +0100</lastBuildDate>
+    
+	<atom:link href="http://example.org/categories/livres/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Critique : Apache Maven</title>
+      <link>http://example.org/blog/2010/04/critique-apache-maven/</link>
+      <pubDate>Tue, 06 Apr 2010 08:00:00 +0100</pubDate>
+      
+      <guid>http://example.org/blog/2010/04/critique-apache-maven/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;http://blog.hikage.be/wp-content/uploads/2010/03/ApacheMaven.gif&#34;&gt;&lt;img class=&#34;size-medium wp-image-28&#34; title=&#34;Apache Maven&#34; src=&#34;http://blog.hikage.be/wp-content/uploads/2010/03/ApacheMaven-243x300.gif&#34; alt=&#34;Apache Maven&#34; width=&#34;243&#34; height=&#34;300&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;#Informations&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Public : Débutants / Initiés&lt;/li&gt;
+&lt;li&gt;ISBN : &lt;a href=&#34;http://www.amazon.fr/Apache-Maven-Nicolas-loof/dp/274402337X/&#34;&gt;274402337X&lt;/a&gt; / &lt;a href=&#34;http://www.amazon.fr/Apache-Maven-Nicolas-loof/dp/274402337X/&#34;&gt;978-2744023378&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Prix Amazon : 30,39 €&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on Gildas Cuisinier</title>
+    <link>http://example.org/categories/</link>
+    <description>Recent content in Categories on Gildas Cuisinier</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="http://example.org/categories/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Java</title>
+      <link>http://example.org/categories/java/</link>
+      <pubDate>Tue, 03 Apr 2012 08:00:00 +0100</pubDate>
+      
+      <guid>http://example.org/categories/java/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Livres</title>
+      <link>http://example.org/categories/livres/</link>
+      <pubDate>Tue, 06 Apr 2010 08:00:00 +0100</pubDate>
+      
+      <guid>http://example.org/categories/livres/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Opensource</title>
+      <link>http://example.org/categories/opensource/</link>
+      <pubDate>Thu, 15 Mar 2012 08:00:00 +0100</pubDate>
+      
+      <guid>http://example.org/categories/opensource/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Osx</title>
+      <link>http://example.org/categories/osx/</link>
+      <pubDate>Tue, 03 Apr 2012 08:00:00 +0100</pubDate>
+      
+      <guid>http://example.org/categories/osx/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Spring</title>
+      <link>http://example.org/categories/spring/</link>
+      <pubDate>Sat, 17 Mar 2012 08:00:00 +0100</pubDate>
+      
+      <guid>http://example.org/categories/spring/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Xml</title>
+      <link>http://example.org/categories/xml/</link>
+      <pubDate>Thu, 15 Mar 2012 08:00:00 +0100</pubDate>
+      
+      <guid>http://example.org/categories/xml/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
