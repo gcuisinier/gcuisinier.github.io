@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Livres on Gildas Cuisinier</title>
-    <link>http://example.org/categories/livres/</link>
+    <link>http://www.gcuisinier.net/categories/livres/</link>
     <description>Recent content in Livres on Gildas Cuisinier</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
+    <language>fr-FR</language>
     <lastBuildDate>Tue, 06 Apr 2010 08:00:00 +0100</lastBuildDate>
     
-	<atom:link href="http://example.org/categories/livres/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://www.gcuisinier.net/categories/livres/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Critique : Apache Maven</title>
-      <link>http://example.org/blog/2010/04/critique-apache-maven/</link>
+      <link>http://www.gcuisinier.net/blog/2010/04/critique-apache-maven/</link>
       <pubDate>Tue, 06 Apr 2010 08:00:00 +0100</pubDate>
       
-      <guid>http://example.org/blog/2010/04/critique-apache-maven/</guid>
+      <guid>http://www.gcuisinier.net/blog/2010/04/critique-apache-maven/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;http://blog.hikage.be/wp-content/uploads/2010/03/ApacheMaven.gif&#34;&gt;&lt;img class=&#34;size-medium wp-image-28&#34; title=&#34;Apache Maven&#34; src=&#34;http://blog.hikage.be/wp-content/uploads/2010/03/ApacheMaven-243x300.gif&#34; alt=&#34;Apache Maven&#34; width=&#34;243&#34; height=&#34;300&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;#Informations&lt;/p&gt;

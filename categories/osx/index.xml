@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Osx on Gildas Cuisinier</title>
-    <link>http://example.org/categories/osx/</link>
+    <link>http://www.gcuisinier.net/categories/osx/</link>
     <description>Recent content in Osx on Gildas Cuisinier</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
+    <language>fr-FR</language>
     <lastBuildDate>Tue, 03 Apr 2012 08:00:00 +0100</lastBuildDate>
     
-	<atom:link href="http://example.org/categories/osx/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://www.gcuisinier.net/categories/osx/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Installer CRaSH sous Mac OS X</title>
-      <link>http://example.org/blog/2012/04/installer-crash-sous-mac-os-x/</link>
+      <link>http://www.gcuisinier.net/blog/2012/04/installer-crash-sous-mac-os-x/</link>
       <pubDate>Tue, 03 Apr 2012 08:00:00 +0100</pubDate>
       
-      <guid>http://example.org/blog/2012/04/installer-crash-sous-mac-os-x/</guid>
+      <guid>http://www.gcuisinier.net/blog/2012/04/installer-crash-sous-mac-os-x/</guid>
       <description>##CRaSH, c&amp;rsquo;est quoi ? Derrière un nom qui ferait fuir n&amp;rsquo;importe qui, se cache un outil assez prometteur. CRaSH est un projet Open Source, sous licence LGPL, créé par Julien Viet. Et plus exactement un Shell qui permet de se connecter à une JVM et de la contrôler à l&amp;rsquo;aide de commande développée en Groovy.
 Il est assez extensible, mais de base il vient avec des commandes pour JDBC, le logging, les Thread.</description>
     </item>

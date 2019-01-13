@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Spring on Gildas Cuisinier</title>
-    <link>http://example.org/categories/spring/</link>
+    <link>http://www.gcuisinier.net/categories/spring/</link>
     <description>Recent content in Spring on Gildas Cuisinier</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
+    <language>fr-FR</language>
     <lastBuildDate>Sat, 17 Mar 2012 08:00:00 +0100</lastBuildDate>
     
-	<atom:link href="http://example.org/categories/spring/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://www.gcuisinier.net/categories/spring/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Spring MongoDB en 5 minutes</title>
-      <link>http://example.org/blog/2012/03/spring-mongodb-en-5-minutes/</link>
+      <link>http://www.gcuisinier.net/blog/2012/03/spring-mongodb-en-5-minutes/</link>
       <pubDate>Sat, 17 Mar 2012 08:00:00 +0100</pubDate>
       
-      <guid>http://example.org/blog/2012/03/spring-mongodb-en-5-minutes/</guid>
+      <guid>http://www.gcuisinier.net/blog/2012/03/spring-mongodb-en-5-minutes/</guid>
       <description>##Créer sa base MongoDB
 Bien qu&amp;rsquo;il soit assez simple d&amp;rsquo;installer MongoDB sur un poste de développement, avec l&amp;rsquo;arrivée du cloud et des SaaS, il est très simple et très rapide d&amp;rsquo;avoir une instance de Mongo. MongoHQ offre des solutions d&amp;rsquo;hébergement de Mongo à la demande, à plusieurs tarifs. L&amp;rsquo;offre starter est gratuite, mais apporte une limite de 16 Mo.
 En plus d&amp;rsquo;héberger l&amp;rsquo;instance, MongoHQ offre également une interface graphique très pratique pour parcourir votre base, vos collections et leurs données, ou encore gérer les indexes.</description>
@@ -24,10 +24,10 @@ En plus d&amp;rsquo;héberger l&amp;rsquo;instance, MongoHQ offre également une
     
     <item>
       <title>Créer un namespace Spring</title>
-      <link>http://example.org/blog/2010/04/cr%C3%A9er-un-namespace-spring/</link>
+      <link>http://www.gcuisinier.net/blog/2010/04/cr%C3%A9er-un-namespace-spring/</link>
       <pubDate>Sat, 24 Apr 2010 08:00:00 +0100</pubDate>
       
-      <guid>http://example.org/blog/2010/04/cr%C3%A9er-un-namespace-spring/</guid>
+      <guid>http://www.gcuisinier.net/blog/2010/04/cr%C3%A9er-un-namespace-spring/</guid>
       <description>Une des fonctionnalités fort pratique avec Spring est la notion de namespace. Ceux-ci permettre de simplifier et réduire de manière significative une configuration XML.
 Spring en possède plusieurs de bases : jms, jee, scheduling, jdbc, mvc, &amp;hellip;
 Cependant, il est tout à fait possible d&amp;rsquo;en créer des spécifiques à nos propres besoins, et sans trop de difficulté.
@@ -36,10 +36,10 @@ Cependant, il est tout à fait possible d&amp;rsquo;en créer des spécifiques �
     
     <item>
       <title>Projet de modèle de configuration Spring</title>
-      <link>http://example.org/blog/2010/04/projet-de-mod%C3%A8le-de-configuration-spring/</link>
+      <link>http://www.gcuisinier.net/blog/2010/04/projet-de-mod%C3%A8le-de-configuration-spring/</link>
       <pubDate>Thu, 08 Apr 2010 08:00:00 +0100</pubDate>
       
-      <guid>http://example.org/blog/2010/04/projet-de-mod%C3%A8le-de-configuration-spring/</guid>
+      <guid>http://www.gcuisinier.net/blog/2010/04/projet-de-mod%C3%A8le-de-configuration-spring/</guid>
       <description>&lt;p&gt;##Problème
 Sur certains projets, j&amp;rsquo;ai eu l&amp;rsquo;occasion de voir des fichiers de configuration Spring de ce type :&lt;/p&gt;
 

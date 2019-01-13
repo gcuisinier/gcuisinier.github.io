@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Gildas Cuisinier</title>
-    <link>http://example.org/posts/</link>
+    <link>http://www.gcuisinier.net/posts/</link>
     <description>Recent content in Posts on Gildas Cuisinier</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
+    <language>fr-FR</language>
     <lastBuildDate>Fri, 15 Jun 2012 08:00:00 +0100</lastBuildDate>
     
-	<atom:link href="http://example.org/posts/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://www.gcuisinier.net/posts/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Les agents Java</title>
-      <link>http://example.org/blog/2012/06/les-agents-java/</link>
+      <link>http://www.gcuisinier.net/blog/2012/06/les-agents-java/</link>
       <pubDate>Fri, 15 Jun 2012 08:00:00 +0100</pubDate>
       
-      <guid>http://example.org/blog/2012/06/les-agents-java/</guid>
+      <guid>http://www.gcuisinier.net/blog/2012/06/les-agents-java/</guid>
       <description>&lt;p&gt;Les Agents Java ? Pas la moindre idée de ce que c&amp;rsquo;est ?
 Mais si, vous en avez certainement déja vu, ils se cachent dans la ligne de commande Java via ce paramètre &lt;code&gt;-javaagent:vers/mon/agent.jar&lt;/code&gt;.&lt;/p&gt;
 
@@ -31,30 +31,30 @@ Mais si, vous en avez certainement déja vu, ils se cachent dans la ligne de com
     
     <item>
       <title>Mon retour sur Devoxx France, en tant que conférencier</title>
-      <link>http://example.org/blog/2012/04/mon-retour-sur-devoxx-france-en-tant-que-conf%C3%A9rencier/</link>
+      <link>http://www.gcuisinier.net/blog/2012/04/mon-retour-sur-devoxx-france-en-tant-que-conf%C3%A9rencier/</link>
       <pubDate>Mon, 30 Apr 2012 08:00:00 +0100</pubDate>
       
-      <guid>http://example.org/blog/2012/04/mon-retour-sur-devoxx-france-en-tant-que-conf%C3%A9rencier/</guid>
+      <guid>http://www.gcuisinier.net/blog/2012/04/mon-retour-sur-devoxx-france-en-tant-que-conf%C3%A9rencier/</guid>
       <description>Le début du rêve L’histoire a commencé à Anvers, durant une keynote à Devoxx de Stefan Janssens où il lance une bombe atomique. En collaboration avec l’équipe du ParisJUG, ils ont commencé à préparer en secret LA conférence de France : Devoxx France.
 Cette conférence reprend les mêmes concepts de l’original, mais en plus court : 1 jour d’université, 2 jours de conférences. Mais France oblige, une majorité de présentation seront en français.</description>
     </item>
     
     <item>
       <title>Installer CRaSH sous Mac OS X</title>
-      <link>http://example.org/blog/2012/04/installer-crash-sous-mac-os-x/</link>
+      <link>http://www.gcuisinier.net/blog/2012/04/installer-crash-sous-mac-os-x/</link>
       <pubDate>Tue, 03 Apr 2012 08:00:00 +0100</pubDate>
       
-      <guid>http://example.org/blog/2012/04/installer-crash-sous-mac-os-x/</guid>
+      <guid>http://www.gcuisinier.net/blog/2012/04/installer-crash-sous-mac-os-x/</guid>
       <description>##CRaSH, c&amp;rsquo;est quoi ? Derrière un nom qui ferait fuir n&amp;rsquo;importe qui, se cache un outil assez prometteur. CRaSH est un projet Open Source, sous licence LGPL, créé par Julien Viet. Et plus exactement un Shell qui permet de se connecter à une JVM et de la contrôler à l&amp;rsquo;aide de commande développée en Groovy.
 Il est assez extensible, mais de base il vient avec des commandes pour JDBC, le logging, les Thread.</description>
     </item>
     
     <item>
       <title>Spring MongoDB en 5 minutes</title>
-      <link>http://example.org/blog/2012/03/spring-mongodb-en-5-minutes/</link>
+      <link>http://www.gcuisinier.net/blog/2012/03/spring-mongodb-en-5-minutes/</link>
       <pubDate>Sat, 17 Mar 2012 08:00:00 +0100</pubDate>
       
-      <guid>http://example.org/blog/2012/03/spring-mongodb-en-5-minutes/</guid>
+      <guid>http://www.gcuisinier.net/blog/2012/03/spring-mongodb-en-5-minutes/</guid>
       <description>##Créer sa base MongoDB
 Bien qu&amp;rsquo;il soit assez simple d&amp;rsquo;installer MongoDB sur un poste de développement, avec l&amp;rsquo;arrivée du cloud et des SaaS, il est très simple et très rapide d&amp;rsquo;avoir une instance de Mongo. MongoHQ offre des solutions d&amp;rsquo;hébergement de Mongo à la demande, à plusieurs tarifs. L&amp;rsquo;offre starter est gratuite, mais apporte une limite de 16 Mo.
 En plus d&amp;rsquo;héberger l&amp;rsquo;instance, MongoHQ offre également une interface graphique très pratique pour parcourir votre base, vos collections et leurs données, ou encore gérer les indexes.</description>
@@ -62,20 +62,20 @@ En plus d&amp;rsquo;héberger l&amp;rsquo;instance, MongoHQ offre également une
     
     <item>
       <title>Présentation de xdt4j</title>
-      <link>http://example.org/blog/2012/03/pr%C3%A9sentation-de-xdt4j/</link>
+      <link>http://www.gcuisinier.net/blog/2012/03/pr%C3%A9sentation-de-xdt4j/</link>
       <pubDate>Thu, 15 Mar 2012 08:00:00 +0100</pubDate>
       
-      <guid>http://example.org/blog/2012/03/pr%C3%A9sentation-de-xdt4j/</guid>
+      <guid>http://www.gcuisinier.net/blog/2012/03/pr%C3%A9sentation-de-xdt4j/</guid>
       <description>Introduction Chez mon client, nous avons eu un besoin particulier : celui de pouvoir étendre des archetypes Maven. Autrement dit, pouvoir créer un archetype qui se baserait sur un autre, et qui apporterait uniquement le delta de différence.
 Pour certain fichier, nous n&amp;rsquo;avons pas eu le choix, nous avons été obliger de fournir une nouvelle version qui remplacerait la version initiale, par exemple les fichiers binaires tels que les images.</description>
     </item>
     
     <item>
       <title>Tutoriel : Comment créer un DMG</title>
-      <link>http://example.org/blog/2011/05/tutoriel-comment-cr%C3%A9er-un-dmg/</link>
+      <link>http://www.gcuisinier.net/blog/2011/05/tutoriel-comment-cr%C3%A9er-un-dmg/</link>
       <pubDate>Wed, 11 May 2011 08:00:00 +0100</pubDate>
       
-      <guid>http://example.org/blog/2011/05/tutoriel-comment-cr%C3%A9er-un-dmg/</guid>
+      <guid>http://www.gcuisinier.net/blog/2011/05/tutoriel-comment-cr%C3%A9er-un-dmg/</guid>
       <description>&lt;p&gt;Les utilisateurs de Mac utilisent souvent de type de fichier, qui sont en fait des images disques (comme des .iso) qui peuvent être montées et qui apparaitront comme un nouveau disque sous Mac OS X.&lt;/p&gt;
 
 &lt;p&gt;Ce type de fichier est très souvent utilisé sous Mac comme moyen d&amp;rsquo;installer des logiciels.
@@ -84,10 +84,10 @@ Afin de fournir un Bundle pour OpenJDK pour Mac OS X, j&amp;rsquo;ai voulu regar
     
     <item>
       <title>Feedback : Switch PC vers Mac</title>
-      <link>http://example.org/blog/2010/04/feedback-switch-pc-vers-mac/</link>
+      <link>http://www.gcuisinier.net/blog/2010/04/feedback-switch-pc-vers-mac/</link>
       <pubDate>Wed, 28 Apr 2010 08:00:00 +0100</pubDate>
       
-      <guid>http://example.org/blog/2010/04/feedback-switch-pc-vers-mac/</guid>
+      <guid>http://www.gcuisinier.net/blog/2010/04/feedback-switch-pc-vers-mac/</guid>
       <description>&lt;p&gt;##Tentation, doute et ..&lt;/p&gt;
 
 &lt;p&gt;Ceci n&amp;rsquo;est pas un billet de plus pour faire de la propagande Apple, mais juste l&amp;rsquo;envie de partager mon expérience sur le switch de Pc vers Mac.&lt;/p&gt;
@@ -105,10 +105,10 @@ Mais avec un léger regret tout de même.&lt;/p&gt;
     
     <item>
       <title>Créer un namespace Spring</title>
-      <link>http://example.org/blog/2010/04/cr%C3%A9er-un-namespace-spring/</link>
+      <link>http://www.gcuisinier.net/blog/2010/04/cr%C3%A9er-un-namespace-spring/</link>
       <pubDate>Sat, 24 Apr 2010 08:00:00 +0100</pubDate>
       
-      <guid>http://example.org/blog/2010/04/cr%C3%A9er-un-namespace-spring/</guid>
+      <guid>http://www.gcuisinier.net/blog/2010/04/cr%C3%A9er-un-namespace-spring/</guid>
       <description>Une des fonctionnalités fort pratique avec Spring est la notion de namespace. Ceux-ci permettre de simplifier et réduire de manière significative une configuration XML.
 Spring en possède plusieurs de bases : jms, jee, scheduling, jdbc, mvc, &amp;hellip;
 Cependant, il est tout à fait possible d&amp;rsquo;en créer des spécifiques à nos propres besoins, et sans trop de difficulté.
@@ -117,10 +117,10 @@ Cependant, il est tout à fait possible d&amp;rsquo;en créer des spécifiques �
     
     <item>
       <title>Projet de modèle de configuration Spring</title>
-      <link>http://example.org/blog/2010/04/projet-de-mod%C3%A8le-de-configuration-spring/</link>
+      <link>http://www.gcuisinier.net/blog/2010/04/projet-de-mod%C3%A8le-de-configuration-spring/</link>
       <pubDate>Thu, 08 Apr 2010 08:00:00 +0100</pubDate>
       
-      <guid>http://example.org/blog/2010/04/projet-de-mod%C3%A8le-de-configuration-spring/</guid>
+      <guid>http://www.gcuisinier.net/blog/2010/04/projet-de-mod%C3%A8le-de-configuration-spring/</guid>
       <description>&lt;p&gt;##Problème
 Sur certains projets, j&amp;rsquo;ai eu l&amp;rsquo;occasion de voir des fichiers de configuration Spring de ce type :&lt;/p&gt;
 
@@ -137,10 +137,10 @@ Si demain, un nouvel environnement devait être ajouté, je vous le donne dans l
     
     <item>
       <title>Critique : Apache Maven</title>
-      <link>http://example.org/blog/2010/04/critique-apache-maven/</link>
+      <link>http://www.gcuisinier.net/blog/2010/04/critique-apache-maven/</link>
       <pubDate>Tue, 06 Apr 2010 08:00:00 +0100</pubDate>
       
-      <guid>http://example.org/blog/2010/04/critique-apache-maven/</guid>
+      <guid>http://www.gcuisinier.net/blog/2010/04/critique-apache-maven/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;http://blog.hikage.be/wp-content/uploads/2010/03/ApacheMaven.gif&#34;&gt;&lt;img class=&#34;size-medium wp-image-28&#34; title=&#34;Apache Maven&#34; src=&#34;http://blog.hikage.be/wp-content/uploads/2010/03/ApacheMaven-243x300.gif&#34; alt=&#34;Apache Maven&#34; width=&#34;243&#34; height=&#34;300&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;#Informations&lt;/p&gt;

@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Osx on Gildas Cuisinier</title>
-    <link>http://example.org/tags/osx/</link>
+    <link>http://www.gcuisinier.net/tags/osx/</link>
     <description>Recent content in Osx on Gildas Cuisinier</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
+    <language>fr-FR</language>
     <lastBuildDate>Wed, 11 May 2011 08:00:00 +0100</lastBuildDate>
     
-	<atom:link href="http://example.org/tags/osx/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://www.gcuisinier.net/tags/osx/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Tutoriel : Comment créer un DMG</title>
-      <link>http://example.org/blog/2011/05/tutoriel-comment-cr%C3%A9er-un-dmg/</link>
+      <link>http://www.gcuisinier.net/blog/2011/05/tutoriel-comment-cr%C3%A9er-un-dmg/</link>
       <pubDate>Wed, 11 May 2011 08:00:00 +0100</pubDate>
       
-      <guid>http://example.org/blog/2011/05/tutoriel-comment-cr%C3%A9er-un-dmg/</guid>
+      <guid>http://www.gcuisinier.net/blog/2011/05/tutoriel-comment-cr%C3%A9er-un-dmg/</guid>
       <description>&lt;p&gt;Les utilisateurs de Mac utilisent souvent de type de fichier, qui sont en fait des images disques (comme des .iso) qui peuvent être montées et qui apparaitront comme un nouveau disque sous Mac OS X.&lt;/p&gt;
 
 &lt;p&gt;Ce type de fichier est très souvent utilisé sous Mac comme moyen d&amp;rsquo;installer des logiciels.
@@ -25,10 +25,10 @@ Afin de fournir un Bundle pour OpenJDK pour Mac OS X, j&amp;rsquo;ai voulu regar
     
     <item>
       <title>Feedback : Switch PC vers Mac</title>
-      <link>http://example.org/blog/2010/04/feedback-switch-pc-vers-mac/</link>
+      <link>http://www.gcuisinier.net/blog/2010/04/feedback-switch-pc-vers-mac/</link>
       <pubDate>Wed, 28 Apr 2010 08:00:00 +0100</pubDate>
       
-      <guid>http://example.org/blog/2010/04/feedback-switch-pc-vers-mac/</guid>
+      <guid>http://www.gcuisinier.net/blog/2010/04/feedback-switch-pc-vers-mac/</guid>
       <description>&lt;p&gt;##Tentation, doute et ..&lt;/p&gt;
 
 &lt;p&gt;Ceci n&amp;rsquo;est pas un billet de plus pour faire de la propagande Apple, mais juste l&amp;rsquo;envie de partager mon expérience sur le switch de Pc vers Mac.&lt;/p&gt;
