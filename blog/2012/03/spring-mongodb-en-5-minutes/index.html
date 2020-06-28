@@ -11,7 +11,7 @@
 <meta http-equiv="Cache-Control" content="public" />
 <!-- Enable responsiveness on mobile devices -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-<meta name="generator" content="Hugo 0.53" />
+<meta name="generator" content="Hugo 0.73.0" />
 
     
     
@@ -22,15 +22,16 @@
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Spring MongoDB en 5 minutes"/>
-<meta name="twitter:description" content="Créer sa base MongoDB Bien qu&rsquo;il soit assez simple d&rsquo;installer MongoDB sur un poste de développement, avec l&rsquo;arrivée du cloud et des SaaS, il est très simple et très rapide d&rsquo;avoir une instance de Mongo. MongoHQ offre des solutions d&rsquo;hébergement de Mongo à la demande, à plusieurs tarifs. L&rsquo;offre starter est gratuite, mais apporte une limite de 16 Mo.
-En plus d&rsquo;héberger l&rsquo;instance, MongoHQ offre également une interface graphique très pratique pour parcourir votre base, vos collections et leurs données, ou encore gérer les indexes."/>
+<meta name="twitter:description" content="Créer sa base MongoDB Bien qu&rsquo;il soit assez simple d&rsquo;installer MongoDB sur un poste de développement, avec l&rsquo;arrivée du cloud et des SaaS, il est très simple et très rapide d&rsquo;avoir une instance de Mongo. MongoHQoffre des solutions d&rsquo;hébergement de Mongo à la demande, à plusieurs tarifs. L&rsquo;offre starterest gratuite, mais apporte une limite de 16 Mo.
+En plus d&rsquo;héberger l&rsquo;instance, MongoHQoffre également une interface graphique très pratique pour parcourir votre base, vos collections et leurs données, ou encore gérer les indexes."/>
 
 <meta property="og:title" content="Spring MongoDB en 5 minutes" />
-<meta property="og:description" content="Créer sa base MongoDB Bien qu&rsquo;il soit assez simple d&rsquo;installer MongoDB sur un poste de développement, avec l&rsquo;arrivée du cloud et des SaaS, il est très simple et très rapide d&rsquo;avoir une instance de Mongo. MongoHQ offre des solutions d&rsquo;hébergement de Mongo à la demande, à plusieurs tarifs. L&rsquo;offre starter est gratuite, mais apporte une limite de 16 Mo.
-En plus d&rsquo;héberger l&rsquo;instance, MongoHQ offre également une interface graphique très pratique pour parcourir votre base, vos collections et leurs données, ou encore gérer les indexes." />
+<meta property="og:description" content="Créer sa base MongoDB Bien qu&rsquo;il soit assez simple d&rsquo;installer MongoDB sur un poste de développement, avec l&rsquo;arrivée du cloud et des SaaS, il est très simple et très rapide d&rsquo;avoir une instance de Mongo. MongoHQoffre des solutions d&rsquo;hébergement de Mongo à la demande, à plusieurs tarifs. L&rsquo;offre starterest gratuite, mais apporte une limite de 16 Mo.
+En plus d&rsquo;héberger l&rsquo;instance, MongoHQoffre également une interface graphique très pratique pour parcourir votre base, vos collections et leurs données, ou encore gérer les indexes." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://www.gcuisinier.net/blog/2012/03/spring-mongodb-en-5-minutes/" /><meta property="article:published_time" content="2012-03-17T08:00:00&#43;01:00"/>
-<meta property="article:modified_time" content="2012-03-17T08:00:00&#43;01:00"/>
+<meta property="og:url" content="https://www.gcuisinier.net/blog/2012/03/spring-mongodb-en-5-minutes/" />
+<meta property="article:published_time" content="2012-03-17T08:00:00+01:00" />
+<meta property="article:modified_time" content="2012-03-17T08:00:00+01:00" />
 
 
     
@@ -45,13 +46,15 @@ En plus d&rsquo;héberger l&rsquo;instance, MongoHQ offre également une interfa
 
 
 
-<link rel="stylesheet" href="/scss/hyde-hyde.9b47255fe7feae0b7a7befc8c22902cc12b602757ee6a841471810f413cdcf33.css" integrity="sha256-m0clX&#43;f&#43;rgt6e&#43;/IwikCzBK2AnV&#43;5qhBRxgQ9BPNzzM=">
+<link rel="stylesheet" href="/scss/hyde-hyde.f5f1c5a434c1a2dcfe929d5949cf1ac53a53604a0620627df6ef86c959e8c1de.css" integrity="sha256-9fHFpDTBotz&#43;kp1ZSc8axTpTYEoGIGJ99u&#43;GyVnowd4=">
 
 
 <link rel="stylesheet" href="/scss/print.5aa4005c7565ec5b66c62cd79012c5cad1081f3332793145a8d3861a26391697.css" integrity="sha256-WqQAXHVl7FtmxizXkBLFytEIHzMyeTFFqNOGGiY5Fpc=" media="print">
 
 
-<link rel="stylesheet" href="static-css/hover-min.css" media="screen">
+
+
+<link rel="stylesheet" href="/scss/tocbot.5ef07cebc3c477b54270456f149ee02922479bb7555fd344b2c69f953b0e7e5e.css" integrity="sha256-XvB868PEd7VCcEVvFJ7gKSJHm7dVX9NEssaflTsOfl4=">
 
 
 
@@ -62,24 +65,11 @@ En plus d&rsquo;héberger l&rsquo;instance, MongoHQ offre également une interfa
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
     <!-- Icons -->
-    <link rel="apple-touch-icon" sizes="57x57" href="icon/apple-icon-57x57.png">
-<link rel="apple-touch-icon" sizes="60x60" href="icon/apple-icon-60x60.png">
-<link rel="apple-touch-icon" sizes="72x72" href="icon/apple-icon-72x72.png">
-<link rel="apple-touch-icon" sizes="76x76" href="icon/apple-icon-76x76.png">
-<link rel="apple-touch-icon" sizes="114x114" href="icon/apple-icon-114x114.png">
-<link rel="apple-touch-icon" sizes="120x120" href="icon/apple-icon-120x120.png">
-<link rel="apple-touch-icon" sizes="144x144" href="icon/apple-icon-144x144.png">
-<link rel="apple-touch-icon" sizes="152x152" href="icon/apple-icon-152x152.png">
-<link rel="apple-touch-icon" sizes="180x180" href="icon/apple-icon-180x180.png">
-<link rel="icon" type="image/png" sizes="192x192"  href="icon/android-icon-192x192.png">
-<link rel="icon" type="image/png" sizes="32x32" href="icon/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="96x96" href="icon/favicon-96x96.png">
-<link rel="icon" type="image/png" sizes="16x16" href="icon/favicon-16x16.png">
-<link rel="manifest" href="icon/manifest.json">
-<meta name="msapplication-TileColor" content="#ffffff">
-<meta name="msapplication-TileImage" content="icon/ms-icon-144x144.png">
-<meta name="theme-color" content="#ffffff">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+    <link rel="shortcut icon" href="/favicon.png">
     
+    
+<link href="/css-static/hover.css" rel="stylesheet">
 
 </head>
 
@@ -93,13 +83,13 @@ En plus d&rsquo;héberger l&rsquo;instance, MongoHQ offre également une interfa
         <a href="https://www.gcuisinier.net">Gildas Cuisinier</a>
       </span>
       <small class="text-center center-block">&lt;dev&gt;SomeWhere&lt;ops&gt;</small>
-      
+
       
         
         
         
         <div class="author-image hvr-rotate">
-          <img src="https://www.gcuisinier.net/img/gcuisinier.jpg" alt="Author Image" class="img--circle img--headshot element--center">
+          <img src="https://www.gcuisinier.netimg/gcuisinier.jpg" alt="Author Image" class="img--circle img--headshot element--center">
         </div>
         
       
@@ -140,39 +130,36 @@ En plus d&rsquo;héberger l&rsquo;instance, MongoHQ offre également une interfa
 				</li>
 			 
 		
-		</li>
 	</ul>
 </div>
 
         <section class="social">
 	
-	<a href="https://twitter.com/gcuisinier" rel="me"><i class="fab fa-twitter fa-lg hvr-push" aria-hidden="true"></i></a>
+	<a href="https://twitter.com/gcuisinier" rel="me"><i class="fab fa-twitter fa-lg hvr-buzz-out hvr-buzz-out " aria-hidden="true"></i></a>
 	
 	
 	
-	<a href="https://github.com/gcuisinier" rel="me"><i class="fab fa-github fa-lg hvr-push" aria-hidden="true"></i></a>
-	
-	
-	
-	
+	<a href="https://github.com/gcuisinier" rel="me"><i class="fab fa-github fa-lg hvr-buzz-out hvr-buzz-out" aria-hidden="true"></i></a>
 	
 	
 	
 	
 	
-	<a href="https://keybase.io/gcuisinier" rel="me"><i class="fab fa-keybase fa-lg hvr-push" aria-hidden="true"></i></a>
-	
-	
-	
-	&nbsp;<a href="https://about.me/gcuisinier"><i class="fas fa-address-card fa-lg hvr-push" aria-hidden="true"></i></a>
-	
-	
-	&nbsp;<a href="https://hub.docker.com/u/gcuisinier"><i class="fab fa-docker fa-lg hvr-push" aria-hidden="true"></i></a>
 	
 	
 	
 	
-	<a href="mailto:contact%20[at]%20gcuisinier.net" rel="me"><i class="fas fa-envelope fa-lg hvr-push" aria-hidden="true"></i></a>
+	
+	
+	<a href="https://keybase.io/gcuisinier" rel="me"><i class="fab fa-keybase fa-lg hvr-buzz-out" aria-hidden="true"></i></a>
+	
+	
+	
+	&nbsp;<a href="https://about.me/gcuisinier"><i class="fas fa-address-card fa-lg hvr-buzz-out" aria-hidden="true"></i></a>
+	
+	
+	
+	<a href="mailto:contact%20[at]%20gcuisinier.net" rel="me"><i class="fas fa-at fa-lg hvr-buzz-out" aria-hidden="true"></i></a>
 	
 </section>
 
@@ -190,7 +177,8 @@ Built with <a href="https://gohugo.io">Hugo</a> ❤️ <a href="https://github.c
 
         <div class="content container">
             
-    <article>
+    
+<article>
   <header>
     <h1>Spring MongoDB en 5 minutes</h1>
     
@@ -225,95 +213,80 @@ Built with <a href="https://gohugo.io">Hugo</a> ❤️ <a href="https://github.c
   </header>
   
   
+  
+    <div class="toc-wrapper">
+      <input type="checkbox" id="tocToggle">
+      <label for="tocToggle">Table of Content</label>
+      
+        <div class="toc" id="TableOfContents"></div>
+      
+    </div>
+  
+  
   <div class="post">
-    
-
-<h2 id="créer-sa-base-mongodb">Créer sa base MongoDB</h2>
-
+    <h2 id="créer-sa-base-mongodb">Créer sa base MongoDB</h2>
 <p>Bien qu&rsquo;il soit assez simple d&rsquo;installer MongoDB sur un poste de développement, avec l&rsquo;arrivée du cloud et des SaaS, il est très simple et très rapide d&rsquo;avoir une instance de Mongo.
-<a href="https://mongohq.com" target="_blank">MongoHQ</a> offre des solutions d&rsquo;hébergement de Mongo à la demande, à plusieurs tarifs.
-L&rsquo;offre <strong>starter</strong> est gratuite, mais apporte une limite de 16 Mo.</p>
-
-<p>En plus d&rsquo;héberger l&rsquo;instance, <a href="https://mongohq.com" target="_blank">MongoHQ</a> offre également une interface graphique très pratique pour parcourir votre base, vos collections et leurs données, ou encore gérer les indexes.</p>
-
+<!-- raw HTML omitted -->MongoHQ<!-- raw HTML omitted --> offre des solutions d&rsquo;hébergement de Mongo à la demande, à plusieurs tarifs.
+L&rsquo;offre <!-- raw HTML omitted -->starter<!-- raw HTML omitted --> est gratuite, mais apporte une limite de 16 Mo.</p>
+<p>En plus d&rsquo;héberger l&rsquo;instance, <!-- raw HTML omitted -->MongoHQ<!-- raw HTML omitted --> offre également une interface graphique très pratique pour parcourir votre base, vos collections et leurs données, ou encore gérer les indexes.</p>
 <h2 id="utiliser-spring-data-mongodb">Utiliser Spring Data MongoDB</h2>
-
 <h3 id="ajout-des-dépendances">Ajout des dépendances</h3>
-
 <p>La première chose à faire est d&rsquo;ajouter la dépendance vers le projet Spring Mongo.
 Avec un projet Maven, cela se fera très simplement comme ceci :</p>
-
-<pre><code class="language-xml">&lt;dependency&gt;
-	&lt;groupId&gt;org.springframework.data&lt;/groupId&gt;
-	&lt;artifactId&gt;spring-data-mongodb&lt;/artifactId&gt;
-	&lt;version&gt;1.0.1.RELEASE&lt;/version&gt;
-&lt;/dependency&gt;
-</code></pre>
-
-<h3 id="configuration-de-spring-data-mongodb">Configuration de Spring Data MongoDB</h3>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#f92672">&lt;dependency&gt;</span>
+	<span style="color:#f92672">&lt;groupId&gt;</span>org.springframework.data<span style="color:#f92672">&lt;/groupId&gt;</span>
+	<span style="color:#f92672">&lt;artifactId&gt;</span>spring-data-mongodb<span style="color:#f92672">&lt;/artifactId&gt;</span>
+	<span style="color:#f92672">&lt;version&gt;</span>1.0.1.RELEASE<span style="color:#f92672">&lt;/version&gt;</span>
+<span style="color:#f92672">&lt;/dependency&gt;</span>
+</code></pre></div><h3 id="configuration-de-spring-data-mongodb">Configuration de Spring Data MongoDB</h3>
 <p>Il faut ensuite configurer votre application Spring afin d&rsquo;y ajouter les beans nécessaires pour utiliser Spring Data MongoDB. Ce dernier fournit une classe de configuration qu&rsquo;il suffit d&rsquo;étendre pour configurer le stricte nécessaire :</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#a6e22e">@Configuration</span>
+<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">MongoConfig</span> <span style="color:#66d9ef">extends</span> AbstractMongoConfiguration <span style="color:#f92672">{</span>
 
-<pre><code class="language-java">@Configuration
-public class MongoConfig extends AbstractMongoConfiguration {
+    <span style="color:#a6e22e">@Override</span>
+    <span style="color:#66d9ef">public</span> Mongo <span style="color:#a6e22e">mongo</span><span style="color:#f92672">()</span> <span style="color:#66d9ef">throws</span> Exception <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">new</span> Mongo<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;staff.mongohq.com&#34;</span><span style="color:#f92672">,</span> 10073<span style="color:#f92672">);</span>
+    <span style="color:#f92672">}</span>
 
-    @Override
-    public Mongo mongo() throws Exception {
-        return new Mongo(&quot;staff.mongohq.com&quot;, 10073);
-    }
+    <span style="color:#a6e22e">@Override</span>
+    <span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">getDatabaseName</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;spring-data&#34;</span><span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
 
-    @Override
-    public String getDatabaseName() {
-        return &quot;spring-data&quot;;
-    }
-
-    @Override
-    public UserCredentials getUserCredentials() {
-        return new UserCredentials(&quot;spring-data&quot;, &quot;spring-data-passwd&quot;);
-    }
-}
-</code></pre>
-
-<p>Les deux premières méthodes sont obligatoires, la première représente la connexion vers le serveur MongoDB.
+    <span style="color:#a6e22e">@Override</span>
+    <span style="color:#66d9ef">public</span> UserCredentials <span style="color:#a6e22e">getUserCredentials</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">new</span> UserCredentials<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;spring-data&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;spring-data-passwd&#34;</span><span style="color:#f92672">);</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p>Les deux premières méthodes sont obligatoires, la première représente la connexion vers le serveur MongoDB.
 Si vous utilisez mongohq, vous trouverez les informations nécessaires dans l&rsquo;onglet &ldquo;Database infos&rdquo;</p>
-
-<p><img src="http://www.gcuisinier.net/wp-content/uploads/2012/03/Capture-d’écran-2012-03-16-à-23.36.36-300x114.png" alt="Information de connexion à Mongohq" title="Information de connexion à Mongohq" width="300" height="114" class="aligncenter size-medium wp-image-419" /></p>
-
+<p><!-- raw HTML omitted --></p>
 <p>La deuxième est le nom de la base à utiliser, celui que vous avez fournit à la création dans mongohq</p>
-
 <p>La troisième quand à elle ne soit être surchargée que lorsqu&rsquo;on utilise des bases sécurisées et donc pour lesquelles il faut s&rsquo;authentifier.
 Une fois de plus, mongohq offre la possibilité de gérer les utilisateurs et leur mot de passe via l&rsquo;interface web.</p>
-
 <h3 id="enregistrer-et-lire-des-documents">Enregistrer et lire des documents</h3>
-
-<p>Une fois la configuration préparée, il est possible d&rsquo;injecter un bean de type <code>MongoTemplate</code>.
+<p>Une fois la configuration préparée, il est possible d&rsquo;injecter un bean de type <!-- raw HTML omitted -->MongoTemplate<!-- raw HTML omitted -->.
 Celui ci propose une série de méthodes pour accéder à MongoDB.</p>
-
 <p>Par exemple, prenons une classe Contact.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Contact</span> <span style="color:#f92672">{</span>
 
-<pre><code class="language-java">public class Contact {
+    <span style="color:#66d9ef">private</span> String firstname<span style="color:#f92672">;</span>
 
-    private String firstname;
+    <span style="color:#66d9ef">private</span> String lastname<span style="color:#f92672">;</span>
 
-    private String lastname;
+    <span style="color:#66d9ef">private</span> String email<span style="color:#f92672">;</span>
 
-    private String email;
+    <span style="color:#66d9ef">private</span> String phoneNumber<span style="color:#f92672">;</span>
 
-    private String phoneNumber;
+    <span style="color:#75715e">// Getter, Setter &amp; Constructors
+</span><span style="color:#75715e"></span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p>Afin d&rsquo;enregistrer une instance de cette classe, il suffit d&rsquo;utiliser la méthode save(Object) du MongoTemplate :</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">MongoTemplate template <span style="color:#f92672">=</span> context<span style="color:#f92672">.</span><span style="color:#a6e22e">getBean</span><span style="color:#f92672">(</span>MongoTemplate<span style="color:#f92672">.</span><span style="color:#a6e22e">class</span><span style="color:#f92672">);</span>
 
-    // Getter, Setter &amp; Constructors
-
-}
-</code></pre>
-
-<p>Afin d&rsquo;enregistrer une instance de cette classe, il suffit d&rsquo;utiliser la méthode save(Object) du MongoTemplate :</p>
-
-<pre><code class="language-java">MongoTemplate template = context.getBean(MongoTemplate.class);
-
-Contact contact = new Contact(&quot;Gildas&quot;, &quot;Cuisinier&quot;, &quot;gildas.cuisinier[at]domain.com&quot;, &quot;+42 424242&quot;);
-template.save(contact);
-</code></pre>
-
+Contact contact <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Contact<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Gildas&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;Cuisinier&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;gildas.cuisinier[at]domain.com&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;+42 424242&#34;</span><span style="color:#f92672">);</span>
+template<span style="color:#f92672">.</span><span style="color:#a6e22e">save</span><span style="color:#f92672">(</span>contact<span style="color:#f92672">);</span>
+</code></pre></div>
   </div>
   
 
@@ -346,31 +319,34 @@ template.save(contact);
         
     
 
-
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-132470679-1"></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-
-gtag('config', 'UA-132470679-1');
-</script>
-
-
-<script defer src="https://use.fontawesome.com/releases/v5.5.0/js/all.js" integrity="sha384-GqVMZRt5Gn7tB9D9q7ONtcp4gtHIUEW/yG7h98J7IpE3kpi+srfFyyB/04OV6pG0" crossorigin="anonymous"></script>
+<script defer src="https://use.fontawesome.com/releases/v5.11.2/js/all.js" integrity="sha384-b3ua1l97aVGAPEIe48b4TC60WUQbQaGi2jqAWM90y0OZXZeyaTCWtBTKtjW2GXG1" crossorigin="anonymous"></script>
 
 
     
-    
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/highlight.min.js"></script>
         
-    
     <script type="text/javascript">
         
         hljs.initHighlightingOnLoad();
     </script>
     
 
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.js"></script>
+<script type="text/javascript">
+  if (tocbot) {
+    tocbot.init({
+      
+      tocSelector: '.toc',
+      
+      contentSelector: '.post',
+      
+      headingSelector: 'h2, h3, h4',
+      collapseDepth: 4
+    });
+  }
+</script>
 
 
 

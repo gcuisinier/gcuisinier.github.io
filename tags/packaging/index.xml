@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Packaging on Gildas Cuisinier</title>
@@ -18,7 +18,6 @@
       
       <guid>https://www.gcuisinier.net/blog/2011/05/tutoriel-comment-cr%C3%A9er-un-dmg/</guid>
       <description>&lt;p&gt;Les utilisateurs de Mac utilisent souvent de type de fichier, qui sont en fait des images disques (comme des .iso) qui peuvent être montées et qui apparaitront comme un nouveau disque sous Mac OS X.&lt;/p&gt;
-
 &lt;p&gt;Ce type de fichier est très souvent utilisé sous Mac comme moyen d&amp;rsquo;installer des logiciels.
 Afin de fournir un Bundle pour OpenJDK pour Mac OS X, j&amp;rsquo;ai voulu regarder de plus près comment faire pour créer un tel fichier.&lt;/p&gt;</description>
     </item>

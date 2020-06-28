@@ -11,7 +11,7 @@
 <meta http-equiv="Cache-Control" content="public" />
 <!-- Enable responsiveness on mobile devices -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-<meta name="generator" content="Hugo 0.53" />
+<meta name="generator" content="Hugo 0.73.0" />
 
     
     
@@ -23,50 +23,37 @@
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Présentation de xdt4j"/>
 <meta name="twitter:description" content="Introduction
-
 Chez mon client, nous avons eu un besoin particulier : celui de pouvoir étendre des archetypes Maven.
 Autrement dit, pouvoir créer un archetype qui se baserait sur un autre, et qui apporterait uniquement le delta de différence.
-
 Pour certain fichier, nous n&rsquo;avons pas eu le choix, nous avons été obliger de fournir une nouvelle version qui remplacerait la version initiale, par exemple les fichiers binaires tels que les images.
-
 Par contre, pour le fichiers XML, et en particulier les fichiers pom.xml ou encore le fichier archetype-metadata.xml, c&rsquo;était plus problématique. En effet, en cas de modification de l&rsquo;un des ces fichiers dans l&rsquo;archetype de base, nous aurions été obligé de copier ceux-ci, et ré-introduire les delta à la main&hellip; ce qui ne serait pas très productifs.
-
-Partant du fait que ces fichiers sont du XML, il me semblait plus logique de partir du fichier de base et de ne décrire que les transformations à lui apporter. Quand on parle de transformation en XML, on pense tout de suite à XSLT.
+Partant du fait que ces fichiers sont du XML, il me semblait plus logique de partir du fichier de base et de ne décrire que les transformations à lui apporter. Quand on parle de transformation en XML, on pense tout de suite à XSLT. 
 Mais il faut avouer que s&rsquo;il est très puissant, il n&rsquo;est pas forcément le plus simple à appréhender.
-
 J&rsquo;ai donc cherché des alternatives plus simples. En discutant avec un consultant .Net, celui-ci m&rsquo;a présenté le système qui est utilisé par Microsoft pour gérer les fichiers de configuration de IIS : XML Document Transform.
 J&rsquo;ai tout de suite trouvé cette solution élégante pour répondre à notre problème.
-
 Par chance, quelqu&rsquo;un a eu la bonne idée de faire une première implémentation OpenSource ( en se basant sur tout les exemples qu&rsquo;il à trouvé dans la documentation et sur internet.
 Son implémentation se basait sur des spécificités .Net, donc impossible de le porter tel quel en Java.
 Cependant, son jeu de test était assez complet.
-
 Grâce à celui-ci tests, j&rsquo;ai pu développer en TDD une implémentation en Java : xdt4j."/>
 
 <meta property="og:title" content="Présentation de xdt4j" />
 <meta property="og:description" content="Introduction
-
 Chez mon client, nous avons eu un besoin particulier : celui de pouvoir étendre des archetypes Maven.
 Autrement dit, pouvoir créer un archetype qui se baserait sur un autre, et qui apporterait uniquement le delta de différence.
-
 Pour certain fichier, nous n&rsquo;avons pas eu le choix, nous avons été obliger de fournir une nouvelle version qui remplacerait la version initiale, par exemple les fichiers binaires tels que les images.
-
 Par contre, pour le fichiers XML, et en particulier les fichiers pom.xml ou encore le fichier archetype-metadata.xml, c&rsquo;était plus problématique. En effet, en cas de modification de l&rsquo;un des ces fichiers dans l&rsquo;archetype de base, nous aurions été obligé de copier ceux-ci, et ré-introduire les delta à la main&hellip; ce qui ne serait pas très productifs.
-
-Partant du fait que ces fichiers sont du XML, il me semblait plus logique de partir du fichier de base et de ne décrire que les transformations à lui apporter. Quand on parle de transformation en XML, on pense tout de suite à XSLT.
+Partant du fait que ces fichiers sont du XML, il me semblait plus logique de partir du fichier de base et de ne décrire que les transformations à lui apporter. Quand on parle de transformation en XML, on pense tout de suite à XSLT. 
 Mais il faut avouer que s&rsquo;il est très puissant, il n&rsquo;est pas forcément le plus simple à appréhender.
-
 J&rsquo;ai donc cherché des alternatives plus simples. En discutant avec un consultant .Net, celui-ci m&rsquo;a présenté le système qui est utilisé par Microsoft pour gérer les fichiers de configuration de IIS : XML Document Transform.
 J&rsquo;ai tout de suite trouvé cette solution élégante pour répondre à notre problème.
-
 Par chance, quelqu&rsquo;un a eu la bonne idée de faire une première implémentation OpenSource ( en se basant sur tout les exemples qu&rsquo;il à trouvé dans la documentation et sur internet.
 Son implémentation se basait sur des spécificités .Net, donc impossible de le porter tel quel en Java.
 Cependant, son jeu de test était assez complet.
-
 Grâce à celui-ci tests, j&rsquo;ai pu développer en TDD une implémentation en Java : xdt4j." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://www.gcuisinier.net/blog/2012/03/pr%C3%A9sentation-de-xdt4j/" /><meta property="article:published_time" content="2012-03-15T08:00:00&#43;01:00"/>
-<meta property="article:modified_time" content="2012-03-15T08:00:00&#43;01:00"/>
+<meta property="og:url" content="https://www.gcuisinier.net/blog/2012/03/pr%C3%A9sentation-de-xdt4j/" />
+<meta property="article:published_time" content="2012-03-15T08:00:00+01:00" />
+<meta property="article:modified_time" content="2012-03-15T08:00:00+01:00" />
 
 
     
@@ -81,13 +68,15 @@ Grâce à celui-ci tests, j&rsquo;ai pu développer en TDD une implémentation e
 
 
 
-<link rel="stylesheet" href="/scss/hyde-hyde.9b47255fe7feae0b7a7befc8c22902cc12b602757ee6a841471810f413cdcf33.css" integrity="sha256-m0clX&#43;f&#43;rgt6e&#43;/IwikCzBK2AnV&#43;5qhBRxgQ9BPNzzM=">
+<link rel="stylesheet" href="/scss/hyde-hyde.f5f1c5a434c1a2dcfe929d5949cf1ac53a53604a0620627df6ef86c959e8c1de.css" integrity="sha256-9fHFpDTBotz&#43;kp1ZSc8axTpTYEoGIGJ99u&#43;GyVnowd4=">
 
 
 <link rel="stylesheet" href="/scss/print.5aa4005c7565ec5b66c62cd79012c5cad1081f3332793145a8d3861a26391697.css" integrity="sha256-WqQAXHVl7FtmxizXkBLFytEIHzMyeTFFqNOGGiY5Fpc=" media="print">
 
 
-<link rel="stylesheet" href="static-css/hover-min.css" media="screen">
+
+
+<link rel="stylesheet" href="/scss/tocbot.5ef07cebc3c477b54270456f149ee02922479bb7555fd344b2c69f953b0e7e5e.css" integrity="sha256-XvB868PEd7VCcEVvFJ7gKSJHm7dVX9NEssaflTsOfl4=">
 
 
 
@@ -98,24 +87,11 @@ Grâce à celui-ci tests, j&rsquo;ai pu développer en TDD une implémentation e
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
     <!-- Icons -->
-    <link rel="apple-touch-icon" sizes="57x57" href="icon/apple-icon-57x57.png">
-<link rel="apple-touch-icon" sizes="60x60" href="icon/apple-icon-60x60.png">
-<link rel="apple-touch-icon" sizes="72x72" href="icon/apple-icon-72x72.png">
-<link rel="apple-touch-icon" sizes="76x76" href="icon/apple-icon-76x76.png">
-<link rel="apple-touch-icon" sizes="114x114" href="icon/apple-icon-114x114.png">
-<link rel="apple-touch-icon" sizes="120x120" href="icon/apple-icon-120x120.png">
-<link rel="apple-touch-icon" sizes="144x144" href="icon/apple-icon-144x144.png">
-<link rel="apple-touch-icon" sizes="152x152" href="icon/apple-icon-152x152.png">
-<link rel="apple-touch-icon" sizes="180x180" href="icon/apple-icon-180x180.png">
-<link rel="icon" type="image/png" sizes="192x192"  href="icon/android-icon-192x192.png">
-<link rel="icon" type="image/png" sizes="32x32" href="icon/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="96x96" href="icon/favicon-96x96.png">
-<link rel="icon" type="image/png" sizes="16x16" href="icon/favicon-16x16.png">
-<link rel="manifest" href="icon/manifest.json">
-<meta name="msapplication-TileColor" content="#ffffff">
-<meta name="msapplication-TileImage" content="icon/ms-icon-144x144.png">
-<meta name="theme-color" content="#ffffff">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+    <link rel="shortcut icon" href="/favicon.png">
     
+    
+<link href="/css-static/hover.css" rel="stylesheet">
 
 </head>
 
@@ -129,13 +105,13 @@ Grâce à celui-ci tests, j&rsquo;ai pu développer en TDD une implémentation e
         <a href="https://www.gcuisinier.net">Gildas Cuisinier</a>
       </span>
       <small class="text-center center-block">&lt;dev&gt;SomeWhere&lt;ops&gt;</small>
-      
+
       
         
         
         
         <div class="author-image hvr-rotate">
-          <img src="https://www.gcuisinier.net/img/gcuisinier.jpg" alt="Author Image" class="img--circle img--headshot element--center">
+          <img src="https://www.gcuisinier.netimg/gcuisinier.jpg" alt="Author Image" class="img--circle img--headshot element--center">
         </div>
         
       
@@ -176,39 +152,36 @@ Grâce à celui-ci tests, j&rsquo;ai pu développer en TDD une implémentation e
 				</li>
 			 
 		
-		</li>
 	</ul>
 </div>
 
         <section class="social">
 	
-	<a href="https://twitter.com/gcuisinier" rel="me"><i class="fab fa-twitter fa-lg hvr-push" aria-hidden="true"></i></a>
+	<a href="https://twitter.com/gcuisinier" rel="me"><i class="fab fa-twitter fa-lg hvr-buzz-out hvr-buzz-out " aria-hidden="true"></i></a>
 	
 	
 	
-	<a href="https://github.com/gcuisinier" rel="me"><i class="fab fa-github fa-lg hvr-push" aria-hidden="true"></i></a>
-	
-	
-	
-	
+	<a href="https://github.com/gcuisinier" rel="me"><i class="fab fa-github fa-lg hvr-buzz-out hvr-buzz-out" aria-hidden="true"></i></a>
 	
 	
 	
 	
 	
-	<a href="https://keybase.io/gcuisinier" rel="me"><i class="fab fa-keybase fa-lg hvr-push" aria-hidden="true"></i></a>
-	
-	
-	
-	&nbsp;<a href="https://about.me/gcuisinier"><i class="fas fa-address-card fa-lg hvr-push" aria-hidden="true"></i></a>
-	
-	
-	&nbsp;<a href="https://hub.docker.com/u/gcuisinier"><i class="fab fa-docker fa-lg hvr-push" aria-hidden="true"></i></a>
 	
 	
 	
 	
-	<a href="mailto:contact%20[at]%20gcuisinier.net" rel="me"><i class="fas fa-envelope fa-lg hvr-push" aria-hidden="true"></i></a>
+	
+	
+	<a href="https://keybase.io/gcuisinier" rel="me"><i class="fab fa-keybase fa-lg hvr-buzz-out" aria-hidden="true"></i></a>
+	
+	
+	
+	&nbsp;<a href="https://about.me/gcuisinier"><i class="fas fa-address-card fa-lg hvr-buzz-out" aria-hidden="true"></i></a>
+	
+	
+	
+	<a href="mailto:contact%20[at]%20gcuisinier.net" rel="me"><i class="fas fa-at fa-lg hvr-buzz-out" aria-hidden="true"></i></a>
 	
 </section>
 
@@ -226,7 +199,8 @@ Built with <a href="https://gohugo.io">Hugo</a> ❤️ <a href="https://github.c
 
         <div class="content container">
             
-    <article>
+    
+<article>
   <header>
     <h1>Présentation de xdt4j</h1>
     
@@ -264,135 +238,106 @@ Built with <a href="https://gohugo.io">Hugo</a> ❤️ <a href="https://github.c
   </header>
   
   
+  
+    <div class="toc-wrapper">
+      <input type="checkbox" id="tocToggle">
+      <label for="tocToggle">Table of Content</label>
+      
+        <div class="toc" id="TableOfContents"></div>
+      
+    </div>
+  
+  
   <div class="post">
     <h2 id="introduction">Introduction</h2>
-
 <p>Chez mon client, nous avons eu un besoin particulier : celui de pouvoir étendre des archetypes Maven.
 Autrement dit, pouvoir créer un archetype qui se baserait sur un autre, et qui apporterait uniquement le delta de différence.</p>
-
 <p>Pour certain fichier, nous n&rsquo;avons pas eu le choix, nous avons été obliger de fournir une nouvelle version qui remplacerait la version initiale, par exemple les fichiers binaires tels que les images.</p>
-
 <p>Par contre, pour le fichiers XML, et en particulier les fichiers pom.xml ou encore le fichier archetype-metadata.xml, c&rsquo;était plus problématique. En effet, en cas de modification de l&rsquo;un des ces fichiers dans l&rsquo;archetype de base, nous aurions été obligé de copier ceux-ci, et ré-introduire les delta à la main&hellip; ce qui ne serait pas très productifs.</p>
-
-<p>Partant du fait que ces fichiers sont du XML, il me semblait plus logique de partir du fichier de base et de ne décrire que les transformations à lui apporter. Quand on parle de transformation en XML, on pense tout de suite à XSLT.
+<p>Partant du fait que ces fichiers sont du XML, il me semblait plus logique de partir du fichier de base et de ne décrire que les transformations à lui apporter. Quand on parle de transformation en XML, on pense tout de suite à XSLT. 
 Mais il faut avouer que s&rsquo;il est très puissant, il n&rsquo;est pas forcément le plus simple à appréhender.</p>
-
 <p>J&rsquo;ai donc cherché des alternatives plus simples. En discutant avec un consultant .Net, celui-ci m&rsquo;a présenté le système qui est utilisé par Microsoft pour gérer les fichiers de configuration de IIS : XML Document Transform.
 J&rsquo;ai tout de suite trouvé cette solution élégante pour répondre à notre problème.</p>
-
-<p>Par chance, quelqu&rsquo;un a eu la bonne idée de faire une première implémentation OpenSource (<a href="http://code.google.com/p/xdt/" title="XDT sur GoogleCode" target="_blank"></a> en se basant sur tout les exemples qu&rsquo;il à trouvé dans la documentation et sur internet.
+<p>Par chance, quelqu&rsquo;un a eu la bonne idée de faire une première implémentation OpenSource (<!-- raw HTML omitted --><!-- raw HTML omitted --> en se basant sur tout les exemples qu&rsquo;il à trouvé dans la documentation et sur internet.
 Son implémentation se basait sur des spécificités .Net, donc impossible de le porter tel quel en Java.
 Cependant, son jeu de test était assez complet.</p>
-
-<p>Grâce à celui-ci tests, j&rsquo;ai pu développer en TDD une implémentation en Java : <a href="https://github.com/hikage/xdt4j" target="_blank">xdt4j</a>.</p>
-
+<p>Grâce à celui-ci tests, j&rsquo;ai pu développer en TDD une implémentation en Java : <!-- raw HTML omitted -->xdt4j<!-- raw HTML omitted -->.</p>
 <h2 id="utilisation">Utilisation</h2>
-
 <p>Le fonctionnement de XDT pour ajouter/modifier/supprimer des éléments dans un fichier XML est en réalité assez simple.
 Le document XML décrivant les transformations est en réalité un document XML qui se conforme à la structure du document de base, mais sur lequel des attributs XDT ont été ajoutés pour décrire la modification voulue.</p>
-
 <p>Prenons par exemple un fichier pom.xml qui servira de base :</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#f92672">&lt;project&gt;</span>
+    <span style="color:#f92672">&lt;modelVersion&gt;</span>4.0.0<span style="color:#f92672">&lt;/modelVersion&gt;</span>
 
-<pre><code class="language-xml">&lt;project&gt;
-    &lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt;
+    <span style="color:#f92672">&lt;groupId&gt;</span>be.hikage<span style="color:#f92672">&lt;/groupId&gt;</span>
+    <span style="color:#f92672">&lt;artifactId&gt;</span>xdt4j<span style="color:#f92672">&lt;/artifactId&gt;</span>
+    <span style="color:#f92672">&lt;version&gt;</span>1.0.1-SNAPSHOT<span style="color:#f92672">&lt;/version&gt;</span>
+    <span style="color:#f92672">&lt;packaging&gt;</span>jar<span style="color:#f92672">&lt;/packaging&gt;</span>
 
-    &lt;groupId&gt;be.hikage&lt;/groupId&gt;
-    &lt;artifactId&gt;xdt4j&lt;/artifactId&gt;
-    &lt;version&gt;1.0.1-SNAPSHOT&lt;/version&gt;
-    &lt;packaging&gt;jar&lt;/packaging&gt;
+	<span style="color:#f92672">&lt;dependencies&gt;</span>
+		<span style="color:#f92672">&lt;dependency&gt;</span>
+		    <span style="color:#f92672">&lt;groupId&gt;</span>log4j<span style="color:#f92672">&lt;/groupId&gt;</span>
+		    <span style="color:#f92672">&lt;artifactId&gt;</span>log4j<span style="color:#f92672">&lt;/artifactId&gt;</span>
+		    <span style="color:#f92672">&lt;version&gt;</span>1.2.16<span style="color:#f92672">&lt;/version&gt;</span>
+		    <span style="color:#f92672">&lt;packaging&gt;</span>bundle<span style="color:#f92672">&lt;/packaging&gt;</span>
+		<span style="color:#f92672">&lt;/dependency&gt;</span>
+	<span style="color:#f92672">&lt;/dependencies&gt;</span>
 
-    &lt;dependencies&gt;
-        &lt;dependency&gt;
-            &lt;groupId&gt;log4j&lt;/groupId&gt;
-            &lt;artifactId&gt;log4j&lt;/artifactId&gt;
-            &lt;version&gt;1.2.16&lt;/version&gt;
-            &lt;packaging&gt;bundle&lt;/packaging&gt;
-        &lt;/dependency&gt;
-    &lt;/dependencies&gt;
-
-&lt;/project&gt;
-</code></pre>
-
-<p>La première modification que l&rsquo;on souhaite apporter : Modifier le nom de l&rsquo;artefact.
+<span style="color:#f92672">&lt;/project&gt;</span>
+</code></pre></div><p>La première modification que l&rsquo;on souhaite apporter : Modifier le nom de l&rsquo;artefact.
 Pour cela, il suffit de créer un fichier XML ayant une structure identique, qui représentera la modification que l&rsquo;on souhaite apporter.</p>
-
 <p>Ici par exemple :</p>
-
-<pre><code class="language-xml">/tmp/temp_textmate.JcbHjN:2: warning: variable $KCODE is no longer effective; ignored
-&lt;project xmlns:xdt=&quot;http://schemas.microsoft.com/XML-Document-Transform&quot;&gt;
-    &lt;artifactId xdt:Transform=&quot;Replace&quot;&gt;xdt4j-children&lt;/artifactId&gt;
-&lt;/project&gt;
-</code></pre>
-
-<p>Vous pouvez voir que pour exprimer les modifications, il suffit d&rsquo;ajouter un attribut de type <code>xdt:Transform</code>.
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml">/tmp/temp_textmate.JcbHjN:2: warning: variable $KCODE is no longer effective; ignored
+<span style="color:#f92672">&lt;project</span> <span style="color:#a6e22e">xmlns:xdt=</span><span style="color:#e6db74">&#34;http://schemas.microsoft.com/XML-Document-Transform&#34;</span><span style="color:#f92672">&gt;</span>
+    <span style="color:#f92672">&lt;artifactId</span> <span style="color:#a6e22e">xdt:Transform=</span><span style="color:#e6db74">&#34;Replace&#34;</span><span style="color:#f92672">&gt;</span>xdt4j-children<span style="color:#f92672">&lt;/artifactId&gt;</span>
+<span style="color:#f92672">&lt;/project&gt;</span>
+</code></pre></div><p>Vous pouvez voir que pour exprimer les modifications, il suffit d&rsquo;ajouter un attribut de type <!-- raw HTML omitted -->xdt:Transform<!-- raw HTML omitted -->.
 Ici la valeur &ldquo;Replace&rdquo; signifie que l&rsquo;on souhaite simplement remplacer l&rsquo;élement du document de base par celui-ci.</p>
-
 <p>Une fois les deux documents XML prêts, l&rsquo;API Java de xdt4j est des plus simple :</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#75715e">// Chargement des fichiers XML sous forme de Document dom4j
+</span><span style="color:#75715e"></span>Document xmlBase <span style="color:#f92672">=</span> loadDocument<span style="color:#f92672">(&amp;</span>quot<span style="color:#f92672">;</span>base<span style="color:#f92672">.</span><span style="color:#a6e22e">xml</span><span style="color:#f92672">&amp;</span>quot<span style="color:#f92672">;);</span>
+Document xmlTransform <span style="color:#f92672">=</span> loadDocument<span style="color:#f92672">(&amp;</span>quot<span style="color:#f92672">;</span>transform<span style="color:#f92672">.</span><span style="color:#a6e22e">xml</span><span style="color:#f92672">&amp;</span>quot<span style="color:#f92672">;);</span>
 
-<pre><code class="language-java">// Chargement des fichiers XML sous forme de Document dom4j
-Document xmlBase = loadDocument(&amp;quot;base.xml&amp;quot;);
-Document xmlTransform = loadDocument(&amp;quot;transform.xml&amp;quot;);
-
-// Utilisation de xdt4j
-XdtTransformer transformer = new XdtTransformer();
-Document xmlResult = transformer.transform(xmlBase, xmlTransform);
-</code></pre>
-
-<p>Le résultat de la méthode XdtTransformer.transform() est une copie du document original, sur lequel les transformations ont été traités. Le document original n&rsquo;est pas modifié.</p>
-
+<span style="color:#75715e">// Utilisation de xdt4j
+</span><span style="color:#75715e"></span>XdtTransformer transformer <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> XdtTransformer<span style="color:#f92672">();</span>
+Document xmlResult <span style="color:#f92672">=</span> transformer<span style="color:#f92672">.</span><span style="color:#a6e22e">transform</span><span style="color:#f92672">(</span>xmlBase<span style="color:#f92672">,</span> xmlTransform<span style="color:#f92672">);</span>
+</code></pre></div><p>Le résultat de la méthode XdtTransformer.transform() est une copie du document original, sur lequel les transformations ont été traités. Le document original n&rsquo;est pas modifié.</p>
 <h2 id="transformations-et-locators">Transformations et Locators</h2>
-
 <p>D&rsquo;autres transformations existent.
 Avec la transformation &ldquo;Insert&rdquo;, il serait possible d&rsquo;ajouter une dépendance de cette manière:</p>
-
-<pre><code class="language-xml">&lt;project xmlns:xdt=&quot;http://schemas.microsoft.com/XML-Document-Transform&quot;&gt;
-    &lt;dependencies&gt;
-        &lt;dependency xdt:Transform=&quot;Insert&quot;&gt;
-            &lt;groupId&gt;log4j&lt;/groupId&gt;
-            &lt;artifactId&gt;log4j&lt;/artifactId&gt;
-            &lt;version&gt;1.2.16&lt;/version&gt;
-            &lt;packaging&gt;bundle&lt;/packaging&gt;
-        &lt;/dependency&gt;
-    &lt;/dependencies&gt;
-&lt;/project&gt;
-</code></pre>
-
-<p>Il est également possible de supprimer des élements avec la transformation &ldquo;Remove&rdquo;.
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#f92672">&lt;project</span> <span style="color:#a6e22e">xmlns:xdt=</span><span style="color:#e6db74">&#34;http://schemas.microsoft.com/XML-Document-Transform&#34;</span><span style="color:#f92672">&gt;</span>
+    <span style="color:#f92672">&lt;dependencies&gt;</span>
+		<span style="color:#f92672">&lt;dependency</span> <span style="color:#a6e22e">xdt:Transform=</span><span style="color:#e6db74">&#34;Insert&#34;</span><span style="color:#f92672">&gt;</span>
+		    <span style="color:#f92672">&lt;groupId&gt;</span>log4j<span style="color:#f92672">&lt;/groupId&gt;</span>
+		    <span style="color:#f92672">&lt;artifactId&gt;</span>log4j<span style="color:#f92672">&lt;/artifactId&gt;</span>
+		    <span style="color:#f92672">&lt;version&gt;</span>1.2.16<span style="color:#f92672">&lt;/version&gt;</span>
+		    <span style="color:#f92672">&lt;packaging&gt;</span>bundle<span style="color:#f92672">&lt;/packaging&gt;</span>
+		<span style="color:#f92672">&lt;/dependency&gt;</span>
+	<span style="color:#f92672">&lt;/dependencies&gt;</span>
+<span style="color:#f92672">&lt;/project&gt;</span>
+</code></pre></div><p>Il est également possible de supprimer des élements avec la transformation &ldquo;Remove&rdquo;.
 Pour supprimer la dépendance sur log4j par exemple :</p>
-
-<pre><code class="language-xml">&lt;project xmlns:xdt=&quot;http://schemas.microsoft.com/XML-Document-Transform&quot;&gt;
-    &lt;dependencies&gt;
-        &lt;dependency xdt:Transform=&quot;Remove&quot; xdt:Locator=&quot;Condition(groupId/text()='log4j')&quot;&gt;       
-        &lt;/dependency&gt;
-    &lt;/dependencies&gt;
-&lt;/project&gt;
-</code></pre>
-
-<p>Vous remarquerez dans ce dernier exemple l&rsquo;attribut xdt:Locator. Celui-ci permet de spécifier plus précisement sur quel élement l&rsquo;on souhaite appliquer la modification.</p>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#f92672">&lt;project</span> <span style="color:#a6e22e">xmlns:xdt=</span><span style="color:#e6db74">&#34;http://schemas.microsoft.com/XML-Document-Transform&#34;</span><span style="color:#f92672">&gt;</span>
+    <span style="color:#f92672">&lt;dependencies&gt;</span>
+		<span style="color:#f92672">&lt;dependency</span> <span style="color:#a6e22e">xdt:Transform=</span><span style="color:#e6db74">&#34;Remove&#34;</span> <span style="color:#a6e22e">xdt:Locator=</span><span style="color:#e6db74">&#34;Condition(groupId/text()=&#39;log4j&#39;)&#34;</span><span style="color:#f92672">&gt;</span>		  
+		<span style="color:#f92672">&lt;/dependency&gt;</span>
+	<span style="color:#f92672">&lt;/dependencies&gt;</span>
+<span style="color:#f92672">&lt;/project&gt;</span>
+</code></pre></div><p>Vous remarquerez dans ce dernier exemple l&rsquo;attribut xdt:Locator. Celui-ci permet de spécifier plus précisement sur quel élement l&rsquo;on souhaite appliquer la modification.</p>
 <p>En effet, la transformation &ldquo;Remove&rdquo; par défaut va supprimer le premier élément du document de base qui va correspondre à l&rsquo;expression XPath de l&rsquo;élement sur lequel la transformation est placée.
-L&rsquo;attribut Locator permet d&rsquo;effectuer un filtre plus précis via les valeurs possibles <b>Condition</b>, <b>Match</b> ou <b>XPath</b>.</p>
-
-<p>Dans ce cas-ci, <b>Condition</b> prends comme paramètre une condition XPath relative à l&rsquo;élement courant.</p>
-
-<h3>Conclusion</h3>
-
+L&rsquo;attribut Locator permet d&rsquo;effectuer un filtre plus précis via les valeurs possibles <!-- raw HTML omitted -->Condition<!-- raw HTML omitted -->, <!-- raw HTML omitted -->Match<!-- raw HTML omitted --> ou <!-- raw HTML omitted -->XPath<!-- raw HTML omitted -->.</p>
+<p>Dans ce cas-ci, <!-- raw HTML omitted -->Condition<!-- raw HTML omitted --> prends comme paramètre une condition XPath relative à l&rsquo;élement courant.</p>
+<!-- raw HTML omitted -->
 <p>Dans notre cas, xdt4j est une excellente réponse à notre besoin : l&rsquo;extension d&rsquo;archetype.</p>
-
 <p>Il n&rsquo;est pas forcément complet pour tout les cas de figures, mais il est ouvert et disponible sur GitHub : <a href="https://github.com/hikage/xdt4j">https://github.com/hikage/xdt4j</a>.</p>
-
 <p>Toute participation est donc la bienvenue, que ce soit des patch, des avis, des besoins (ouvrez une issue sur GitHub).</p>
-
 <p>Et bonne nouvelle, les releases de xdt4j sont disponible sur Maven Central :</p>
-
-<pre><code class="language-xml">&lt;dependency&gt;
-  &lt;groupId&gt;be.hikage&lt;/groupId&gt;
-  &lt;artifactId&gt;xdt4j&lt;/artifactId&gt;
-  &lt;version&gt;1.0.2&lt;/version&gt;
-&lt;/dependency&gt;
-</code></pre>
-
-<p>Les versions Snapshots de leurs coté sont disponibles sur le répository OpenSource de Sonatype : <a href="https://oss.sonatype.org/">https://oss.sonatype.org/</a></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#f92672">&lt;dependency&gt;</span>
+  <span style="color:#f92672">&lt;groupId&gt;</span>be.hikage<span style="color:#f92672">&lt;/groupId&gt;</span>
+  <span style="color:#f92672">&lt;artifactId&gt;</span>xdt4j<span style="color:#f92672">&lt;/artifactId&gt;</span>
+  <span style="color:#f92672">&lt;version&gt;</span>1.0.2<span style="color:#f92672">&lt;/version&gt;</span>
+<span style="color:#f92672">&lt;/dependency&gt;</span>
+</code></pre></div><p>Les versions Snapshots de leurs coté sont disponibles sur le répository OpenSource de Sonatype : <a href="https://oss.sonatype.org/">https://oss.sonatype.org/</a></p>
   </div>
   
 
@@ -425,31 +370,34 @@ L&rsquo;attribut Locator permet d&rsquo;effectuer un filtre plus précis via les
         
     
 
-
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-132470679-1"></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-
-gtag('config', 'UA-132470679-1');
-</script>
-
-
-<script defer src="https://use.fontawesome.com/releases/v5.5.0/js/all.js" integrity="sha384-GqVMZRt5Gn7tB9D9q7ONtcp4gtHIUEW/yG7h98J7IpE3kpi+srfFyyB/04OV6pG0" crossorigin="anonymous"></script>
+<script defer src="https://use.fontawesome.com/releases/v5.11.2/js/all.js" integrity="sha384-b3ua1l97aVGAPEIe48b4TC60WUQbQaGi2jqAWM90y0OZXZeyaTCWtBTKtjW2GXG1" crossorigin="anonymous"></script>
 
 
     
-    
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/highlight.min.js"></script>
         
-    
     <script type="text/javascript">
         
         hljs.initHighlightingOnLoad();
     </script>
     
 
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.js"></script>
+<script type="text/javascript">
+  if (tocbot) {
+    tocbot.init({
+      
+      tocSelector: '.toc',
+      
+      contentSelector: '.post',
+      
+      headingSelector: 'h2, h3, h4',
+      collapseDepth: 4
+    });
+  }
+</script>
 
 
 

@@ -11,7 +11,7 @@
 <meta http-equiv="Cache-Control" content="public" />
 <!-- Enable responsiveness on mobile devices -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-<meta name="generator" content="Hugo 0.53" />
+<meta name="generator" content="Hugo 0.73.0" />
 
     
     
@@ -24,9 +24,7 @@
 <meta name="twitter:title" content="Les agents Java"/>
 <meta name="twitter:description" content="Les Agents Java ? Pas la moindre idée de ce que c&rsquo;est ?
 Mais si, vous en avez certainement déja vu, ils se cachent dans la ligne de commande Java via ce paramètre -javaagent:vers/mon/agent.jar.
-
 Ceux-ci interviennent lors du chargement des classes par un classloader, et ont la possiblité de venir modifier la classe en cours de chargement. Ce mécanisme est utilisé par divers outils et frameworks :
-
 
 AspectJ pour faire du tissage d&rsquo;Aspect au chargement
 Par des outils de Profiling pour venir ajouter du code permettant de tracer les appels
@@ -36,17 +34,16 @@ Par des outils de Profiling pour venir ajouter du code permettant de tracer les 
 <meta property="og:title" content="Les agents Java" />
 <meta property="og:description" content="Les Agents Java ? Pas la moindre idée de ce que c&rsquo;est ?
 Mais si, vous en avez certainement déja vu, ils se cachent dans la ligne de commande Java via ce paramètre -javaagent:vers/mon/agent.jar.
-
 Ceux-ci interviennent lors du chargement des classes par un classloader, et ont la possiblité de venir modifier la classe en cours de chargement. Ce mécanisme est utilisé par divers outils et frameworks :
-
 
 AspectJ pour faire du tissage d&rsquo;Aspect au chargement
 Par des outils de Profiling pour venir ajouter du code permettant de tracer les appels
 &hellip; et plein d&rsquo;autres
 " />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://www.gcuisinier.net/blog/2012/06/les-agents-java/" /><meta property="article:published_time" content="2012-06-15T08:00:00&#43;01:00"/>
-<meta property="article:modified_time" content="2012-06-15T08:00:00&#43;01:00"/>
+<meta property="og:url" content="https://www.gcuisinier.net/blog/2012/06/les-agents-java/" />
+<meta property="article:published_time" content="2012-06-15T08:00:00+01:00" />
+<meta property="article:modified_time" content="2012-06-15T08:00:00+01:00" />
 
 
     
@@ -61,13 +58,15 @@ Par des outils de Profiling pour venir ajouter du code permettant de tracer les 
 
 
 
-<link rel="stylesheet" href="/scss/hyde-hyde.9b47255fe7feae0b7a7befc8c22902cc12b602757ee6a841471810f413cdcf33.css" integrity="sha256-m0clX&#43;f&#43;rgt6e&#43;/IwikCzBK2AnV&#43;5qhBRxgQ9BPNzzM=">
+<link rel="stylesheet" href="/scss/hyde-hyde.f5f1c5a434c1a2dcfe929d5949cf1ac53a53604a0620627df6ef86c959e8c1de.css" integrity="sha256-9fHFpDTBotz&#43;kp1ZSc8axTpTYEoGIGJ99u&#43;GyVnowd4=">
 
 
 <link rel="stylesheet" href="/scss/print.5aa4005c7565ec5b66c62cd79012c5cad1081f3332793145a8d3861a26391697.css" integrity="sha256-WqQAXHVl7FtmxizXkBLFytEIHzMyeTFFqNOGGiY5Fpc=" media="print">
 
 
-<link rel="stylesheet" href="static-css/hover-min.css" media="screen">
+
+
+<link rel="stylesheet" href="/scss/tocbot.5ef07cebc3c477b54270456f149ee02922479bb7555fd344b2c69f953b0e7e5e.css" integrity="sha256-XvB868PEd7VCcEVvFJ7gKSJHm7dVX9NEssaflTsOfl4=">
 
 
 
@@ -78,24 +77,11 @@ Par des outils de Profiling pour venir ajouter du code permettant de tracer les 
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
     <!-- Icons -->
-    <link rel="apple-touch-icon" sizes="57x57" href="icon/apple-icon-57x57.png">
-<link rel="apple-touch-icon" sizes="60x60" href="icon/apple-icon-60x60.png">
-<link rel="apple-touch-icon" sizes="72x72" href="icon/apple-icon-72x72.png">
-<link rel="apple-touch-icon" sizes="76x76" href="icon/apple-icon-76x76.png">
-<link rel="apple-touch-icon" sizes="114x114" href="icon/apple-icon-114x114.png">
-<link rel="apple-touch-icon" sizes="120x120" href="icon/apple-icon-120x120.png">
-<link rel="apple-touch-icon" sizes="144x144" href="icon/apple-icon-144x144.png">
-<link rel="apple-touch-icon" sizes="152x152" href="icon/apple-icon-152x152.png">
-<link rel="apple-touch-icon" sizes="180x180" href="icon/apple-icon-180x180.png">
-<link rel="icon" type="image/png" sizes="192x192"  href="icon/android-icon-192x192.png">
-<link rel="icon" type="image/png" sizes="32x32" href="icon/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="96x96" href="icon/favicon-96x96.png">
-<link rel="icon" type="image/png" sizes="16x16" href="icon/favicon-16x16.png">
-<link rel="manifest" href="icon/manifest.json">
-<meta name="msapplication-TileColor" content="#ffffff">
-<meta name="msapplication-TileImage" content="icon/ms-icon-144x144.png">
-<meta name="theme-color" content="#ffffff">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+    <link rel="shortcut icon" href="/favicon.png">
     
+    
+<link href="/css-static/hover.css" rel="stylesheet">
 
 </head>
 
@@ -109,13 +95,13 @@ Par des outils de Profiling pour venir ajouter du code permettant de tracer les 
         <a href="https://www.gcuisinier.net">Gildas Cuisinier</a>
       </span>
       <small class="text-center center-block">&lt;dev&gt;SomeWhere&lt;ops&gt;</small>
-      
+
       
         
         
         
         <div class="author-image hvr-rotate">
-          <img src="https://www.gcuisinier.net/img/gcuisinier.jpg" alt="Author Image" class="img--circle img--headshot element--center">
+          <img src="https://www.gcuisinier.netimg/gcuisinier.jpg" alt="Author Image" class="img--circle img--headshot element--center">
         </div>
         
       
@@ -156,39 +142,36 @@ Par des outils de Profiling pour venir ajouter du code permettant de tracer les 
 				</li>
 			 
 		
-		</li>
 	</ul>
 </div>
 
         <section class="social">
 	
-	<a href="https://twitter.com/gcuisinier" rel="me"><i class="fab fa-twitter fa-lg hvr-push" aria-hidden="true"></i></a>
+	<a href="https://twitter.com/gcuisinier" rel="me"><i class="fab fa-twitter fa-lg hvr-buzz-out hvr-buzz-out " aria-hidden="true"></i></a>
 	
 	
 	
-	<a href="https://github.com/gcuisinier" rel="me"><i class="fab fa-github fa-lg hvr-push" aria-hidden="true"></i></a>
-	
-	
-	
-	
+	<a href="https://github.com/gcuisinier" rel="me"><i class="fab fa-github fa-lg hvr-buzz-out hvr-buzz-out" aria-hidden="true"></i></a>
 	
 	
 	
 	
 	
-	<a href="https://keybase.io/gcuisinier" rel="me"><i class="fab fa-keybase fa-lg hvr-push" aria-hidden="true"></i></a>
-	
-	
-	
-	&nbsp;<a href="https://about.me/gcuisinier"><i class="fas fa-address-card fa-lg hvr-push" aria-hidden="true"></i></a>
-	
-	
-	&nbsp;<a href="https://hub.docker.com/u/gcuisinier"><i class="fab fa-docker fa-lg hvr-push" aria-hidden="true"></i></a>
 	
 	
 	
 	
-	<a href="mailto:contact%20[at]%20gcuisinier.net" rel="me"><i class="fas fa-envelope fa-lg hvr-push" aria-hidden="true"></i></a>
+	
+	
+	<a href="https://keybase.io/gcuisinier" rel="me"><i class="fab fa-keybase fa-lg hvr-buzz-out" aria-hidden="true"></i></a>
+	
+	
+	
+	&nbsp;<a href="https://about.me/gcuisinier"><i class="fas fa-address-card fa-lg hvr-buzz-out" aria-hidden="true"></i></a>
+	
+	
+	
+	<a href="mailto:contact%20[at]%20gcuisinier.net" rel="me"><i class="fas fa-at fa-lg hvr-buzz-out" aria-hidden="true"></i></a>
 	
 </section>
 
@@ -206,7 +189,8 @@ Built with <a href="https://gohugo.io">Hugo</a> ❤️ <a href="https://github.c
 
         <div class="content container">
             
-    <article>
+    
+<article>
   <header>
     <h1>Les agents Java</h1>
     
@@ -241,120 +225,97 @@ Built with <a href="https://gohugo.io">Hugo</a> ❤️ <a href="https://github.c
   </header>
   
   
+  
+    <div class="toc-wrapper">
+      <input type="checkbox" id="tocToggle">
+      <label for="tocToggle">Table of Content</label>
+      
+        <div class="toc" id="TableOfContents"></div>
+      
+    </div>
+  
+  
   <div class="post">
     <p>Les Agents Java ? Pas la moindre idée de ce que c&rsquo;est ?
-Mais si, vous en avez certainement déja vu, ils se cachent dans la ligne de commande Java via ce paramètre <code>-javaagent:vers/mon/agent.jar</code>.</p>
-
+Mais si, vous en avez certainement déja vu, ils se cachent dans la ligne de commande Java via ce paramètre <!-- raw HTML omitted -->-javaagent:vers/mon/agent.jar<!-- raw HTML omitted -->.</p>
 <p>Ceux-ci interviennent lors du chargement des classes par un classloader, et ont la possiblité de venir modifier la classe en cours de chargement. Ce mécanisme est utilisé par divers outils et frameworks :</p>
-
 <ul>
 <li>AspectJ pour faire du tissage d&rsquo;Aspect au chargement</li>
 <li>Par des outils de Profiling pour venir ajouter du code permettant de tracer les appels</li>
 <li>&hellip; et plein d&rsquo;autres</li>
 </ul>
-
-<h2 id="getting-started">Getting started !</h2>
-
+<h2 id="getting-started-">Getting started !</h2>
 <p>Pour mieux comprendre comment fonctionne un agent, le plus simple est de tenter d&rsquo;en faire un simple.</p>
+<h3 id="créer-la-classe-de-lagent">Créer la classe de l&rsquo;agent</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">package</span> be.hikage.agent<span style="color:#f92672">;</span>
 
-<h3 id="créer-la-classe-de-l-agent">Créer la classe de l&rsquo;agent</h3>
+<span style="color:#f92672">import</span> java.lang.instrument.Instrumentation<span style="color:#f92672">;</span>
 
-<pre><code class="language-java">package be.hikage.agent;
+<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">AgentSimple</span> <span style="color:#f92672">{</span>
 
-import java.lang.instrument.Instrumentation;
-
-public class AgentSimple {
-
-	public static void premain(String agentArgument, Instrumentation instrumentation){		
-		System.out.println(&quot;Hello, Agent Smith ! [ &quot; + agentArgument + &quot;]&quot;);
-	}
-}
-</code></pre>
-
-<p>La méthode <code>premain(String agentArgument, Instrumentation instrumentation)</code> est pour un agent ce qu&rsquo;est la méthode <code>main(String &hellip; arguments)</code> est pour une application Java.</p>
-
+	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">premain</span><span style="color:#f92672">(</span>String agentArgument<span style="color:#f92672">,</span> Instrumentation instrumentation<span style="color:#f92672">){</span>		
+		System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Hello, Agent Smith ! [ &#34;</span> <span style="color:#f92672">+</span> agentArgument <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;]&#34;</span><span style="color:#f92672">);</span>
+	<span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p>La méthode <!-- raw HTML omitted -->premain(String agentArgument, Instrumentation instrumentation)<!-- raw HTML omitted --> est pour un agent ce qu&rsquo;est la méthode <!-- raw HTML omitted -->main(String &hellip; arguments)<!-- raw HTML omitted --> est pour une application Java.</p>
 <p>Cette méthode appelée lors du chargement de l&rsquo;agent, et possède deux arguments :</p>
-
 <ul>
-<li><code>String agentArguments</code> : Ce sont les options passée en paramètre dans la ligne de commande pour l&rsquo;agent. <code>-javaagent:jarpath=parametre</code></li>
-<li><code>Instrumentation instrumentation</code>, est un service qui va fournir des méthodes pour modifier les classes.</li>
+<li><!-- raw HTML omitted -->String agentArguments<!-- raw HTML omitted --> : Ce sont les options passée en paramètre dans la ligne de commande pour l&rsquo;agent. <!-- raw HTML omitted -->-javaagent:jarpath=parametre<!-- raw HTML omitted --></li>
+<li><!-- raw HTML omitted -->Instrumentation instrumentation<!-- raw HTML omitted -->, est un service qui va fournir des méthodes pour modifier les classes.</li>
 </ul>
-
 <h3 id="préparer-le-packaging">Préparer le packaging</h3>
-
 <p>Mais avoir la classe ne suffit pas pour avoir un agent utilisable. En effet, un agent doit obligatoirement un jar, avec un manifest correctement configuré.</p>
-
-<p>Celui-ci doit contenir une entrée <code>Premain-Class</code></p>
-
+<p>Celui-ci doit contenir une entrée <!-- raw HTML omitted -->Premain-Class<!-- raw HTML omitted --></p>
 <pre><code>Manifest-Version: 1.0
 Premain-Class: be.hikage.agent.AgentSimple
-</code></pre>
+</code></pre><h3 id="tester-lagent">Tester l&rsquo;Agent</h3>
+<p>Une fois le <!-- raw HTML omitted -->Jar<!-- raw HTML omitted --> prêt, il faut le tester. Pour cela créer un petit programme simple :</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">TestMain</span> <span style="color:#f92672">{</span>
 
-<h3 id="tester-l-agent">Tester l&rsquo;Agent</h3>
-
-<p>Une fois le <strong>Jar</strong> prêt, il faut le tester. Pour cela créer un petit programme simple :</p>
-
-<pre><code class="language-java">public class TestMain {
-
-	public static void main(String[] args) {
-		System.out.println(&quot;Mon Programme&quot;);
-	}
-}
-</code></pre>
-
-<p>Et lançons celui-ci en fournissant l&rsquo;agent :</p>
-
-<pre><code class="language-sh">$ java -javaagent:AgentSimple.jar=&quot;Mes paramètres&quot; be.hikage.agent.TestMain
-Hello, Agent Smith ! [ Mes paramètres]
+	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[]</span> args<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+		System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Mon Programme&#34;</span><span style="color:#f92672">);</span>
+	<span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p>Et lançons celui-ci en fournissant l&rsquo;agent :</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ java -javaagent:AgentSimple.jar<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Mes paramètres&#34;</span> be.hikage.agent.TestMain
+Hello, Agent Smith ! <span style="color:#f92672">[</span> Mes paramètres<span style="color:#f92672">]</span>
 Mon Programme
-</code></pre>
-
-<p>On remarque que l&rsquo;agent est bien lancé avant l&rsquo;application, et qu&rsquo;il a bien reçu les paramètres que l&rsquo;on lui a fourni.</p>
-
+</code></pre></div><p>On remarque que l&rsquo;agent est bien lancé avant l&rsquo;application, et qu&rsquo;il a bien reçu les paramètres que l&rsquo;on lui a fourni.</p>
 <h2 id="interception-des-chargements-de-classes">Interception des chargements de classes</h2>
-
 <p>Voyons maintenant à quoi sert le deuxième paramètre fourni à la méthode <em>Premain</em> : Instrumentation.
 La principale fonctionnalité de celui-ci est de permettre d&rsquo;enregistrer un <em>ClassFileTransformer</em>. Cette interface oblige à implémenter une unique méthode :</p>
-
-<pre><code class="language-java">byte[]
-    transform(  ClassLoader         loader,
-                String              className,
-                Class            classBeingRedefined,
-                ProtectionDomain    protectionDomain,
-                byte[]              classfileBuffer)
-        throws IllegalClassFormatException;
-</code></pre>
-
-<p>Le premier paramètre étant le classloader impliqué pour le chargement de la classe. Les deux suivant, le nom de la classe et l&rsquo;instance de Class représentant la classe en train d&rsquo;être chargée.
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">byte</span><span style="color:#f92672">[]</span>
+    <span style="color:#a6e22e">transform</span><span style="color:#f92672">(</span>  ClassLoader         loader<span style="color:#f92672">,</span>
+                String              className<span style="color:#f92672">,</span>
+                Class            classBeingRedefined<span style="color:#f92672">,</span>
+                ProtectionDomain    protectionDomain<span style="color:#f92672">,</span>
+                <span style="color:#66d9ef">byte</span><span style="color:#f92672">[]</span>              classfileBuffer<span style="color:#f92672">)</span>
+        <span style="color:#66d9ef">throws</span> IllegalClassFormatException<span style="color:#f92672">;</span>
+</code></pre></div><p>Le premier paramètre étant le classloader impliqué pour le chargement de la classe. Les deux suivant, le nom de la classe et l&rsquo;instance de Class représentant la classe en train d&rsquo;être chargée.
 Le dernier est le bytecode brut de la classe, sous la forme d&rsquo;un tableau de bytes.</p>
-
 <p>Modifions maintenant notre agent pour afficher les classes en cours de chargement :</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">package</span> be.hikage.agent<span style="color:#f92672">;</span>
 
-<pre><code class="language-java">package be.hikage.agent;
+<span style="color:#f92672">import</span> java.lang.instrument.ClassFileTransformer<span style="color:#f92672">;</span>
+<span style="color:#f92672">import</span> java.lang.instrument.IllegalClassFormatException<span style="color:#f92672">;</span>
+<span style="color:#f92672">import</span> java.lang.instrument.Instrumentation<span style="color:#f92672">;</span>
+<span style="color:#f92672">import</span> java.security.ProtectionDomain<span style="color:#f92672">;</span>
 
-import java.lang.instrument.ClassFileTransformer;
-import java.lang.instrument.IllegalClassFormatException;
-import java.lang.instrument.Instrumentation;
-import java.security.ProtectionDomain;
+<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">AgentSimple</span> <span style="color:#f92672">{</span>
 
-public class AgentSimple {
+	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">premain</span><span style="color:#f92672">(</span>String agentArgument<span style="color:#f92672">,</span> Instrumentation instrumentation<span style="color:#f92672">){</span>		
+		System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Hello, Agent Smith ! [ &#34;</span> <span style="color:#f92672">+</span> agentArgument <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;]&#34;</span><span style="color:#f92672">);</span>
 
-	public static void premain(String agentArgument, Instrumentation instrumentation){		
-		System.out.println(&quot;Hello, Agent Smith ! [ &quot; + agentArgument + &quot;]&quot;);
-
-        instrumentation.addTransformer( new ClassFileTransformer() {
-            @Override
-            public byte[] transform(ClassLoader loader, String className, Class&lt;?&gt; classBeingRedefined, ProtectionDomain protectionDomain, byte[] classfileBuffer) throws IllegalClassFormatException {
-                System.out.println(&quot;Tu es en train de charger la classe :&quot; + className);
-                return classfileBuffer;
-            }
-        });
-	}
-}
-</code></pre>
-
-<p>Le résultat sera le suivant :</p>
-
+        instrumentation<span style="color:#f92672">.</span><span style="color:#a6e22e">addTransformer</span><span style="color:#f92672">(</span> <span style="color:#66d9ef">new</span> ClassFileTransformer<span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+            <span style="color:#a6e22e">@Override</span>
+            <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">byte</span><span style="color:#f92672">[]</span> <span style="color:#a6e22e">transform</span><span style="color:#f92672">(</span>ClassLoader loader<span style="color:#f92672">,</span> String className<span style="color:#f92672">,</span> Class<span style="color:#f92672">&lt;?&gt;</span> classBeingRedefined<span style="color:#f92672">,</span> ProtectionDomain protectionDomain<span style="color:#f92672">,</span> <span style="color:#66d9ef">byte</span><span style="color:#f92672">[]</span> classfileBuffer<span style="color:#f92672">)</span> <span style="color:#66d9ef">throws</span> IllegalClassFormatException <span style="color:#f92672">{</span>
+                System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Tu es en train de charger la classe :&#34;</span> <span style="color:#f92672">+</span> className<span style="color:#f92672">);</span>
+                <span style="color:#66d9ef">return</span> classfileBuffer<span style="color:#f92672">;</span>
+            <span style="color:#f92672">}</span>
+        <span style="color:#f92672">});</span>
+	<span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p>Le résultat sera le suivant :</p>
 <pre><code>Hello, Agent Smith ! [ Mes paramètres]
 Tu es en train de charger la classe : sun/launcher/LauncherHelper
 Tu es en train de charger la classe : java/lang/Enum
@@ -363,91 +324,80 @@ Tu es en train de charger la classe : java/lang/Void
 Mon Programme
 Tu es en train de charger la classe : java/lang/Shutdown
 Tu es en train de charger la classe : java/lang/Shutdown$Lock
-</code></pre>
-
-<h2 id="modification-de-classe">Modification de classe</h2>
-
+</code></pre><h2 id="modification-de-classe">Modification de classe</h2>
 <p>Passons maintenant la seconde, et tentons de venir modifier les classes en cours de chargement afin d&rsquo;avoir des statistiques sur le nombre d&rsquo;instance.
 Pour cela, il suffit d&rsquo;ajouter un champ statique qui servira de compteur, et de modifier les constructeurs pour y ajouter une incrémentation de celui-ci ainsi que de l&rsquo;afficher dans les logs.</p>
-
 <p>Pour cela, il faut utiliser un outil de manipulation de bytecode tels que <a href="http://www.jboss.org/javassist">Javassist</a>.
 Voici une implémentation d&rsquo;un ClassFileTransformer possible :</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">package</span> be.hikage.agent<span style="color:#f92672">;</span>
 
-<pre><code class="language-java">package be.hikage.agent;
+<span style="color:#f92672">import</span> javassist.ClassPool<span style="color:#f92672">;</span>
+<span style="color:#f92672">import</span> javassist.CtBehavior<span style="color:#f92672">;</span>
+<span style="color:#f92672">import</span> javassist.CtClass<span style="color:#f92672">;</span>
+<span style="color:#f92672">import</span> javassist.CtField<span style="color:#f92672">;</span>
 
-import javassist.ClassPool;
-import javassist.CtBehavior;
-import javassist.CtClass;
-import javassist.CtField;
+<span style="color:#f92672">import</span> java.lang.instrument.ClassFileTransformer<span style="color:#f92672">;</span>
+<span style="color:#f92672">import</span> java.lang.instrument.IllegalClassFormatException<span style="color:#f92672">;</span>
+<span style="color:#f92672">import</span> java.security.ProtectionDomain<span style="color:#f92672">;</span>
 
-import java.lang.instrument.ClassFileTransformer;
-import java.lang.instrument.IllegalClassFormatException;
-import java.security.ProtectionDomain;
-
-public class CountInstanceTransformer implements ClassFileTransformer {
-
-
-    @Override
-    public byte[] transform(ClassLoader loader, String className, Class&lt;?&gt; classBeingRedefined, ProtectionDomain protectionDomain, byte[] classfileBuffer) throws IllegalClassFormatException {
-        return visitClass(className, classBeingRedefined, classfileBuffer);
-
-    }
-
-    private byte[] visitClass(String className, Class&lt;?&gt; classBeingRedefined, byte[] classfileBuffer) {
-        ClassPool pool = ClassPool.getDefault();
-        CtClass cl = null;
-        try {
-            cl = pool.makeClass(new java.io.ByteArrayInputStream(classfileBuffer));
-            if (cl.isInterface() == false) {
-
-                // Ajout d'un champ static dans la classe
-                CtField field = CtField.make(&quot;private static long _instanceCount;&quot;, cl);
-
-                cl.addField(field);
-
-                CtBehavior[] constructors = cl.getDeclaredConstructors();
-                for (int i = 0; i &lt; constructors.length; i++) {
-                    // On incrémente le compteur et on l'affiche
-                    constructors[i].insertAfter(&quot;_instanceCount++;&quot;);
-                    constructors[i].insertAfter(&quot;System.out.println(\&quot;&quot; + className + &quot; : \&quot; + _instanceCount);&quot;);
+<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">CountInstanceTransformer</span> <span style="color:#66d9ef">implements</span> ClassFileTransformer <span style="color:#f92672">{</span>
 
 
-                }
+    <span style="color:#a6e22e">@Override</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">byte</span><span style="color:#f92672">[]</span> <span style="color:#a6e22e">transform</span><span style="color:#f92672">(</span>ClassLoader loader<span style="color:#f92672">,</span> String className<span style="color:#f92672">,</span> Class<span style="color:#f92672">&lt;?&gt;</span> classBeingRedefined<span style="color:#f92672">,</span> ProtectionDomain protectionDomain<span style="color:#f92672">,</span> <span style="color:#66d9ef">byte</span><span style="color:#f92672">[]</span> classfileBuffer<span style="color:#f92672">)</span> <span style="color:#66d9ef">throws</span> IllegalClassFormatException <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">return</span> visitClass<span style="color:#f92672">(</span>className<span style="color:#f92672">,</span> classBeingRedefined<span style="color:#f92672">,</span> classfileBuffer<span style="color:#f92672">);</span>
 
-                // Génération du bytecode modifié
-                classfileBuffer = cl.toBytecode();
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
+    <span style="color:#f92672">}</span>
 
-        } finally {
-            if (cl != null) {
-                cl.detach();
-            }
-        }
-        return classfileBuffer;
-    }
-}
-</code></pre>
+    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">byte</span><span style="color:#f92672">[]</span> <span style="color:#a6e22e">visitClass</span><span style="color:#f92672">(</span>String className<span style="color:#f92672">,</span> Class<span style="color:#f92672">&lt;?&gt;</span> classBeingRedefined<span style="color:#f92672">,</span> <span style="color:#66d9ef">byte</span><span style="color:#f92672">[]</span> classfileBuffer<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        ClassPool pool <span style="color:#f92672">=</span> ClassPool<span style="color:#f92672">.</span><span style="color:#a6e22e">getDefault</span><span style="color:#f92672">();</span>
+        CtClass cl <span style="color:#f92672">=</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">;</span>
+        <span style="color:#66d9ef">try</span> <span style="color:#f92672">{</span>
+            cl <span style="color:#f92672">=</span> pool<span style="color:#f92672">.</span><span style="color:#a6e22e">makeClass</span><span style="color:#f92672">(</span><span style="color:#66d9ef">new</span> java<span style="color:#f92672">.</span><span style="color:#a6e22e">io</span><span style="color:#f92672">.</span><span style="color:#a6e22e">ByteArrayInputStream</span><span style="color:#f92672">(</span>classfileBuffer<span style="color:#f92672">));</span>
+            <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>cl<span style="color:#f92672">.</span><span style="color:#a6e22e">isInterface</span><span style="color:#f92672">()</span> <span style="color:#f92672">==</span> <span style="color:#66d9ef">false</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
 
-<p>Et un petit programme de tests :</p>
+                <span style="color:#75715e">// Ajout d&#39;un champ static dans la classe
+</span><span style="color:#75715e"></span>                CtField field <span style="color:#f92672">=</span> CtField<span style="color:#f92672">.</span><span style="color:#a6e22e">make</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;private static long _instanceCount;&#34;</span><span style="color:#f92672">,</span> cl<span style="color:#f92672">);</span>
 
-<pre><code class="language-java">public class TestMain {
+                cl<span style="color:#f92672">.</span><span style="color:#a6e22e">addField</span><span style="color:#f92672">(</span>field<span style="color:#f92672">);</span>
 
-	public static void main(String[] args) {
-		System.out.println(&quot;Mon Programme&quot;);
-        List test = new ArrayList();
-        test.add(new MonObject()) ;
-        test.add(new MonObject()) ;
-        test.add(new MonObject()) ;
-        test.add(new MonObject()) ;
-	}
-}
-</code></pre>
+                CtBehavior<span style="color:#f92672">[]</span> constructors <span style="color:#f92672">=</span> cl<span style="color:#f92672">.</span><span style="color:#a6e22e">getDeclaredConstructors</span><span style="color:#f92672">();</span>
+                <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span> i <span style="color:#f92672">&lt;</span> constructors<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span><span style="color:#f92672">;</span> i<span style="color:#f92672">++)</span> <span style="color:#f92672">{</span>
+                    <span style="color:#75715e">// On incrémente le compteur et on l&#39;affiche
+</span><span style="color:#75715e"></span>                    constructors<span style="color:#f92672">[</span>i<span style="color:#f92672">].</span><span style="color:#a6e22e">insertAfter</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;_instanceCount++;&#34;</span><span style="color:#f92672">);</span>
+                    constructors<span style="color:#f92672">[</span>i<span style="color:#f92672">].</span><span style="color:#a6e22e">insertAfter</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;System.out.println(\&#34;&#34;</span> <span style="color:#f92672">+</span> className <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34; : \&#34; + _instanceCount);&#34;</span><span style="color:#f92672">);</span>
 
-<p>Le lancement de l&rsquo;agent se fait de la même manière qu&rsquo;auparavant. Cependant, celui-ci apporte une dépendance supplémentaire, Javassist, au runtime.
+
+                <span style="color:#f92672">}</span>
+
+                <span style="color:#75715e">// Génération du bytecode modifié
+</span><span style="color:#75715e"></span>                classfileBuffer <span style="color:#f92672">=</span> cl<span style="color:#f92672">.</span><span style="color:#a6e22e">toBytecode</span><span style="color:#f92672">();</span>
+            <span style="color:#f92672">}</span>
+        <span style="color:#f92672">}</span> <span style="color:#66d9ef">catch</span> <span style="color:#f92672">(</span>Exception e<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+            e<span style="color:#f92672">.</span><span style="color:#a6e22e">printStackTrace</span><span style="color:#f92672">();</span>
+
+        <span style="color:#f92672">}</span> <span style="color:#66d9ef">finally</span> <span style="color:#f92672">{</span>
+            <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>cl <span style="color:#f92672">!=</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+                cl<span style="color:#f92672">.</span><span style="color:#a6e22e">detach</span><span style="color:#f92672">();</span>
+            <span style="color:#f92672">}</span>
+        <span style="color:#f92672">}</span>
+        <span style="color:#66d9ef">return</span> classfileBuffer<span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p>Et un petit programme de tests :</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">TestMain</span> <span style="color:#f92672">{</span>
+
+	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[]</span> args<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+		System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Mon Programme&#34;</span><span style="color:#f92672">);</span>
+        List test <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ArrayList<span style="color:#f92672">();</span>
+        test<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span><span style="color:#66d9ef">new</span> MonObject<span style="color:#f92672">())</span> <span style="color:#f92672">;</span>
+        test<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span><span style="color:#66d9ef">new</span> MonObject<span style="color:#f92672">())</span> <span style="color:#f92672">;</span>
+        test<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span><span style="color:#66d9ef">new</span> MonObject<span style="color:#f92672">())</span> <span style="color:#f92672">;</span>
+        test<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span><span style="color:#66d9ef">new</span> MonObject<span style="color:#f92672">())</span> <span style="color:#f92672">;</span>
+	<span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p>Le lancement de l&rsquo;agent se fait de la même manière qu&rsquo;auparavant. Cependant, celui-ci apporte une dépendance supplémentaire, Javassist, au runtime.
 Il faut donc que celui-ci soit disponible dans le classpath :</p>
-
 <pre><code>$ java -classpath &quot;path/to/javassist-3.14.0-GA.jar:./&quot; -javaagent:AgentSimple.jar=&quot;Mes paramètres&quot; be.hikage.agent.TestMain
 Hello, Agent Smith ! [ Mes paramètres]
 java/lang/Enum : 1
@@ -461,13 +411,9 @@ java/lang/Shutdown$Lock : 1
 java/lang/Shutdown$Lock : 2
 java/lang/Shutdown$Lock : 3
 java/lang/Shutdown$Lock : 4
-</code></pre>
-
-<h1 id="conclusion">Conclusion</h1>
-
+</code></pre><h1 id="conclusion">Conclusion</h1>
 <p>Les Agents Java sont assez simple à mettre en place, et les possibilités sont assez nombreuses.
 Cependant, cela nécessite d&rsquo;avoir déclarer celui-ci au démarrage de l&rsquo;application.</p>
-
 <p>Et parfois, on aimerait avoir la possibilité d&rsquo;activer un agent plus tard, au besoin.
 Pour cela, il existe une API, l&rsquo;Attach API.
 Celle-ci fera l&rsquo;objet d&rsquo;un prochain article.</p>
@@ -481,6 +427,11 @@ Celle-ci fera l&rsquo;objet d&rsquo;un prochain article.</p>
       <span class="navigation-tittle">Mon retour sur Devoxx France, en tant que conférencier</span>
     </a>
     
+    
+    <a href="/blog/2020/06/cka-challenge-1-configurer-un-kubectl-en-remote/" class="navigation-next">
+      <span class="navigation-tittle">CKA - Challenge 1 - Configurer un kubectl en remote</span>
+      <i aria-hidden="true" class="fa fa-chevron-right"></i>
+    </a>
     
 </div>
 
@@ -498,31 +449,34 @@ Celle-ci fera l&rsquo;objet d&rsquo;un prochain article.</p>
         
     
 
-
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-132470679-1"></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-
-gtag('config', 'UA-132470679-1');
-</script>
-
-
-<script defer src="https://use.fontawesome.com/releases/v5.5.0/js/all.js" integrity="sha384-GqVMZRt5Gn7tB9D9q7ONtcp4gtHIUEW/yG7h98J7IpE3kpi+srfFyyB/04OV6pG0" crossorigin="anonymous"></script>
+<script defer src="https://use.fontawesome.com/releases/v5.11.2/js/all.js" integrity="sha384-b3ua1l97aVGAPEIe48b4TC60WUQbQaGi2jqAWM90y0OZXZeyaTCWtBTKtjW2GXG1" crossorigin="anonymous"></script>
 
 
     
-    
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/highlight.min.js"></script>
         
-    
     <script type="text/javascript">
         
         hljs.initHighlightingOnLoad();
     </script>
     
 
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.js"></script>
+<script type="text/javascript">
+  if (tocbot) {
+    tocbot.init({
+      
+      tocSelector: '.toc',
+      
+      contentSelector: '.post',
+      
+      headingSelector: 'h2, h3, h4',
+      collapseDepth: 4
+    });
+  }
+</script>
 
 
 

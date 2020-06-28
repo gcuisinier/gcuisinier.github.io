@@ -11,7 +11,7 @@
 <meta http-equiv="Cache-Control" content="public" />
 <!-- Enable responsiveness on mobile devices -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-<meta name="generator" content="Hugo 0.53" />
+<meta name="generator" content="Hugo 0.73.0" />
 
     
     
@@ -23,20 +23,17 @@
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Créer un namespace Spring"/>
 <meta name="twitter:description" content="Une des fonctionnalités fort pratique avec Spring est la notion de namespace. Ceux-ci permettre de simplifier et réduire de manière significative une configuration XML.
-
 Spring en possède plusieurs de bases : jms, jee, scheduling, jdbc, mvc, &hellip;
-
 Cependant, il est tout à fait possible d&rsquo;en créer des spécifiques à nos propres besoins, et sans trop de difficulté."/>
 
 <meta property="og:title" content="Créer un namespace Spring" />
 <meta property="og:description" content="Une des fonctionnalités fort pratique avec Spring est la notion de namespace. Ceux-ci permettre de simplifier et réduire de manière significative une configuration XML.
-
 Spring en possède plusieurs de bases : jms, jee, scheduling, jdbc, mvc, &hellip;
-
 Cependant, il est tout à fait possible d&rsquo;en créer des spécifiques à nos propres besoins, et sans trop de difficulté." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://www.gcuisinier.net/blog/2010/04/cr%C3%A9er-un-namespace-spring/" /><meta property="article:published_time" content="2010-04-24T08:00:00&#43;01:00"/>
-<meta property="article:modified_time" content="2010-04-24T08:00:00&#43;01:00"/>
+<meta property="og:url" content="https://www.gcuisinier.net/blog/2010/04/cr%C3%A9er-un-namespace-spring/" />
+<meta property="article:published_time" content="2010-04-24T08:00:00+01:00" />
+<meta property="article:modified_time" content="2010-04-24T08:00:00+01:00" />
 
 
     
@@ -51,13 +48,15 @@ Cependant, il est tout à fait possible d&rsquo;en créer des spécifiques à no
 
 
 
-<link rel="stylesheet" href="/scss/hyde-hyde.9b47255fe7feae0b7a7befc8c22902cc12b602757ee6a841471810f413cdcf33.css" integrity="sha256-m0clX&#43;f&#43;rgt6e&#43;/IwikCzBK2AnV&#43;5qhBRxgQ9BPNzzM=">
+<link rel="stylesheet" href="/scss/hyde-hyde.f5f1c5a434c1a2dcfe929d5949cf1ac53a53604a0620627df6ef86c959e8c1de.css" integrity="sha256-9fHFpDTBotz&#43;kp1ZSc8axTpTYEoGIGJ99u&#43;GyVnowd4=">
 
 
 <link rel="stylesheet" href="/scss/print.5aa4005c7565ec5b66c62cd79012c5cad1081f3332793145a8d3861a26391697.css" integrity="sha256-WqQAXHVl7FtmxizXkBLFytEIHzMyeTFFqNOGGiY5Fpc=" media="print">
 
 
-<link rel="stylesheet" href="static-css/hover-min.css" media="screen">
+
+
+<link rel="stylesheet" href="/scss/tocbot.5ef07cebc3c477b54270456f149ee02922479bb7555fd344b2c69f953b0e7e5e.css" integrity="sha256-XvB868PEd7VCcEVvFJ7gKSJHm7dVX9NEssaflTsOfl4=">
 
 
 
@@ -68,24 +67,11 @@ Cependant, il est tout à fait possible d&rsquo;en créer des spécifiques à no
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
     <!-- Icons -->
-    <link rel="apple-touch-icon" sizes="57x57" href="icon/apple-icon-57x57.png">
-<link rel="apple-touch-icon" sizes="60x60" href="icon/apple-icon-60x60.png">
-<link rel="apple-touch-icon" sizes="72x72" href="icon/apple-icon-72x72.png">
-<link rel="apple-touch-icon" sizes="76x76" href="icon/apple-icon-76x76.png">
-<link rel="apple-touch-icon" sizes="114x114" href="icon/apple-icon-114x114.png">
-<link rel="apple-touch-icon" sizes="120x120" href="icon/apple-icon-120x120.png">
-<link rel="apple-touch-icon" sizes="144x144" href="icon/apple-icon-144x144.png">
-<link rel="apple-touch-icon" sizes="152x152" href="icon/apple-icon-152x152.png">
-<link rel="apple-touch-icon" sizes="180x180" href="icon/apple-icon-180x180.png">
-<link rel="icon" type="image/png" sizes="192x192"  href="icon/android-icon-192x192.png">
-<link rel="icon" type="image/png" sizes="32x32" href="icon/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="96x96" href="icon/favicon-96x96.png">
-<link rel="icon" type="image/png" sizes="16x16" href="icon/favicon-16x16.png">
-<link rel="manifest" href="icon/manifest.json">
-<meta name="msapplication-TileColor" content="#ffffff">
-<meta name="msapplication-TileImage" content="icon/ms-icon-144x144.png">
-<meta name="theme-color" content="#ffffff">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+    <link rel="shortcut icon" href="/favicon.png">
     
+    
+<link href="/css-static/hover.css" rel="stylesheet">
 
 </head>
 
@@ -99,13 +85,13 @@ Cependant, il est tout à fait possible d&rsquo;en créer des spécifiques à no
         <a href="https://www.gcuisinier.net">Gildas Cuisinier</a>
       </span>
       <small class="text-center center-block">&lt;dev&gt;SomeWhere&lt;ops&gt;</small>
-      
+
       
         
         
         
         <div class="author-image hvr-rotate">
-          <img src="https://www.gcuisinier.net/img/gcuisinier.jpg" alt="Author Image" class="img--circle img--headshot element--center">
+          <img src="https://www.gcuisinier.netimg/gcuisinier.jpg" alt="Author Image" class="img--circle img--headshot element--center">
         </div>
         
       
@@ -146,39 +132,36 @@ Cependant, il est tout à fait possible d&rsquo;en créer des spécifiques à no
 				</li>
 			 
 		
-		</li>
 	</ul>
 </div>
 
         <section class="social">
 	
-	<a href="https://twitter.com/gcuisinier" rel="me"><i class="fab fa-twitter fa-lg hvr-push" aria-hidden="true"></i></a>
+	<a href="https://twitter.com/gcuisinier" rel="me"><i class="fab fa-twitter fa-lg hvr-buzz-out hvr-buzz-out " aria-hidden="true"></i></a>
 	
 	
 	
-	<a href="https://github.com/gcuisinier" rel="me"><i class="fab fa-github fa-lg hvr-push" aria-hidden="true"></i></a>
-	
-	
-	
-	
+	<a href="https://github.com/gcuisinier" rel="me"><i class="fab fa-github fa-lg hvr-buzz-out hvr-buzz-out" aria-hidden="true"></i></a>
 	
 	
 	
 	
 	
-	<a href="https://keybase.io/gcuisinier" rel="me"><i class="fab fa-keybase fa-lg hvr-push" aria-hidden="true"></i></a>
-	
-	
-	
-	&nbsp;<a href="https://about.me/gcuisinier"><i class="fas fa-address-card fa-lg hvr-push" aria-hidden="true"></i></a>
-	
-	
-	&nbsp;<a href="https://hub.docker.com/u/gcuisinier"><i class="fab fa-docker fa-lg hvr-push" aria-hidden="true"></i></a>
 	
 	
 	
 	
-	<a href="mailto:contact%20[at]%20gcuisinier.net" rel="me"><i class="fas fa-envelope fa-lg hvr-push" aria-hidden="true"></i></a>
+	
+	
+	<a href="https://keybase.io/gcuisinier" rel="me"><i class="fab fa-keybase fa-lg hvr-buzz-out" aria-hidden="true"></i></a>
+	
+	
+	
+	&nbsp;<a href="https://about.me/gcuisinier"><i class="fas fa-address-card fa-lg hvr-buzz-out" aria-hidden="true"></i></a>
+	
+	
+	
+	<a href="mailto:contact%20[at]%20gcuisinier.net" rel="me"><i class="fas fa-at fa-lg hvr-buzz-out" aria-hidden="true"></i></a>
 	
 </section>
 
@@ -196,7 +179,8 @@ Built with <a href="https://gohugo.io">Hugo</a> ❤️ <a href="https://github.c
 
         <div class="content container">
             
-    <article>
+    
+<article>
   <header>
     <h1>Créer un namespace Spring</h1>
     
@@ -231,194 +215,152 @@ Built with <a href="https://gohugo.io">Hugo</a> ❤️ <a href="https://github.c
   </header>
   
   
+  
+    <div class="toc-wrapper">
+      <input type="checkbox" id="tocToggle">
+      <label for="tocToggle">Table of Content</label>
+      
+        <div class="toc" id="TableOfContents"></div>
+      
+    </div>
+  
+  
   <div class="post">
     <p>Une des fonctionnalités fort pratique avec Spring est la notion de namespace. Ceux-ci permettre de simplifier et réduire de manière significative une configuration XML.</p>
-
 <p>Spring en possède plusieurs de bases : jms, jee, scheduling, jdbc, mvc, &hellip;</p>
-
 <p>Cependant, il est tout à fait possible d&rsquo;en créer des spécifiques à nos propres besoins, et sans trop de difficulté.</p>
-
 <h2 id="créer-le-schéma-xml">Créer le schéma xml</h2>
-
 <p>Lorsqu&rsquo;on créer un namespace pour Spring, la toute première chose à faire est de définir les éléments de celui-ci.
 Et comme on parle de namespace XML, cela se traduit par un schema XSD.</p>
-
 <p>Le plus simple pour créer une XSD est de préparer un exemple de XML valide, et d&rsquo;ensuite créer le XSD à partir de celui-ci.
 Dans le cadre du projet de modèle, je voulais pouvoir importer un fichier et définir des variables :</p>
-
-<pre><code class="language-xml">&lt;import-template location=&quot;classpath:be/hikage/template/template.xml&quot;&gt;
-       &lt;variable name=&quot;variable1&quot; value=&quot;valeur1&quot; /&gt;
-&lt;/import-template&gt;
-</code></pre>
-
-<p>A partir de différents outils (Intellij Idea, XmlSpy, ..), il est possible de générer une XSD correspondant à notre exemple :</p>
-
-<pre><code class="language-xml">&lt;?xml version=&quot;1.0&quot;?&gt;
-&lt;xs:schema xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; elementFormDefault=&quot;qualified&quot;&gt;
-  &lt;xs:element name=&quot;import-template&quot;&gt;
-    &lt;xs:complexType&gt;
-      &lt;xs:sequence&gt;
-        &lt;xs:element name=&quot;variable&quot;&gt;
-          &lt;xs:complexType&gt;
-            &lt;xs:attribute name=&quot;name&quot; type=&quot;xs:string&quot; use=&quot;required&quot;/&gt;
-            &lt;xs:attribute name=&quot;value&quot; type=&quot;xs:string&quot; use=&quot;required&quot;/&gt;
-          &lt;/xs:complexType&gt;
-        &lt;/xs:element&gt;
-      &lt;/xs:sequence&gt;
-      &lt;xs:attribute name=&quot;location&quot; type=&quot;xs:string&quot; use=&quot;required&quot;/&gt;
-    &lt;/xs:complexType&gt;
-  &lt;/xs:element&gt;
-&lt;/xs:schema&gt;
-</code></pre>
-
-<p>Cependant, cette XSD ne comporte pas encore de notion de namespace dédié. Pour cela, il faut lui ajouter l&rsquo;attribut targetNamespace avec comme valeur l&rsquo;identifiant de notre namespace.
-Dans mon cas, il s&rsquo;agira de <strong><a href="http://www.hikage.be/schema/import-template">http://www.hikage.be/schema/import-template</a></strong>.</p>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#f92672">&lt;import-template</span> <span style="color:#a6e22e">location=</span><span style="color:#e6db74">&#34;classpath:be/hikage/template/template.xml&#34;</span><span style="color:#f92672">&gt;</span>
+       <span style="color:#f92672">&lt;variable</span> <span style="color:#a6e22e">name=</span><span style="color:#e6db74">&#34;variable1&#34;</span> <span style="color:#a6e22e">value=</span><span style="color:#e6db74">&#34;valeur1&#34;</span> <span style="color:#f92672">/&gt;</span>
+<span style="color:#f92672">&lt;/import-template&gt;</span>
+</code></pre></div><p>A partir de différents outils (Intellij Idea, XmlSpy, ..), il est possible de générer une XSD correspondant à notre exemple :</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#75715e">&lt;?xml version=&#34;1.0&#34;?&gt;</span>
+<span style="color:#f92672">&lt;xs:schema</span> <span style="color:#a6e22e">xmlns:xs=</span><span style="color:#e6db74">&#34;http://www.w3.org/2001/XMLSchema&#34;</span> <span style="color:#a6e22e">elementFormDefault=</span><span style="color:#e6db74">&#34;qualified&#34;</span><span style="color:#f92672">&gt;</span>
+  <span style="color:#f92672">&lt;xs:element</span> <span style="color:#a6e22e">name=</span><span style="color:#e6db74">&#34;import-template&#34;</span><span style="color:#f92672">&gt;</span>
+    <span style="color:#f92672">&lt;xs:complexType&gt;</span>
+      <span style="color:#f92672">&lt;xs:sequence&gt;</span>
+        <span style="color:#f92672">&lt;xs:element</span> <span style="color:#a6e22e">name=</span><span style="color:#e6db74">&#34;variable&#34;</span><span style="color:#f92672">&gt;</span>
+          <span style="color:#f92672">&lt;xs:complexType&gt;</span>
+            <span style="color:#f92672">&lt;xs:attribute</span> <span style="color:#a6e22e">name=</span><span style="color:#e6db74">&#34;name&#34;</span> <span style="color:#a6e22e">type=</span><span style="color:#e6db74">&#34;xs:string&#34;</span> <span style="color:#a6e22e">use=</span><span style="color:#e6db74">&#34;required&#34;</span><span style="color:#f92672">/&gt;</span>
+            <span style="color:#f92672">&lt;xs:attribute</span> <span style="color:#a6e22e">name=</span><span style="color:#e6db74">&#34;value&#34;</span> <span style="color:#a6e22e">type=</span><span style="color:#e6db74">&#34;xs:string&#34;</span> <span style="color:#a6e22e">use=</span><span style="color:#e6db74">&#34;required&#34;</span><span style="color:#f92672">/&gt;</span>
+          <span style="color:#f92672">&lt;/xs:complexType&gt;</span>
+        <span style="color:#f92672">&lt;/xs:element&gt;</span>
+      <span style="color:#f92672">&lt;/xs:sequence&gt;</span>
+      <span style="color:#f92672">&lt;xs:attribute</span> <span style="color:#a6e22e">name=</span><span style="color:#e6db74">&#34;location&#34;</span> <span style="color:#a6e22e">type=</span><span style="color:#e6db74">&#34;xs:string&#34;</span> <span style="color:#a6e22e">use=</span><span style="color:#e6db74">&#34;required&#34;</span><span style="color:#f92672">/&gt;</span>
+    <span style="color:#f92672">&lt;/xs:complexType&gt;</span>
+  <span style="color:#f92672">&lt;/xs:element&gt;</span>
+<span style="color:#f92672">&lt;/xs:schema&gt;</span>
+</code></pre></div><p>Cependant, cette XSD ne comporte pas encore de notion de namespace dédié. Pour cela, il faut lui ajouter l&rsquo;attribut targetNamespace avec comme valeur l&rsquo;identifiant de notre namespace.
+Dans mon cas, il s&rsquo;agira de <!-- raw HTML omitted --><a href="http://www.hikage.be/schema/import-template">http://www.hikage.be/schema/import-template</a><!-- raw HTML omitted -->.</p>
 <p>La XSD complètée sera donc :</p>
-
-<pre><code class="language-xml">&lt;?xml version=&quot;1.0&quot;?&gt;
-&lt;xs:schema xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; elementFormDefault=&quot;qualified&quot; targetNamespace=&quot;http://www.hikage.be/schema/import-template&quot;&gt;
-  &lt;xs:element name=&quot;import-template&quot;&gt;
-    &lt;xs:complexType&gt;
-      &lt;xs:sequence&gt;
-        &lt;xs:element name=&quot;variable&quot;&gt;
-          &lt;xs:complexType&gt;
-            &lt;xs:attribute name=&quot;name&quot; type=&quot;xs:string&quot; use=&quot;required&quot;/&gt;
-            &lt;xs:attribute name=&quot;value&quot; type=&quot;xs:string&quot; use=&quot;required&quot;/&gt;
-          &lt;/xs:complexType&gt;
-        &lt;/xs:element&gt;
-      &lt;/xs:sequence&gt;
-      &lt;xs:attribute name=&quot;location&quot; type=&quot;xs:string&quot; use=&quot;required&quot;/&gt;
-    &lt;/xs:complexType&gt;
-  &lt;/xs:element&gt;
-&lt;/xs:schema&gt;
-</code></pre>
-
-<p>On enregistre cette classe dans les sources du projets, par exemple dans le package be.hikage.namespaces.schemas.</p>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#75715e">&lt;?xml version=&#34;1.0&#34;?&gt;</span>
+<span style="color:#f92672">&lt;xs:schema</span> <span style="color:#a6e22e">xmlns:xs=</span><span style="color:#e6db74">&#34;http://www.w3.org/2001/XMLSchema&#34;</span> <span style="color:#a6e22e">elementFormDefault=</span><span style="color:#e6db74">&#34;qualified&#34;</span> <span style="color:#a6e22e">targetNamespace=</span><span style="color:#e6db74">&#34;http://www.hikage.be/schema/import-template&#34;</span><span style="color:#f92672">&gt;</span>
+  <span style="color:#f92672">&lt;xs:element</span> <span style="color:#a6e22e">name=</span><span style="color:#e6db74">&#34;import-template&#34;</span><span style="color:#f92672">&gt;</span>
+    <span style="color:#f92672">&lt;xs:complexType&gt;</span>
+      <span style="color:#f92672">&lt;xs:sequence&gt;</span>
+        <span style="color:#f92672">&lt;xs:element</span> <span style="color:#a6e22e">name=</span><span style="color:#e6db74">&#34;variable&#34;</span><span style="color:#f92672">&gt;</span>
+          <span style="color:#f92672">&lt;xs:complexType&gt;</span>
+            <span style="color:#f92672">&lt;xs:attribute</span> <span style="color:#a6e22e">name=</span><span style="color:#e6db74">&#34;name&#34;</span> <span style="color:#a6e22e">type=</span><span style="color:#e6db74">&#34;xs:string&#34;</span> <span style="color:#a6e22e">use=</span><span style="color:#e6db74">&#34;required&#34;</span><span style="color:#f92672">/&gt;</span>
+            <span style="color:#f92672">&lt;xs:attribute</span> <span style="color:#a6e22e">name=</span><span style="color:#e6db74">&#34;value&#34;</span> <span style="color:#a6e22e">type=</span><span style="color:#e6db74">&#34;xs:string&#34;</span> <span style="color:#a6e22e">use=</span><span style="color:#e6db74">&#34;required&#34;</span><span style="color:#f92672">/&gt;</span>
+          <span style="color:#f92672">&lt;/xs:complexType&gt;</span>
+        <span style="color:#f92672">&lt;/xs:element&gt;</span>
+      <span style="color:#f92672">&lt;/xs:sequence&gt;</span>
+      <span style="color:#f92672">&lt;xs:attribute</span> <span style="color:#a6e22e">name=</span><span style="color:#e6db74">&#34;location&#34;</span> <span style="color:#a6e22e">type=</span><span style="color:#e6db74">&#34;xs:string&#34;</span> <span style="color:#a6e22e">use=</span><span style="color:#e6db74">&#34;required&#34;</span><span style="color:#f92672">/&gt;</span>
+    <span style="color:#f92672">&lt;/xs:complexType&gt;</span>
+  <span style="color:#f92672">&lt;/xs:element&gt;</span>
+<span style="color:#f92672">&lt;/xs:schema&gt;</span>
+</code></pre></div><p>On enregistre cette classe dans les sources du projets, par exemple dans le package be.hikage.namespaces.schemas.</p>
 <h2 id="créer-un-namespacehandler">Créer un NamespaceHandler</h2>
-
 <p>Une fois le schéma défini, il faut encore dire à Spring comment l&rsquo;utiliser.
 Pour cela, il faut implémenter un NamespaceHandler, le plus souvent en étendant la classe NamespaceHandlerSupport :</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">TemplateNamespaceHandler</span> <span style="color:#66d9ef">extends</span> NamespaceHandlerSupport <span style="color:#f92672">{</span>
+   <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">final</span> String IMPORT_TEMPLATE_TAG <span style="color:#f92672">=</span> <span style="color:#f92672">&amp;</span>quot<span style="color:#f92672">;</span>import<span style="color:#f92672">-</span>template<span style="color:#f92672">&amp;</span>quot<span style="color:#f92672">;;</span>
 
-<pre><code class="language-java">public class TemplateNamespaceHandler extends NamespaceHandlerSupport {
-   private static final String IMPORT_TEMPLATE_TAG = &amp;quot;import-template&amp;quot;;
+   <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">init</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+       <span style="color:#75715e">// Spécifie que les éléments &amp;lt;import-template&amp;gt; seront traités
+</span><span style="color:#75715e"></span>       <span style="color:#75715e">// par la classe ImportTemplateBeanDefinitionParser
+</span><span style="color:#75715e"></span>       registerBeanDefinitionParser<span style="color:#f92672">(</span>IMPORT_TEMPLATE_TAG<span style="color:#f92672">,</span> 
+          <span style="color:#66d9ef">new</span> ImportTemplateBeanDefinitionParser<span style="color:#f92672">());</span>
 
-   public void init() {
-       // Spécifie que les éléments &amp;lt;import-template&amp;gt; seront traités
-       // par la classe ImportTemplateBeanDefinitionParser
-       registerBeanDefinitionParser(IMPORT_TEMPLATE_TAG, 
-          new ImportTemplateBeanDefinitionParser());
-
-   }
-}                                                                                                                                                                                              }                                   
-</code></pre>
-
-<p>Etendre NamespaceHandlerSupport nécessite d&rsquo;implémenter une méthode init dans laquelle il est nécessaire de lier les éléments racines (import-template dans notre cas) à un BeanDefinitionParser.</p>
-
+   <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>                                                                                                                                                                                              <span style="color:#f92672">}</span>                                   
+</code></pre></div><p>Etendre NamespaceHandlerSupport nécessite d&rsquo;implémenter une méthode init dans laquelle il est nécessaire de lier les éléments racines (import-template dans notre cas) à un BeanDefinitionParser.</p>
 <h2 id="créer-le-beandefinitionparser">Créer le BeanDefinitionParser</h2>
-
 <p>Les BeanDefinitionParser sont certainements les classes les plus importantes dans la création d&rsquo;un namespace car ce sont elles qui vont véritablement dire à Spring quel Beans devront être ajoutés dans le contexte.</p>
-
 <p>Dans notre cas, la classe ImportTemplateBeanDefinitionParser va être responable de</p>
-
 <ul>
 <li>Parser l&rsquo;élément import-template et ses éléments fils (variable)</li>
 <li>Lire le fichier spécifié dans l&rsquo;attribut location</li>
 <li>Injecter dans le contexte Spring les définition définies dans le fichier en remplacant les variables présente dans celui-ci</li>
 </ul>
-
 <p>En pratique, cela se fait dans la méthode parse, qui est définie dans l&rsquo;interface BeanDefinitionParser :</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">	<span style="color:#66d9ef">public</span> BeanDefinition <span style="color:#a6e22e">parse</span><span style="color:#f92672">(</span>Element element<span style="color:#f92672">,</span> ParserContext parserContext<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
 
-<pre><code class="language-java">    public BeanDefinition parse(Element element, ParserContext parserContext) {
+		<span style="color:#75715e">// On lit l&#39;attribut location pour connaitre le fichier modèle
+</span><span style="color:#75715e"></span>		String resource <span style="color:#f92672">=</span> element<span style="color:#f92672">.</span><span style="color:#a6e22e">getAttribute</span><span style="color:#f92672">(</span>LOCATION_ATTRIBUTE<span style="color:#f92672">);</span>
 
-        // On lit l'attribut location pour connaitre le fichier modèle
-        String resource = element.getAttribute(LOCATION_ATTRIBUTE);
+		<span style="color:#75715e">// On récupère les &amp;lt;variable name=&amp;quot;cle&amp;quot; value=&amp;quot;valeur&amp;quot; sous forme de
+</span><span style="color:#75715e"></span>		<span style="color:#75715e">// Map&amp;lt;Cle, Valeur&amp;gt;
+</span><span style="color:#75715e"></span>		Map<span style="color:#f92672">&amp;</span>lt<span style="color:#f92672">;</span>String<span style="color:#f92672">,</span> String<span style="color:#f92672">&amp;</span>gt<span style="color:#f92672">;</span> variables <span style="color:#f92672">=</span> prepareReplacement<span style="color:#f92672">(</span>element<span style="color:#f92672">);</span>
 
-        // On récupère les &amp;lt;variable name=&amp;quot;cle&amp;quot; value=&amp;quot;valeur&amp;quot; sous forme de
-        // Map&amp;lt;Cle, Valeur&amp;gt;
-        Map&amp;lt;String, String&amp;gt; variables = prepareReplacement(element);
+		<span style="color:#75715e">// On lit les BeanDefinition (représentation de la configuration d&#39;un
+</span><span style="color:#75715e"></span>		<span style="color:#75715e">// Bean) à partir du fichier modèle
+</span><span style="color:#75715e"></span>		Map<span style="color:#f92672">&amp;</span>lt<span style="color:#f92672">;</span>String<span style="color:#f92672">,</span> BeanDefinition<span style="color:#f92672">&amp;</span>gt<span style="color:#f92672">;</span> tempDefinitions <span style="color:#f92672">=</span> loadTemplateBeans<span style="color:#f92672">(</span>location<span style="color:#f92672">);</span>
 
-        // On lit les BeanDefinition (représentation de la configuration d'un
-        // Bean) à partir du fichier modèle
-        Map&amp;lt;String, BeanDefinition&amp;gt; tempDefinitions = loadTemplateBeans(location);
+		<span style="color:#75715e">// On remplace les variables dans les définitions ( nom de beans,
+</span><span style="color:#75715e"></span>		<span style="color:#75715e">// attributs, valeurs )
+</span><span style="color:#75715e"></span>		Map<span style="color:#f92672">&amp;</span>lt<span style="color:#f92672">;</span>String<span style="color:#f92672">,</span> BeanDefinition<span style="color:#f92672">&amp;</span>gt<span style="color:#f92672">;</span> beansDefinition <span style="color:#f92672">=</span> replaceVariable<span style="color:#f92672">(</span>
+				tempDefinitions<span style="color:#f92672">,</span> variables<span style="color:#f92672">);</span>
 
-        // On remplace les variables dans les définitions ( nom de beans,
-        // attributs, valeurs )
-        Map&amp;lt;String, BeanDefinition&amp;gt; beansDefinition = replaceVariable(
-                tempDefinitions, variables);
+		<span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span>Map<span style="color:#f92672">.</span><span style="color:#a6e22e">Entry</span><span style="color:#f92672">&amp;</span>lt<span style="color:#f92672">;</span>String<span style="color:#f92672">,</span> BeanDefinition<span style="color:#f92672">&amp;</span>gt<span style="color:#f92672">;</span> entry <span style="color:#f92672">:</span> templateBeansDefinitions
+				<span style="color:#f92672">.</span><span style="color:#a6e22e">entrySet</span><span style="color:#f92672">())</span> <span style="color:#f92672">{</span>
+			<span style="color:#75715e">// On ajoute chaque beans dans le contexte Spring
+</span><span style="color:#75715e"></span>			parserContext<span style="color:#f92672">.</span><span style="color:#a6e22e">getRegistry</span><span style="color:#f92672">().</span><span style="color:#a6e22e">registerBeanDefinition</span><span style="color:#f92672">(</span>entry<span style="color:#f92672">.</span><span style="color:#a6e22e">getKey</span><span style="color:#f92672">(),</span>
+					entry<span style="color:#f92672">.</span><span style="color:#a6e22e">getValue</span><span style="color:#f92672">());</span>
+		<span style="color:#f92672">}</span>
 
-        for (Map.Entry&amp;lt;String, BeanDefinition&amp;gt; entry : templateBeansDefinitions
-                .entrySet()) {
-            // On ajoute chaque beans dans le contexte Spring
-            parserContext.getRegistry().registerBeanDefinition(entry.getKey(),
-                    entry.getValue());
-        }
+		<span style="color:#66d9ef">return</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">;</span>
+	<span style="color:#f92672">}</span>
 
-        return null;
-    }
-
-}
-</code></pre>
-
-<p>J&rsquo;ai volontairement simplié le code concernant les méthodes loadTemplateBeans() et replaceVariable() par soucis de simplicité.</p>
-
+<span style="color:#f92672">}</span>
+</code></pre></div><p>J&rsquo;ai volontairement simplié le code concernant les méthodes loadTemplateBeans() et replaceVariable() par soucis de simplicité.</p>
 <p>Dans le cas de la méthode loadTemplateBeans, j&rsquo;utilise la classe XmlBeanDefinitionReader de Spring qui va lire et créer les BeanDefinitions à ma place. Un BeanDefinition est le modèle interne à Spring pour représenter un Bean : son nom, la classe, les variables constructeurs, les propriétés à configurer, &hellip;</p>
-
 <h2 id="enregistrer-le-namespacehandler-et-le-schéma">Enregistrer le NamespaceHandler et le schéma</h2>
-
 <p>Nous avons maintenant notre schéma ainsi que les classes nécessaire pour que Spring puisse traiter correctement un fichier de ce type  :</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#f92672">&lt;beans</span> <span style="color:#a6e22e">xmlns=</span><span style="color:#e6db74">&#34;http://www.springframework.org/schema/beans&#34;</span>
+      <span style="color:#a6e22e">xmlns:xsi=</span><span style="color:#e6db74">&#34;http://www.w3.org/2001/XMLSchema-instance&#34;</span>
+      <span style="color:#a6e22e">xmlns:hikage=</span><span style="color:#e6db74">&#34;http://www.hikage.be/schema/import-template&#34;</span>
+      <span style="color:#a6e22e">xsi:schemaLocation=</span><span style="color:#e6db74">&#34;http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+</span><span style="color:#e6db74">       http://www.hikage.be/schema/import-template http://www.hikage.be/schema/import-template/import-template-1.0.xsd&#34;</span><span style="color:#f92672">&gt;</span>
 
-<pre><code class="language-xml">&lt;beans xmlns=&quot;http://www.springframework.org/schema/beans&quot;
-      xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
-      xmlns:hikage=&quot;http://www.hikage.be/schema/import-template&quot;
-      xsi:schemaLocation=&quot;http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
-       http://www.hikage.be/schema/import-template http://www.hikage.be/schema/import-template/import-template-1.0.xsd&quot;&gt;
+   <span style="color:#f92672">&lt;hikage:import-template</span> <span style="color:#a6e22e">location=</span><span style="color:#e6db74">&#34;classpath:template.xml&#34;</span><span style="color:#f92672">&gt;</span>
+       <span style="color:#f92672">&lt;hikage:variable</span> <span style="color:#a6e22e">name=</span><span style="color:#e6db74">&#34;env&#34;</span> <span style="color:#a6e22e">value=</span><span style="color:#e6db74">&#34;dev&#34;</span><span style="color:#f92672">/&gt;</span>
+   <span style="color:#f92672">&lt;/hikage:import-template&gt;</span>
 
-   &lt;hikage:import-template location=&quot;classpath:template.xml&quot;&gt;
-       &lt;hikage:variable name=&quot;env&quot; value=&quot;dev&quot;/&gt;
-   &lt;/hikage:import-template&gt;
-
-&lt;/beans&gt;
-</code></pre>
-
-<p>Pour cela, il est nécessaire de créer deux fichiers dans META-INF :</p>
-
+<span style="color:#f92672">&lt;/beans&gt;</span>
+</code></pre></div><p>Pour cela, il est nécessaire de créer deux fichiers dans META-INF :</p>
 <ul>
-<li><strong>spring.handlers</strong> : qui va associé un namespace à son NamespaceHandler</li>
-<li><strong>spring.schemas</strong> : qui va associé l&rsquo;URL utilisé dans xsd:schemaLocation à la XSD dans le classpath</li>
+<li><!-- raw HTML omitted -->spring.handlers<!-- raw HTML omitted --> : qui va associé un namespace à son NamespaceHandler</li>
+<li><!-- raw HTML omitted -->spring.schemas<!-- raw HTML omitted --> : qui va associé l&rsquo;URL utilisé dans xsd:schemaLocation à la XSD dans le classpath</li>
 </ul>
-
 <p>Le fichier spring.handlers :</p>
-
 <pre><code>http://www.hikage.be/schema/import-template=be.hikage.springtemplate.TemplateNamespaceHandler
-</code></pre>
-
-<ul>
-    <li>Clé : Le namespace défini dans le targetNamespace de la XSD</li>
-    <li>Valeur : la FQN du NamespaceHandler</li>
-</ul>
-
+</code></pre><!-- raw HTML omitted -->
 <p>Le fichier spring.schemas :</p>
-
 <pre><code>http://www.hikage.be/schema/import-template/import-template.xsd=be/hikage/springtemplate/import-template-1.0.xsd
-</code></pre>
-
-<ul>
-<li>Clé : L&rsquo;URI définie dans le schemaLocation</li></li>
-<li>Valeur : Le chemin de la XSD dans le classpath</li></li>
+</code></pre><ul>
+<li>Clé : L&rsquo;URI définie dans le schemaLocation<!-- raw HTML omitted --></li>
+<li>Valeur : Le chemin de la XSD dans le classpath<!-- raw HTML omitted --></li>
 </ul>
-
 <h2 id="compléments">Compléments</h2>
-
 <p>Cela dit, cet exemple est assez basique. Les possibilités d&rsquo;un namespace sont plus étendue. Il est également possible d&rsquo;améliorer le schema XSD et le code du BeanDefinitionParser pour mieux s&rsquo;intégrer dans les IDEs.</p>
-
-<p>En attendant, pour plus d&rsquo;informations :
-<ul></p>
-
-<p></ul>
-    <li>Le code complet de l&rsquo;<a href="http://code.google.com/p/spring-import-template/">Import-Template</a> vous permettra de voir en détail comment créer un namespace</li>
-    <li>La <a href="http://static.springsource.org/spring/docs/3.0.x/spring-framework-reference/html/extensible-xml.html">documentation officielle </a>sur la création d&rsquo;un namespace</li></p>
+<p>En attendant, pour plus d&rsquo;informations :</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
   </div>
   
 
@@ -451,31 +393,34 @@ Pour cela, il faut implémenter un NamespaceHandler, le plus souvent en étendan
         
     
 
-
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-132470679-1"></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-
-gtag('config', 'UA-132470679-1');
-</script>
-
-
-<script defer src="https://use.fontawesome.com/releases/v5.5.0/js/all.js" integrity="sha384-GqVMZRt5Gn7tB9D9q7ONtcp4gtHIUEW/yG7h98J7IpE3kpi+srfFyyB/04OV6pG0" crossorigin="anonymous"></script>
+<script defer src="https://use.fontawesome.com/releases/v5.11.2/js/all.js" integrity="sha384-b3ua1l97aVGAPEIe48b4TC60WUQbQaGi2jqAWM90y0OZXZeyaTCWtBTKtjW2GXG1" crossorigin="anonymous"></script>
 
 
     
-    
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/highlight.min.js"></script>
         
-    
     <script type="text/javascript">
         
         hljs.initHighlightingOnLoad();
     </script>
     
 
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.js"></script>
+<script type="text/javascript">
+  if (tocbot) {
+    tocbot.init({
+      
+      tocSelector: '.toc',
+      
+      contentSelector: '.post',
+      
+      headingSelector: 'h2, h3, h4',
+      collapseDepth: 4
+    });
+  }
+</script>
 
 
 
