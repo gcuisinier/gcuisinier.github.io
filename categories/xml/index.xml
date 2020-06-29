@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Xml on Gildas Cuisinier</title>
+    <link>https://www.gcuisinier.net/categories/xml/</link>
+    <description>Recent content in Xml on Gildas Cuisinier</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 15 Mar 2012 08:00:00 +0100</lastBuildDate>
+    
+	<atom:link href="https://www.gcuisinier.net/categories/xml/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Présentation de xdt4j</title>
+      <link>https://www.gcuisinier.net/blog/2012/03/pr%C3%A9sentation-de-xdt4j/</link>
+      <pubDate>Thu, 15 Mar 2012 08:00:00 +0100</pubDate>
+      
+      <guid>https://www.gcuisinier.net/blog/2012/03/pr%C3%A9sentation-de-xdt4j/</guid>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;Chez mon client, nous avons eu un besoin particulier : celui de pouvoir étendre des archetypes Maven.
+Autrement dit, pouvoir créer un archetype qui se baserait sur un autre, et qui apporterait uniquement le delta de différence.&lt;/p&gt;
+&lt;p&gt;Pour certain fichier, nous n&amp;rsquo;avons pas eu le choix, nous avons été obliger de fournir une nouvelle version qui remplacerait la version initiale, par exemple les fichiers binaires tels que les images.&lt;/p&gt;
+&lt;p&gt;Par contre, pour le fichiers XML, et en particulier les fichiers pom.xml ou encore le fichier archetype-metadata.xml, c&amp;rsquo;était plus problématique. En effet, en cas de modification de l&amp;rsquo;un des ces fichiers dans l&amp;rsquo;archetype de base, nous aurions été obligé de copier ceux-ci, et ré-introduire les delta à la main&amp;hellip; ce qui ne serait pas très productifs.&lt;/p&gt;
+&lt;p&gt;Partant du fait que ces fichiers sont du XML, il me semblait plus logique de partir du fichier de base et de ne décrire que les transformations à lui apporter. Quand on parle de transformation en XML, on pense tout de suite à XSLT. 
+Mais il faut avouer que s&amp;rsquo;il est très puissant, il n&amp;rsquo;est pas forcément le plus simple à appréhender.&lt;/p&gt;
+&lt;p&gt;J&amp;rsquo;ai donc cherché des alternatives plus simples. En discutant avec un consultant .Net, celui-ci m&amp;rsquo;a présenté le système qui est utilisé par Microsoft pour gérer les fichiers de configuration de IIS : XML Document Transform.
+J&amp;rsquo;ai tout de suite trouvé cette solution élégante pour répondre à notre problème.&lt;/p&gt;
+&lt;p&gt;Par chance, quelqu&amp;rsquo;un a eu la bonne idée de faire une première implémentation OpenSource (&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; en se basant sur tout les exemples qu&amp;rsquo;il à trouvé dans la documentation et sur internet.
+Son implémentation se basait sur des spécificités .Net, donc impossible de le porter tel quel en Java.
+Cependant, son jeu de test était assez complet.&lt;/p&gt;
+&lt;p&gt;Grâce à celui-ci tests, j&amp;rsquo;ai pu développer en TDD une implémentation en Java : &lt;!-- raw HTML omitted --&gt;xdt4j&lt;!-- raw HTML omitted --&gt;.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Créer un namespace Spring</title>
+      <link>https://www.gcuisinier.net/blog/2010/04/cr%C3%A9er-un-namespace-spring/</link>
+      <pubDate>Sat, 24 Apr 2010 08:00:00 +0100</pubDate>
+      
+      <guid>https://www.gcuisinier.net/blog/2010/04/cr%C3%A9er-un-namespace-spring/</guid>
+      <description>&lt;p&gt;Une des fonctionnalités fort pratique avec Spring est la notion de namespace. Ceux-ci permettre de simplifier et réduire de manière significative une configuration XML.&lt;/p&gt;
+&lt;p&gt;Spring en possède plusieurs de bases : jms, jee, scheduling, jdbc, mvc, &amp;hellip;&lt;/p&gt;
+&lt;p&gt;Cependant, il est tout à fait possible d&amp;rsquo;en créer des spécifiques à nos propres besoins, et sans trop de difficulté.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

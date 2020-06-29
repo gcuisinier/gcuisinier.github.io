@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Gildas Cuisinier</title>
+    <link>https://www.gcuisinier.net/</link>
+    <description>Recent content on Gildas Cuisinier</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 28 Jun 2020 12:23:54 +0200</lastBuildDate>
+    
+	<atom:link href="https://www.gcuisinier.net/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>CKA - Challenge 1 - Configurer un kubectl en remote</title>
+      <link>https://www.gcuisinier.net/blog/2020/06/cka-challenge-1-configurer-un-kubectl-en-remote/</link>
+      <pubDate>Sun, 28 Jun 2020 12:23:54 +0200</pubDate>
+      
+      <guid>https://www.gcuisinier.net/blog/2020/06/cka-challenge-1-configurer-un-kubectl-en-remote/</guid>
+      <description>&lt;h1 id=&#34;introduction&#34;&gt;Introduction&lt;/h1&gt;
+&lt;p&gt;Dans le cadre de ma préparation à l&amp;rsquo;examen de certifiation d&amp;rsquo;administration Kubernetes (CKA), je me prépare quelques exercices pratiques à mettre en oeuvre.
+Si vous êtes intéressés, je vous propose ceux-ci, avec une solution possible.
+N&amp;rsquo;hésitez pas à me faire part de vos commentaires, critiques ou de vos propres solutions pour en discuter !&lt;/p&gt;
+&lt;h2 id=&#34;challenge&#34;&gt;Challenge&lt;/h2&gt;
+&lt;p&gt;Un nouveau collaborateur Bobby vient d&amp;rsquo;arriver dans votre société, et il souhaite pouvoir se connecter à un cluster Kubernetes existant avec kubectl afin de gérer complètement le namespace &lt;code&gt;developer&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Comment faire?&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Les Archers Arlonais</title>
+      <link>https://www.gcuisinier.net/portfolio/les-archers-arlonais/</link>
+      <pubDate>Sat, 01 Sep 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.gcuisinier.net/portfolio/les-archers-arlonais/</guid>
+      <description>Création du logo du club de tir des Archers Arlonais</description>
+    </item>
+    
+    <item>
+      <title>jEnv</title>
+      <link>https://www.gcuisinier.net/portfolio/jenv/</link>
+      <pubDate>Tue, 02 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.gcuisinier.net/portfolio/jenv/</guid>
+      <description>When you work with multiple JDK version, you probably have to change JAVA_HOME frequently. jEnv is a solution to help you !
+It allows you to configure which version to use for a specific folder, and jEnv will change JAVA_HOME each time you change of directory.</description>
+    </item>
+    
+    <item>
+      <title>About Me</title>
+      <link>https://www.gcuisinier.net/about/</link>
+      <pubDate>Wed, 01 Mar 2017 10:47:53 +0100</pubDate>
+      
+      <guid>https://www.gcuisinier.net/about/</guid>
+      <description>Software Engineer I have been a professional developer since 2006 after graduating with a Bacherlor degree from Haute Ecole Rennequin Sualem à Seraing (INPRES). I mainly develop in Java, and I quickly find a real interest in the development of framework or development tools to improve the quality and the development speed.
+ I am currently Software Engineer at Banque Internationale à Luxembourg, where I am in charge of the software factory.</description>
+    </item>
+    
+    <item>
+      <title>Les agents Java</title>
+      <link>https://www.gcuisinier.net/blog/2012/06/les-agents-java/</link>
+      <pubDate>Fri, 15 Jun 2012 08:00:00 +0100</pubDate>
+      
+      <guid>https://www.gcuisinier.net/blog/2012/06/les-agents-java/</guid>
+      <description>&lt;p&gt;Les Agents Java ? Pas la moindre idée de ce que c&amp;rsquo;est ?
+Mais si, vous en avez certainement déja vu, ils se cachent dans la ligne de commande Java via ce paramètre &lt;!-- raw HTML omitted --&gt;-javaagent:vers/mon/agent.jar&lt;!-- raw HTML omitted --&gt;.&lt;/p&gt;
+&lt;p&gt;Ceux-ci interviennent lors du chargement des classes par un classloader, et ont la possiblité de venir modifier la classe en cours de chargement. Ce mécanisme est utilisé par divers outils et frameworks :&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;AspectJ pour faire du tissage d&amp;rsquo;Aspect au chargement&lt;/li&gt;
+&lt;li&gt;Par des outils de Profiling pour venir ajouter du code permettant de tracer les appels&lt;/li&gt;
+&lt;li&gt;&amp;hellip; et plein d&amp;rsquo;autres&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+    <item>
+      <title>Mon retour sur Devoxx France, en tant que conférencier</title>
+      <link>https://www.gcuisinier.net/blog/2012/04/mon-retour-sur-devoxx-france-en-tant-que-conf%C3%A9rencier/</link>
+      <pubDate>Mon, 30 Apr 2012 08:00:00 +0100</pubDate>
+      
+      <guid>https://www.gcuisinier.net/blog/2012/04/mon-retour-sur-devoxx-france-en-tant-que-conf%C3%A9rencier/</guid>
+      <description>&lt;h2 id=&#34;le-début-du-rêve&#34;&gt;Le début du rêve&lt;/h2&gt;
+&lt;p&gt;L’histoire a commencé à Anvers, durant une keynote à Devoxx de Stefan Janssens où il lance une bombe atomique. En collaboration avec l’équipe du ParisJUG, ils ont commencé à préparer en secret LA conférence de France : &lt;a href=&#34;http://devoxx.fr/display/FR12/Accueil&#34;&gt;Devoxx France&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Cette conférence reprend les mêmes concepts de l’original, mais en plus court : 1 jour d’université, 2 jours de conférences.
+Mais France oblige, une majorité de présentation seront en français.&lt;/p&gt;
+&lt;p&gt;A ce moment, ayant déja fait plusieurs conférences dans les JUGs, j’espérais faire un jour une présentation à Devoxx.
+Malheureusement mon anglais n&amp;rsquo;étant pas assez au point, ce n&amp;rsquo;était pas pour demain.
+Mais Devoxx France était pour moi la solution idéale, et je me voyais bien un jour y venir présenter un sujet.&lt;/p&gt;
+&lt;p&gt;De retour d&amp;rsquo;Anvers, l&amp;rsquo;idée me trotte dans la tête, mais ma présentation sur les nouveautés de Spring 3.0 n&amp;rsquo;est plus d&amp;rsquo;actualité&amp;hellip; Et je ne maitrise pas d&amp;rsquo;autre sujet  suffisement pour être prêt dans les temps.&lt;/p&gt;
+&lt;p&gt;Bref, je me dis que Devoxx France, c’est pas encore pour tout de suite !&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Installer CRaSH sous Mac OS X</title>
+      <link>https://www.gcuisinier.net/blog/2012/04/installer-crash-sous-mac-os-x/</link>
+      <pubDate>Tue, 03 Apr 2012 08:00:00 +0100</pubDate>
+      
+      <guid>https://www.gcuisinier.net/blog/2012/04/installer-crash-sous-mac-os-x/</guid>
+      <description>&lt;h2 id=&#34;crash-cest-quoi-&#34;&gt;CRaSH, c&amp;rsquo;est quoi ?&lt;/h2&gt;
+&lt;p&gt;Derrière un nom qui ferait fuir n&amp;rsquo;importe qui, se cache un outil assez prometteur. CRaSH est un projet Open Source, sous licence LGPL, créé par Julien Viet. Et plus exactement un Shell qui permet de se connecter à une JVM et de la contrôler à l&amp;rsquo;aide de commande développée en Groovy.&lt;/p&gt;
+&lt;p&gt;Il est assez extensible, mais de base il vient avec des commandes pour JDBC, le logging, les Thread.
+Pour en savoir plus, je vous recommande la lecture de la &lt;a href=&#34;http://julienviet.com/crash/&#34;&gt;documentation&lt;/a&gt;, de regarder &lt;a href=&#34;http://blog.julienviet.com/2012/04/13/crash-standalone/&#34;&gt;un screencast&lt;/a&gt; ou de parcourir &lt;a href=&#34;http://www.slideshare.net/jviet/crash-12638600&#34;&gt;les slides&lt;/a&gt; de Julien lors de son quickies à Devoxx France&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Spring MongoDB en 5 minutes</title>
+      <link>https://www.gcuisinier.net/blog/2012/03/spring-mongodb-en-5-minutes/</link>
+      <pubDate>Sat, 17 Mar 2012 08:00:00 +0100</pubDate>
+      
+      <guid>https://www.gcuisinier.net/blog/2012/03/spring-mongodb-en-5-minutes/</guid>
+      <description>Créer sa base MongoDB Bien qu&amp;rsquo;il soit assez simple d&amp;rsquo;installer MongoDB sur un poste de développement, avec l&amp;rsquo;arrivée du cloud et des SaaS, il est très simple et très rapide d&amp;rsquo;avoir une instance de Mongo. MongoHQoffre des solutions d&amp;rsquo;hébergement de Mongo à la demande, à plusieurs tarifs. L&amp;rsquo;offre starterest gratuite, mais apporte une limite de 16 Mo.
+En plus d&amp;rsquo;héberger l&amp;rsquo;instance, MongoHQoffre également une interface graphique très pratique pour parcourir votre base, vos collections et leurs données, ou encore gérer les indexes.</description>
+    </item>
+    
+    <item>
+      <title>Présentation de xdt4j</title>
+      <link>https://www.gcuisinier.net/blog/2012/03/pr%C3%A9sentation-de-xdt4j/</link>
+      <pubDate>Thu, 15 Mar 2012 08:00:00 +0100</pubDate>
+      
+      <guid>https://www.gcuisinier.net/blog/2012/03/pr%C3%A9sentation-de-xdt4j/</guid>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;Chez mon client, nous avons eu un besoin particulier : celui de pouvoir étendre des archetypes Maven.
+Autrement dit, pouvoir créer un archetype qui se baserait sur un autre, et qui apporterait uniquement le delta de différence.&lt;/p&gt;
+&lt;p&gt;Pour certain fichier, nous n&amp;rsquo;avons pas eu le choix, nous avons été obliger de fournir une nouvelle version qui remplacerait la version initiale, par exemple les fichiers binaires tels que les images.&lt;/p&gt;
+&lt;p&gt;Par contre, pour le fichiers XML, et en particulier les fichiers pom.xml ou encore le fichier archetype-metadata.xml, c&amp;rsquo;était plus problématique. En effet, en cas de modification de l&amp;rsquo;un des ces fichiers dans l&amp;rsquo;archetype de base, nous aurions été obligé de copier ceux-ci, et ré-introduire les delta à la main&amp;hellip; ce qui ne serait pas très productifs.&lt;/p&gt;
+&lt;p&gt;Partant du fait que ces fichiers sont du XML, il me semblait plus logique de partir du fichier de base et de ne décrire que les transformations à lui apporter. Quand on parle de transformation en XML, on pense tout de suite à XSLT. 
+Mais il faut avouer que s&amp;rsquo;il est très puissant, il n&amp;rsquo;est pas forcément le plus simple à appréhender.&lt;/p&gt;
+&lt;p&gt;J&amp;rsquo;ai donc cherché des alternatives plus simples. En discutant avec un consultant .Net, celui-ci m&amp;rsquo;a présenté le système qui est utilisé par Microsoft pour gérer les fichiers de configuration de IIS : XML Document Transform.
+J&amp;rsquo;ai tout de suite trouvé cette solution élégante pour répondre à notre problème.&lt;/p&gt;
+&lt;p&gt;Par chance, quelqu&amp;rsquo;un a eu la bonne idée de faire une première implémentation OpenSource (&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; en se basant sur tout les exemples qu&amp;rsquo;il à trouvé dans la documentation et sur internet.
+Son implémentation se basait sur des spécificités .Net, donc impossible de le porter tel quel en Java.
+Cependant, son jeu de test était assez complet.&lt;/p&gt;
+&lt;p&gt;Grâce à celui-ci tests, j&amp;rsquo;ai pu développer en TDD une implémentation en Java : &lt;!-- raw HTML omitted --&gt;xdt4j&lt;!-- raw HTML omitted --&gt;.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Tutoriel : Comment créer un DMG</title>
+      <link>https://www.gcuisinier.net/blog/2011/05/tutoriel-comment-cr%C3%A9er-un-dmg/</link>
+      <pubDate>Wed, 11 May 2011 08:00:00 +0100</pubDate>
+      
+      <guid>https://www.gcuisinier.net/blog/2011/05/tutoriel-comment-cr%C3%A9er-un-dmg/</guid>
+      <description>&lt;p&gt;Les utilisateurs de Mac utilisent souvent de type de fichier, qui sont en fait des images disques (comme des .iso) qui peuvent être montées et qui apparaitront comme un nouveau disque sous Mac OS X.&lt;/p&gt;
+&lt;p&gt;Ce type de fichier est très souvent utilisé sous Mac comme moyen d&amp;rsquo;installer des logiciels.
+Afin de fournir un Bundle pour OpenJDK pour Mac OS X, j&amp;rsquo;ai voulu regarder de plus près comment faire pour créer un tel fichier.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Feedback : Switch PC vers Mac</title>
+      <link>https://www.gcuisinier.net/blog/2010/04/feedback-switch-pc-vers-mac/</link>
+      <pubDate>Wed, 28 Apr 2010 08:00:00 +0100</pubDate>
+      
+      <guid>https://www.gcuisinier.net/blog/2010/04/feedback-switch-pc-vers-mac/</guid>
+      <description>&lt;h2 id=&#34;tentation-doute-et-&#34;&gt;Tentation, doute et ..&lt;/h2&gt;
+&lt;p&gt;Ceci n&amp;rsquo;est pas un billet de plus pour faire de la propagande Apple, mais juste l&amp;rsquo;envie de partager mon expérience sur le switch de Pc vers Mac.&lt;/p&gt;
+&lt;p&gt;J&amp;rsquo;ai eu l&amp;rsquo;occasion de tester, très épisodiquement, Mac OS X chez mon premier employeur. J&amp;rsquo;ai trouvé le concept intéressant, plutôt bien fini esthétiquement et simple à utiliser.
+Mais en tant que développeur/administrateur système, j&amp;rsquo;ai également découvert avec horreur le clavier Apple..&lt;/p&gt;
+&lt;p&gt;Quelques temps plus  tard, un ami proche, administrateur système de profession, à tenter le switch vers un portable Apple. Mais il a rapidement changé, en particulier à cause du clavier qui ne lui était pas fort pratique.&lt;/p&gt;
+&lt;p&gt;Suite à cela, moi qui était jusque la tenter de passer le pas, j&amp;rsquo;ai été fort refroidit. Et quand j&amp;rsquo;ai effectivement été forcé de changer de portable, je suis resté sur le marque PC qui ne m&amp;rsquo;a jamais fait défaut.
+Mais avec un léger regret tout de même.&lt;/p&gt;
+&lt;p&gt;Et finalement, fin 2009, j&amp;rsquo;ai franchi le cap et me suis commandé un Mac Book Pro 15&amp;rdquo;.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Créer un namespace Spring</title>
+      <link>https://www.gcuisinier.net/blog/2010/04/cr%C3%A9er-un-namespace-spring/</link>
+      <pubDate>Sat, 24 Apr 2010 08:00:00 +0100</pubDate>
+      
+      <guid>https://www.gcuisinier.net/blog/2010/04/cr%C3%A9er-un-namespace-spring/</guid>
+      <description>&lt;p&gt;Une des fonctionnalités fort pratique avec Spring est la notion de namespace. Ceux-ci permettre de simplifier et réduire de manière significative une configuration XML.&lt;/p&gt;
+&lt;p&gt;Spring en possède plusieurs de bases : jms, jee, scheduling, jdbc, mvc, &amp;hellip;&lt;/p&gt;
+&lt;p&gt;Cependant, il est tout à fait possible d&amp;rsquo;en créer des spécifiques à nos propres besoins, et sans trop de difficulté.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Projet de modèle de configuration Spring</title>
+      <link>https://www.gcuisinier.net/blog/2010/04/projet-de-mod%C3%A8le-de-configuration-spring/</link>
+      <pubDate>Thu, 08 Apr 2010 08:00:00 +0100</pubDate>
+      
+      <guid>https://www.gcuisinier.net/blog/2010/04/projet-de-mod%C3%A8le-de-configuration-spring/</guid>
+      <description>&lt;h2 id=&#34;problème&#34;&gt;Problème&lt;/h2&gt;
+&lt;p&gt;Sur certains projets, j&amp;rsquo;ai eu l&amp;rsquo;occasion de voir des fichiers de configuration Spring de ce type :&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;import&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;resource=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;monitoring-environnement1.xml&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;/&amp;gt;&lt;/span&gt;
+&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;import&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;resource=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;monitoring-environnement2.xml&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;/&amp;gt;&lt;/span&gt;
+&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;import&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;resource=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;monitoring-environnement3.xml&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;/&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Et bien évidemment, chacun des fichiers de configurations importés était tous semblables, avec comme seule différence les noms de beans Spring ou des valeurs de propriétés.
+Si demain, un nouvel environnement devait être ajouté, je vous le donne dans le mille : un copier / coller, un s/environnement1/nouvel-environnement/g  !&lt;/p&gt;
+&lt;p&gt;Même si cela fonctionne bien, ce n&amp;rsquo;est pas la solution la plus propre : Si le système de monitoring devait être modifié, il faudrait éditer X fichiers, avec le risque d&amp;rsquo;oublier un fichier, ou un valeur&amp;hellip;&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
