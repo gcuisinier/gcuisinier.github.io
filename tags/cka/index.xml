@@ -22,7 +22,7 @@
 Si vous êtes intéressés, je vous propose ceux-ci, avec une solution possible.
 N&amp;rsquo;hésitez pas à me faire part de vos commentaires, critiques ou de vos propres solutions pour en discuter !&lt;/p&gt;
 &lt;h2 id=&#34;challenge&#34;&gt;Challenge&lt;/h2&gt;
-&lt;p&gt;Un nouveau collaborateur Bobby vient d&amp;rsquo;arriver dans votre société, et il souhaite pouvoir se connecter à un cluster Kubernetes existant avec kubectl afin de gérer complètement le namespace developer.&lt;/p&gt;
+&lt;p&gt;Un nouveau collaborateur Bobby vient d&amp;rsquo;arriver dans votre société, et il souhaite pouvoir se connecter à un cluster Kubernetes existant avec kubectl afin de gérer complètement le namespace &lt;code&gt;developer&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;Comment faire?&lt;/p&gt;</description>
     </item>
     

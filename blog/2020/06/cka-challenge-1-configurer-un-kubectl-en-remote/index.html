@@ -56,7 +56,7 @@ Comment faire?" />
 
 
 
-<link rel="stylesheet" href="/scss/hyde-hyde.cf524d34bc8fcf020dc8dee72f6db57b7a6da47fe54e852cb78e1ed1a29d1540.css" integrity="sha256-z1JNNLyPzwINyN7nL221e3ptpH/lToUst44e0aKdFUA=">
+<link rel="stylesheet" href="/scss/hyde-hyde.31568ede24be91e09510aac593483673e00f177b8469108fe40925366ce55e7f.css" integrity="sha256-MVaO3iS&#43;keCVEKrFk0g2c&#43;APF3uEaRCP5AklNmzlXn8=">
 
 
 <link rel="stylesheet" href="/scss/print.5aa4005c7565ec5b66c62cd79012c5cad1081f3332793145a8d3861a26391697.css" integrity="sha256-WqQAXHVl7FtmxizXkBLFytEIHzMyeTFFqNOGGiY5Fpc=" media="print">
@@ -216,7 +216,7 @@ Built with <a href="https://gohugo.io">Hugo</a> ❤️ <a href="https://github.c
     
     
     <br/>
-    <i class="fas fa-clock"></i> 4 min read
+    <i class="fas fa-clock"></i> 5 min read
 </div>
 
 
@@ -239,9 +239,14 @@ Built with <a href="https://gohugo.io">Hugo</a> ❤️ <a href="https://github.c
 Si vous êtes intéressés, je vous propose ceux-ci, avec une solution possible.
 N&rsquo;hésitez pas à me faire part de vos commentaires, critiques ou de vos propres solutions pour en discuter !</p>
 <h2 id="challenge">Challenge</h2>
-<p>Un nouveau collaborateur Bobby vient d&rsquo;arriver dans votre société, et il souhaite pouvoir se connecter à un cluster Kubernetes existant avec kubectl afin de gérer complètement le namespace developer.</p>
+<p>Un nouveau collaborateur Bobby vient d&rsquo;arriver dans votre société, et il souhaite pouvoir se connecter à un cluster Kubernetes existant avec kubectl afin de gérer complètement le namespace <code>developer</code>.</p>
 <p>Comment faire?</p>
 <h2 id="solution">Solution</h2>
+<style type="text/css">.notice{padding:18px;line-height:24px;margin-bottom:24px;border-radius:4px;color:#444;background:#e7f2fa}.notice p:last-child{margin-bottom:0}.notice-title{margin:-18px -18px 12px;padding:4px 18px;border-radius:4px 4px 0 0;font-weight:700;color:#fff;background:#6ab0de}.notice.warning .notice-title{background:rgba(217,83,79,.9)}.notice.warning{background:#fae2e2}.notice.info .notice-title{background:#f0b37e}.notice.info{background:#fff2db}.notice.note .notice-title{background:#6ab0de}.notice.note{background:#e7f2fA}.notice.tip .notice-title{background:rgba(92,184,92,.8)}.notice.tip{background:#e6f9e6}.icon-notice{display:inline-flex;align-self:center;margin-right:8px}.icon-notice img,.icon-notice svg{height:1em;width:1em;fill:currentColor}.icon-notice img,.icon-notice.baseline svg{top:0.125em;position:relative}</style>
+<svg width="0" height="0" display="none" xmlns="http://www.w3.org/2000/svg"><symbol id="tip-notice" viewBox="0 0 512 512" preserveAspectRatio="xMidYMid meet"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"/></symbol><symbol id="note-notice" viewBox="0 0 512 512" preserveAspectRatio="xMidYMid meet"><path d="M504 256c0 136.997-111.043 248-248 248S8 392.997 8 256C8 119.083 119.043 8 256 8s248 111.083 248 248zm-248 50c-25.405 0-46 20.595-46 46s20.595 46 46 46 46-20.595 46-46-20.595-46-46-46zm-43.673-165.346l7.418 136c.347 6.364 5.609 11.346 11.982 11.346h48.546c6.373 0 11.635-4.982 11.982-11.346l7.418-136c.375-6.874-5.098-12.654-11.982-12.654h-63.383c-6.884 0-12.356 5.78-11.981 12.654z"/></symbol><symbol id="warning-notice" viewBox="0 0 576 512" preserveAspectRatio="xMidYMid meet"><path d="M569.517 440.013C587.975 472.007 564.806 512 527.94 512H48.054c-36.937 0-59.999-40.055-41.577-71.987L246.423 23.985c18.467-32.009 64.72-31.951 83.154 0l239.94 416.028zM288 354c-25.405 0-46 20.595-46 46s20.595 46 46 46 46-20.595 46-46-20.595-46-46-46zm-43.673-165.346l7.418 136c.347 6.364 5.609 11.346 11.982 11.346h48.546c6.373 0 11.635-4.982 11.982-11.346l7.418-136c.375-6.874-5.098-12.654-11.982-12.654h-63.383c-6.884 0-12.356 5.78-11.981 12.654z"/></symbol><symbol id="info-notice" viewBox="0 0 512 512" preserveAspectRatio="xMidYMid meet"><path d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm0 110c23.196 0 42 18.804 42 42s-18.804 42-42 42-42-18.804-42-42 18.804-42 42-42zm56 254c0 6.627-5.373 12-12 12h-88c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h12v-64h-12c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h64c6.627 0 12 5.373 12 12v100h12c6.627 0 12 5.373 12 12v24z"/></symbol></svg><div class="notice note" >
+<p class="first notice-title"><span class="icon-notice baseline"><svg><use href="#note-notice"></use></svg></span>Note</p><p>Au moment de l&rsquo;écriture de ce billet, l&rsquo;examen CKA est basé sur Kubernetes 1.18.</p>
+<p>Les solutions proposées  sont donc basées sur cette version.</p></div>
+
 <h3 id="création-dun-certificat-client">Création d&rsquo;un certificat Client</h3>
 <p>La première chose à faire est de générer une CSR (Certificate Signing Request).
 Il est possible d&rsquo;utiliser OpenSSL pour cela, mais pour cette fois c&rsquo;est <a href="https://github.com/cloudflare/cfssl">CFSSL</a>  qui sera utilisé.</p>
@@ -267,7 +272,7 @@ Il est possible d&rsquo;utiliser OpenSSL pour cela, mais pour cette fois c&rsquo
 </ul>
 <h3 id="signature-de-la-csr-par-kubernetes">Signature de la CSR par Kubernetes</h3>
 <p>Il faut maintenant signer la CSR par l&rsquo;autorité de notre cluster Kubernetes afin de récupérer un certificat valide qui sera utilisé pour l&rsquo;authentification.</p>
-<p>Pour cela, nous allons créer une resources de type <strong>CertificateSigningRequest</strong> de l&rsquo;API <code>certificates.k8s.io/v1beta1</code>, dont la représentation YAML peut être créée via cette commande :</p>
+<p>Pour cela, nous allons créer une resource de type <strong>CertificateSigningRequest</strong> de l&rsquo;API <code>certificates.k8s.io/v1beta1</code>, dont la représentation YAML peut être créée via cette commande :</p>
 <pre><code>cat &gt; bobby-admin-csr.yml &lt;&lt;EOF
 apiVersion: certificates.k8s.io/v1beta1
 kind: CertificateSigningRequest
@@ -303,6 +308,16 @@ bobby-authentication   6m33s   kubernetes.io/legacy-unknown   kubernetes-admin  
 </code></pre></div><p>Reste maintenant à extraine le certificat généré via <code>kubectl</code> :</p>
 <pre><code>kubectl get csr bobby-authentication -o jsonpath='{.status.certificate}' | base64 --decode &gt; bobby-admin.crt
 </code></pre><h3 id="configuration-de-kubectl">Configuration de kubectl</h3>
+<div class="notice tip" >
+<p class="first notice-title"><span class="icon-notice baseline"><svg><use href="#tip-notice"></use></svg></span>Tip</p><p>Dans les exemples de commandes suivantes, le paramètre <code>--kubeconfig=bobby-config</code> est proposé à chaque commande afin de permettre de différencier les commandes <code>kubectl</code> utilisée par un utilisateur admin existant, des commandes <code>kubectl</code> sur le poste de Bobby.</p>
+<p>Il serait cependant possiblle de définir la variables d&rsquo;environment <code>KUBECONFIG</code> pointant vers ce fichier afin d&rsquo;éviter cette verbosité :</p>
+<pre><code># Un seul fichier specifique
+export KUBECONFIG=/path/to/bobby-config
+
+# Ou si l'on souhaite avoir plusieurs fichiers de configuration
+export KUBECONFIG=/path/to/bobby-config:/path/to/other-config
+</code></pre></div>
+
 <p>Afin de configurer kubectl, il est nécessaire d&rsquo;avoir :</p>
 <ul>
 <li>Le certificat de l&rsquo;autorité de certification, que l&rsquo;on peut trouver sur le master dans <code>/etc/kubernetes/pki/ca.crt</code></li>
