@@ -1,1 +1,60 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Categories on Gildas Cuisinier</title><link>https://www.gcuisinier.net/categories/</link><description>Recent content in Categories on Gildas Cuisinier</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Tue, 03 Apr 2012 08:00:00 +0100</lastBuildDate><atom:link href="https://www.gcuisinier.net/categories/index.xml" rel="self" type="application/rss+xml"/><item><title>Java</title><link>https://www.gcuisinier.net/categories/java/</link><pubDate>Tue, 03 Apr 2012 08:00:00 +0100</pubDate><guid>https://www.gcuisinier.net/categories/java/</guid><description/></item><item><title>OSX</title><link>https://www.gcuisinier.net/categories/osx/</link><pubDate>Tue, 03 Apr 2012 08:00:00 +0100</pubDate><guid>https://www.gcuisinier.net/categories/osx/</guid><description/></item><item><title>Spring</title><link>https://www.gcuisinier.net/categories/spring/</link><pubDate>Sat, 17 Mar 2012 08:00:00 +0100</pubDate><guid>https://www.gcuisinier.net/categories/spring/</guid><description/></item><item><title>OpenSource</title><link>https://www.gcuisinier.net/categories/opensource/</link><pubDate>Thu, 15 Mar 2012 08:00:00 +0100</pubDate><guid>https://www.gcuisinier.net/categories/opensource/</guid><description/></item><item><title>Xml</title><link>https://www.gcuisinier.net/categories/xml/</link><pubDate>Thu, 15 Mar 2012 08:00:00 +0100</pubDate><guid>https://www.gcuisinier.net/categories/xml/</guid><description/></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on Gildas Cuisinier</title>
+    <link>https://www.gcuisinier.net/categories/</link>
+    <description>Recent content in Categories on Gildas Cuisinier</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 03 Apr 2012 08:00:00 +0100</lastBuildDate>
+    
+	<atom:link href="https://www.gcuisinier.net/categories/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Java</title>
+      <link>https://www.gcuisinier.net/categories/java/</link>
+      <pubDate>Tue, 03 Apr 2012 08:00:00 +0100</pubDate>
+      
+      <guid>https://www.gcuisinier.net/categories/java/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>OSX</title>
+      <link>https://www.gcuisinier.net/categories/osx/</link>
+      <pubDate>Tue, 03 Apr 2012 08:00:00 +0100</pubDate>
+      
+      <guid>https://www.gcuisinier.net/categories/osx/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Spring</title>
+      <link>https://www.gcuisinier.net/categories/spring/</link>
+      <pubDate>Sat, 17 Mar 2012 08:00:00 +0100</pubDate>
+      
+      <guid>https://www.gcuisinier.net/categories/spring/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>OpenSource</title>
+      <link>https://www.gcuisinier.net/categories/opensource/</link>
+      <pubDate>Thu, 15 Mar 2012 08:00:00 +0100</pubDate>
+      
+      <guid>https://www.gcuisinier.net/categories/opensource/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Xml</title>
+      <link>https://www.gcuisinier.net/categories/xml/</link>
+      <pubDate>Thu, 15 Mar 2012 08:00:00 +0100</pubDate>
+      
+      <guid>https://www.gcuisinier.net/categories/xml/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
