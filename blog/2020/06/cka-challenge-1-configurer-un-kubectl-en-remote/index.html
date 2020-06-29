@@ -216,7 +216,7 @@ Built with <a href="https://gohugo.io">Hugo</a> ❤️ <a href="https://github.c
     
     
     <br/>
-    <i class="fas fa-clock"></i> 3 min read
+    <i class="fas fa-clock"></i> 4 min read
 </div>
 
 
@@ -243,9 +243,9 @@ N&rsquo;hésitez pas à me faire part de vos commentaires, critiques ou de vos p
 <p>Comment faire?</p>
 <h2 id="solution">Solution</h2>
 <h3 id="création-dun-certificat-client">Création d&rsquo;un certificat Client</h3>
-<p>La première chose à faire est de généré une CSR (Certificate Signing Request).
-Il est possible d&rsquo;utiliser OpenSSL pour cela, mais pour cette fois c&rsquo;est <a href="https://github.com/cloudflare/cfssl">CFSSL</a>  qui sera utilisé pour cela</p>
-<p>Pour cela, il faut préparer un fichier JSON qui decrit les informations du certificat que l&rsquo;on souhaite générer :</p>
+<p>La première chose à faire est de générer une CSR (Certificate Signing Request).
+Il est possible d&rsquo;utiliser OpenSSL pour cela, mais pour cette fois c&rsquo;est <a href="https://github.com/cloudflare/cfssl">CFSSL</a>  qui sera utilisé.</p>
+<p>Pour cela, il faut préparer un fichier JSON qui décrit les informations du certificat que l&rsquo;on souhaite générer :</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JSON" data-lang="JSON">{
   <span style="color:#f92672">&#34;CN&#34;</span>: <span style="color:#e6db74">&#34;bobby&#34;</span>,
   <span style="color:#f92672">&#34;key&#34;</span>: {
@@ -258,16 +258,16 @@ Il est possible d&rsquo;utiliser OpenSSL pour cela, mais pour cette fois c&rsquo
     }
   ]
 }
-</code></pre></div><p>Ce dernier sera utilisé par CFSSL pour génerer la CSR :</p>
+</code></pre></div><p>Nous le passons ensuite à CFSSL pour la génération proprement dite:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">cfssl genkey bobby-admin.json | cfssljson -bare bobby-admin
 </code></pre></div><p>Le résultat de cette commande est la création de deux fichiers :</p>
 <ul>
-<li>bobby-admin-key.pem : la clé privé</li>
+<li>bobby-admin-key.pem : la clé privée</li>
 <li>bobby-admin-key.csr : la demande de signature</li>
 </ul>
 <h3 id="signature-de-la-csr-par-kubernetes">Signature de la CSR par Kubernetes</h3>
-<p>Il faut maintenant faire signer la CSR par l&rsquo;autorité de notre cluster Kubernetes afin qu&rsquo;il soit accepté pour l&rsquo;authentication.</p>
-<p>Pour cela, nous allons créer une resources de type <strong>CertificateSigningRequest</strong> de l&rsquo;API certificates.k8s.io/v1beta1, dont la représentation YAML peut être créée comme ceci :</p>
+<p>Il faut maintenant signer la CSR par l&rsquo;autorité de notre cluster Kubernetes afin de récupérer un certificat valide qui sera utilisé pour l&rsquo;authentification.</p>
+<p>Pour cela, nous allons créer une resources de type <strong>CertificateSigningRequest</strong> de l&rsquo;API <code>certificates.k8s.io/v1beta1</code>, dont la représentation YAML peut être créée via cette commande :</p>
 <pre><code>cat &gt; bobby-admin-csr.yml &lt;&lt;EOF
 apiVersion: certificates.k8s.io/v1beta1
 kind: CertificateSigningRequest
@@ -283,30 +283,32 @@ spec:
   - server auth
   - client auth
 EOF
-</code></pre><p>Pour ensuite importer cette resources via kubectl</p>
-<pre><code>$&gt; kubectl apply -f
+</code></pre><p>Celle-ci est ensuite importée dans Kubernetes via <code>kubectl</code> :</p>
+<pre><code>$&gt; kubectl apply -f bobby-authentication.yaml
 
 certificatesigningrequest.certificates.k8s.io/bobby-authentication
-</code></pre><p>On peut voir que la CSR est en attente d&rsquo;être signée :</p>
+</code></pre><p>On peut vérifier que cette CSR est bien présente, et en attente d&rsquo;être validée :</p>
 <pre><code>$&gt; kubectl get csr bobby-authentication
 NAME                       AGE     SIGNERNAME                     REQUESTOR          CONDITION
 bobby-authentication   4m50s   kubernetes.io/legacy-unknown   kubernetes-admin   Pending
 </code></pre><p>Pour signer celle-ci, kubectl est une nouvelle fois notre ami :</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$&gt; kubectl certificate approve bobby-authentication
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># Validation de la CSR</span>
+$&gt; kubectl certificate approve bobby-authentication
 certificatesigningrequest.certificates.k8s.io/bobby-authentication approved
 
+<span style="color:#75715e"># Vérification de l&#39;état de la CSR, qui est bien approuvée</span>
 $&gt; kubectl get csr bobby-authentication
 NAME                       AGE     SIGNERNAME                     REQUESTOR          CONDITION
 bobby-authentication   6m33s   kubernetes.io/legacy-unknown   kubernetes-admin   Approved,Issued
-</code></pre></div><p>Il est possible d&rsquo;extraire le certificat, une nouvelle fois grâce à kubectl :</p>
+</code></pre></div><p>Reste maintenant à extraine le certificat généré via <code>kubectl</code> :</p>
 <pre><code>kubectl get csr bobby-authentication -o jsonpath='{.status.certificate}' | base64 --decode &gt; bobby-admin.crt
 </code></pre><h3 id="configuration-de-kubectl">Configuration de kubectl</h3>
 <p>Afin de configurer kubectl, il est nécessaire d&rsquo;avoir :</p>
 <ul>
-<li>Le certificat de lautorité de certification, que l&rsquo;on peut trouver sur le master dans <code>/etc/kubernetes/pki/ca.crt</code></li>
+<li>Le certificat de l&rsquo;autorité de certification, que l&rsquo;on peut trouver sur le master dans <code>/etc/kubernetes/pki/ca.crt</code></li>
 <li>L&rsquo;URL de l&rsquo;API server</li>
 <li>Le certificat client, qui vient d&rsquo;être généré</li>
-<li>La clé privé lié à ce certificat</li>
+<li>La clé privée liée à ce certificat</li>
 </ul>
 <pre><code>API_URL=https://10.0.1.100:6443
 
@@ -319,13 +321,16 @@ kubectl config --kubeconfig=bobby-config set-context bobby --cluster=development
 
 kubectl --kubeconfig=bobby-config use-context bobby
 
-</code></pre><p>Une fois fait, tentons de lister les pods dans le namespace <code>developer</code></p>
+</code></pre><p>Si tout s&rsquo;est passé correctement, nous devrions pouvoir appeler notre cluster avec kubectl en distant.
+Tentons de lister les pods dans le namespace <code>developer</code></p>
 <pre><code>$&gt; kubectl  --kubeconfig=bobby-config get pods
+
 Error from server (Forbidden): pods is forbidden: User &quot;developer-admin&quot; cannot list resource &quot;pods&quot; in API group &quot;&quot; in the namespace &quot;developer&quot;
-</code></pre><p>La connexion est opérationnelle, mais actuellement, notre utilisateur n&rsquo;a aucun droit sur le namespace <code>developer</code></p>
+</code></pre><p>La connexion est opérationnelle, mais actuellement, notre utilisateur n&rsquo;a aucun droit sur le namespace <code>developer</code>.
+Il ne peut rien faire pour le moment !</p>
 <h3 id="configuration-rbac-pour-lutilisateur">Configuration RBAC pour l&rsquo;utilisateur</h3>
 <p>La première chose à faire est de créer un role dans notre namespace.
-Pour cela, le YAML  suivant pourrait faire l&rsquo;affaire :</p>
+Le YAML suivant pourrait faire l&rsquo;affaire :</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-YAML" data-lang="YAML"><span style="color:#66d9ef">kind</span>: Role
 <span style="color:#66d9ef">apiVersion</span>: rbac.authorization.k8s.io/v1beta1
 <span style="color:#66d9ef">metadata</span>:
@@ -340,7 +345,7 @@ Pour cela, le YAML  suivant pourrait faire l&rsquo;affaire :</p>
   - jobs
   - cronjobs
   <span style="color:#66d9ef">verbs</span>: [<span style="color:#e6db74">&#34;*&#34;</span>]
-</code></pre></div><p>Un coup de <code>kubectl apply -f developer-admin-role.yml</code> pour créer le rôle et il restera juste à lié l&rsquo;utilisateur bobby à ce rôle :</p>
+</code></pre></div><p>Un coup de <code>kubectl apply -f developer-admin-role.yml</code> pour créer le rôle et il l&rsquo;étape suivant sera de lier l&rsquo;utilisateur bobby à ce rôle :</p>
 <pre><code>$&gt; kubectl create rolebinding bobby-developer-admin-role --role=developer-admin-role --user=bobby -n developer
 
 rolebinding.rbac.authorization.k8s.io/developer-admin-role created
@@ -354,6 +359,14 @@ $&gt; kubectl --kubeconfig=bobby-config get pods
 NAME         READY   STATUS    RESTARTS   AGE
 test-nginx   1/1     Running   0          37s
 </code></pre><p>Et voila :-)</p>
+<h1 id="dautres-exercices-">D&rsquo;autres exercices ?</h1>
+<p>D&rsquo;autres petits challenges viendront sans doute par la suite, mais en attendant si vous voulez vous entrainer pour l&rsquo;examen CKA, je vous conseille ces deux sites (en anglais):</p>
+<ul>
+<li><a href="https://levelup.gitconnected.com/kubernetes-cka-example-questions-practical-challenge-86318d85b4d">Blog - CKA Challenges</a></li>
+<li><a href="https://killer.sh/">CKA/CKAD Simulator</a></li>
+</ul>
+<p>Ce dernier est payant, mais franchement bien fait !
+Et a priori dans les mêmes conditions que l&rsquo;examens lui même (Web Interface, plusieurs contextes/clusters), et a priori un peu plus compliqué que l&rsquo;examen (d&rsquo;après les retours que j&rsquo;ai pu lire, n&rsquo;ayant pas encore passé moi même l&rsquo;examen).</p>
   </div>
   
 
