@@ -3,32 +3,47 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://www.gcuisinier.net/tags/cka/</loc>
+    <lastmod>2020-08-01T09:45:55+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.gcuisinier.net/blog/2020/08/comment-jai-pass%C3%A9-la-certification-kubernetes-administrator/</loc>
+    <lastmod>2020-08-01T09:45:55+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.gcuisinier.net/tags/feedback/</loc>
+    <lastmod>2020-08-01T09:45:55+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.gcuisinier.net/</loc>
+    <lastmod>2020-08-01T09:45:55+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.gcuisinier.net/posts/</loc>
+    <lastmod>2020-08-01T09:45:55+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.gcuisinier.net/tags/</loc>
+    <lastmod>2020-08-01T09:45:55+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.gcuisinier.net/tags/tips/</loc>
+    <lastmod>2020-08-01T09:45:55+02:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://www.gcuisinier.net/tags/challenge/</loc>
     <lastmod>2020-06-28T12:23:54+02:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.gcuisinier.net/tags/cka/</loc>
-    <lastmod>2020-06-28T12:23:54+02:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://www.gcuisinier.net/blog/2020/06/cka-challenge-1-configurer-un-kubectl-en-remote/</loc>
-    <lastmod>2020-06-28T12:23:54+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.gcuisinier.net/</loc>
-    <lastmod>2020-06-28T12:23:54+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.gcuisinier.net/posts/</loc>
-    <lastmod>2020-06-28T12:23:54+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.gcuisinier.net/tags/</loc>
     <lastmod>2020-06-28T12:23:54+02:00</lastmod>
   </url>
   

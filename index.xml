@@ -6,10 +6,21 @@
     <description>Recent content on Gildas Cuisinier</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 28 Jun 2020 12:23:54 +0200</lastBuildDate>
+    <lastBuildDate>Sat, 01 Aug 2020 09:45:55 +0200</lastBuildDate>
     
 	<atom:link href="https://www.gcuisinier.net/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Comment j&#39;ai passé la certification Kubernetes Administrator</title>
+      <link>https://www.gcuisinier.net/blog/2020/08/comment-jai-pass%C3%A9-la-certification-kubernetes-administrator/</link>
+      <pubDate>Sat, 01 Aug 2020 09:45:55 +0200</pubDate>
+      
+      <guid>https://www.gcuisinier.net/blog/2020/08/comment-jai-pass%C3%A9-la-certification-kubernetes-administrator/</guid>
+      <description>Mon profil ? Disons le vite : Je ne suis pas un expert Kubernetes !
+Voilà, c&amp;rsquo;est dit ;-)
+En effet, bien que je suis très intéressé depuis un certain temps, voir un temps certain sur l&amp;rsquo;écosystème des containers ( Docker 0.6 si mes souvenirs sont bons ), mon expérience professionelle sur ceux-ci est relativement limitée. J&amp;rsquo;ai bien entendu fait pas mal de POC, de projets perso sur Docker, mais pas une vrai utilisation de production chez mon employeur actuel.</description>
+    </item>
     
     <item>
       <title>CKA - Challenge 1 - Configurer un kubectl en remote</title>

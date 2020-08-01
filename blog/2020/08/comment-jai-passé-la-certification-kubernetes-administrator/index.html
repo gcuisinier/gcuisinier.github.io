@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    
+    
+
+
+    <head>
+    <link href="https://gmpg.org/xfn/11" rel="profile">
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta http-equiv="Cache-Control" content="public" />
+<!-- Enable responsiveness on mobile devices -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="generator" content="Hugo 0.73.0" />
+
+    
+    
+    
+
+<title>Comment j&#39;ai passé la certification Kubernetes Administrator • Gildas Cuisinier</title>
+
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Comment j&#39;ai passé la certification Kubernetes Administrator"/>
+<meta name="twitter:description" content="Mon profil ? Disons le vite : Je ne suis pas un expert Kubernetes !
+Voilà, c&rsquo;est dit ;-)
+En effet, bien que je suis très intéressé depuis un certain temps, voir un temps certain sur l&rsquo;écosystème des containers ( Docker 0.6 si mes souvenirs sont bons ), mon expérience professionelle sur ceux-ci est relativement limitée. J&rsquo;ai bien entendu fait pas mal de POC, de projets perso sur Docker, mais pas une vrai utilisation de production chez mon employeur actuel."/>
+
+<meta property="og:title" content="Comment j&#39;ai passé la certification Kubernetes Administrator" />
+<meta property="og:description" content="Mon profil ? Disons le vite : Je ne suis pas un expert Kubernetes !
+Voilà, c&rsquo;est dit ;-)
+En effet, bien que je suis très intéressé depuis un certain temps, voir un temps certain sur l&rsquo;écosystème des containers ( Docker 0.6 si mes souvenirs sont bons ), mon expérience professionelle sur ceux-ci est relativement limitée. J&rsquo;ai bien entendu fait pas mal de POC, de projets perso sur Docker, mais pas une vrai utilisation de production chez mon employeur actuel." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.gcuisinier.net/blog/2020/08/comment-jai-pass%C3%A9-la-certification-kubernetes-administrator/" />
+<meta property="article:published_time" content="2020-08-01T09:45:55+02:00" />
+<meta property="article:modified_time" content="2020-08-01T09:45:55+02:00" />
+
+
+    
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/scss/hyde-hyde.31568ede24be91e09510aac593483673e00f177b8469108fe40925366ce55e7f.css" integrity="sha256-MVaO3iS&#43;keCVEKrFk0g2c&#43;APF3uEaRCP5AklNmzlXn8=">
+
+
+<link rel="stylesheet" href="/scss/print.5aa4005c7565ec5b66c62cd79012c5cad1081f3332793145a8d3861a26391697.css" integrity="sha256-WqQAXHVl7FtmxizXkBLFytEIHzMyeTFFqNOGGiY5Fpc=" media="print">
+
+
+
+
+<link rel="stylesheet" href="/scss/tocbot.5ef07cebc3c477b54270456f149ee02922479bb7555fd344b2c69f953b0e7e5e.css" integrity="sha256-XvB868PEd7VCcEVvFJ7gKSJHm7dVX9NEssaflTsOfl4=">
+
+
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <!-- Icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+    <link rel="shortcut icon" href="/favicon.png">
+    
+    
+<link href="/css-static/hover.css" rel="stylesheet">
+
+</head>
+
+
+    <body class=" ">
+    
+<div class="sidebar">
+  <div class="container  vertical-center">
+    <div class="sidebar-about">
+      <span class="site__title">
+        <a href="https://www.gcuisinier.net/">Gildas Cuisinier</a>
+      </span>
+      <small class="text-center center-block">&lt;dev&gt;SomeWhere&lt;ops&gt;</small>
+
+      
+        
+        
+        
+        <div class="author-image hvr-rotate">
+          <img src="https://www.gcuisinier.net/img/gcuisinier.jpg" alt="Author Image" class="img--circle img--headshot element--center">
+        </div>
+        
+      
+      
+      <p class="site__description">
+        
+      </p>
+    </div>
+    <div class="collapsible-menu">
+      <input type="checkbox" id="menuToggle">
+      <label for="menuToggle">Gildas Cuisinier</label>
+      <div class="menu-content">
+        <div>
+	<ul class="sidebar-nav">
+		 
+		 
+			 
+				<li>
+					<a href="/about/" class="hvr-push">
+						<span>About</span>
+					</a>
+				</li>
+			 
+		 
+			 
+				<li>
+					<a href="/posts/" class="hvr-push">
+						<span>Blog</span>
+					</a>
+				</li>
+			 
+		 
+			 
+				<li>
+					<a href="/portfolio/" class="hvr-push">
+						<span>Projects</span>
+					</a>
+				</li>
+			 
+		
+	</ul>
+</div>
+
+        <section class="social">
+	
+	<a href="https://twitter.com/gcuisinier" rel="me"><i class="fab fa-twitter fa-lg hvr-buzz-out hvr-buzz-out " aria-hidden="true"></i></a>
+	
+	
+	
+	<a href="https://github.com/gcuisinier" rel="me"><i class="fab fa-github fa-lg hvr-buzz-out hvr-buzz-out" aria-hidden="true"></i></a>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<a href="https://keybase.io/gcuisinier" rel="me"><i class="fab fa-keybase fa-lg hvr-buzz-out" aria-hidden="true"></i></a>
+	
+	
+	
+	&nbsp;<a href="https://about.me/gcuisinier"><i class="fas fa-address-card fa-lg hvr-buzz-out" aria-hidden="true"></i></a>
+	
+	
+	
+	<a href="mailto:contact%20[at]%20gcuisinier.net" rel="me"><i class="fas fa-at fa-lg hvr-buzz-out" aria-hidden="true"></i></a>
+	
+</section>
+
+      </div>
+    </div>
+    
+
+
+  </div>
+</div>
+
+        <div class="content container">
+            
+    
+
+
+
+<article>
+  <header>
+    <h1>Comment j&#39;ai passé la certification Kubernetes Administrator</h1>
+    
+    
+<div class="post__meta">
+    
+    
+      <i class="fas fa-calendar-alt"></i> Aug 01, 2020
+    
+    
+    
+    
+    
+      
+      
+          <br/>
+           <i class="fas fa-tags"></i>
+          
+          <a class="badge badge-tag" href="/tags/cka">cka</a>
+           
+      
+          <a class="badge badge-tag" href="/tags/tips">tips</a>
+           
+      
+          <a class="badge badge-tag" href="/tags/feedback">feedback</a>
+          
+      
+    
+    
+    <br/>
+    <i class="fas fa-clock"></i> 7 min read
+</div>
+
+
+  </header>
+  
+  
+  
+    <div class="toc-wrapper">
+      <input type="checkbox" id="tocToggle">
+      <label for="tocToggle">Table of Content</label>
+      
+        <div class="toc" id="TableOfContents"></div>
+      
+    </div>
+  
+  
+  <div class="post">
+    <h1 id="mon-profil-">Mon profil ?</h1>
+<p>Disons le vite : Je ne suis pas un expert Kubernetes !</p>
+<p>Voilà, c&rsquo;est dit ;-)</p>
+<p>En effet, bien que je suis très intéressé depuis un certain temps, voir un temps certain sur l&rsquo;écosystème des containers ( Docker 0.6 si mes souvenirs sont bons ), mon expérience professionelle sur ceux-ci est relativement limitée.
+J&rsquo;ai bien entendu fait pas mal de POC, de projets perso sur Docker, mais pas une vrai utilisation de production  chez mon employeur actuel.
+Du moins, pas encore, mais on y vient enfin !</p>
+<p>Tout cela pour dire que si je n&rsquo;ai pas peur du YAML, que je maitrise assez bien Docker, que je comprends  pas trop mal les concepts de Kubernetes, je n&rsquo;ai pas une expérience &ldquo;Day to day&rdquo; qui me permettait d&rsquo;être à l&rsquo;aise avec Kubernetes.</p>
+<h1 id="cka">CKA</h1>
+<p>CKA, Certified Kubernetes Administrator, est un examen &ldquo;pratique&rdquo;.
+Donc assez différent des autres certifications que j&rsquo;ai déjà pu passer précédemment ( Docker, Java, AWS), qui elle étaient basées sur des questions à choix multiples.</p>
+<p>Perso, je trouve l&rsquo;option <strong>pratique</strong> nettement plus intéressante car plus proche des cas réels.
+Et le fait de devoir s&rsquo;entrainer encore et encore pour préparer l&rsquo;examen améliore la mémorisation et la rapidité.</p>
+<p>En pratique l&rsquo;examen prends la forme  de :</p>
+<ul>
+<li>24 questions pratiques ( se connecter sur un cluster, et exécuter des tâches plus au moins complexes )</li>
+<li>3h de temps</li>
+<li>Un accès à la documentation Kubernetes est autorisée (Documenation, blog officiel et github de Kubernetes) mais uniquement ceux-ci, et un seul onglet.</li>
+<li>Un score de <strong>74%</strong> est nécessaire pour réussir</li>
+</ul>
+<h1 id="mon-cka">Mon CKA</h1>
+<h2 id="fail-fast-ou-pas-">Fail Fast, ou pas :)</h2>
+<p>Pour ma part, j&rsquo;avais en tête de passer cette certification il y a longtemps.</p>
+<p><strong>Pourquoi ?</strong> Juste par envie personnel ! Rien ne m&rsquo;y oblige.
+En fait, quand j&rsquo;ai envie d&rsquo;approfondir un sujet, les certifications sont plus un &ldquo;moyen&rdquo; qu&rsquo;une finalité.
+Cela pose un cadre, une liste de sujets à maitriser,&hellip;</p>
+<p>Après, oui certes, c&rsquo;est toujours un <em>plus</em> d&rsquo;avoir un certification sur un CV, mais dans mon cas, je n&rsquo;ai techniquement pas bougé de poste depuis .. 2008 ;-)
+Donc la plus-value est très .. relative pour moi :)</p>
+<p>Et quand je dis, depuis longtemps &hellip; je parle de 2018.
+J&rsquo;avais profité de l&rsquo;offre Black Friday de Linux Foundation qui proposait à un prix intéressant le combo Formation et Certification.</p>
+<p>J&rsquo;avais commencé à suivre la formation, puis j&rsquo;ai eu quelques difficultés pour trouver du temps libre terminé la formation.
+Et le coupon pour la certification n&rsquo;était valide qu&rsquo;un an .. et a fini par expirer  ! Gros #fail</p>
+<p>Donc je n&rsquo;ai même pas pu essayer l&rsquo;examen !</p>
+<h2 id="2eme-essai-">2eme essai !</h2>
+<p>Rebelote en 2019, même offre de Linux Foundation et on recommence !</p>
+<p>J&rsquo;essaie de me forcer à préparer un peu mieux début 2020.
+Pour cela, voici les principales ressources que j&rsquo;ai utilisées pour cela :</p>
+<ul>
+<li>Cours Linux Academy : <a href="https://linuxacademy.com/course/cloud-native-certified-kubernetes-administrator-cka/">https://linuxacademy.com/course/cloud-native-certified-kubernetes-administrator-cka/</a></li>
+<li>Articles de blogs sur des Tips CKA</li>
+<li>Simulateur d&rsquo;examens : <a href="https://www.killer.sh">Killer.sh</a></li>
+<li>Cours Udemy: <a href="https://www.udemy.com/course/certified-kubernetes-administrator-with-practice-tests/learn/lecture/14296066?start=390#overview">https://www.udemy.com/course/certified-kubernetes-administrator-with-practice-tests/learn/lecture/14296066?start=390#overview</a></li>
+</ul>
+<h3 id="cours-linux-academy">Cours Linux Academy</h3>
+<p>J&rsquo;ai pris une souscription Linux Academy pour avoir accès à un certain nombre de cours, et en partie celui sur Kubernetes &amp; CKA.</p>
+<p>Ce fut ma principale source pour revoir la partie théorie Kubernetes, et j&rsquo;ai vu toutes les vidéos (en mode accéléré ).</p>
+<p>Le cours est relativement bien fait, et il vient avec son lot de Labs pour les exercices pratiques.</p>
+<p>J&rsquo;ai terminé ce cours en Mai.
+Et initialement j&rsquo;avais prévu de passer l&rsquo;examen CKA début Juin.
+Mais avec la situation COVID-19, la fin d&rsquo;année scolaire de mes fils ont pris un peu plus d&rsquo;importance, et j&rsquo;ai décallé l&rsquo;examen pour être disponible pour eux.</p>
+<h3 id="article-de-blog---tips-cka">Article de blog - Tips CKA</h3>
+<p>Parmi les autres lectures, j&rsquo;ai lu pas mal de retour d&rsquo;expérience sur la certification, afin de connaitre les pièges à éviter ;-)</p>
+<p>Et parmi les blogs, je suis tombé sur cette série :   <a href="https://levelup.gitconnected.com/kubernetes-cka-example-questions-practical-challenge-86318d85b4d">https://levelup.gitconnected.com/kubernetes-cka-example-questions-practical-challenge-86318d85b4d</a></p>
+<p>Les challenges sont intéressants, et ils m&rsquo;ont surtout permis de connaitre <a href="https://www.killer.sh">Killer.sh</a></p>
+<h3 id="cours-udemy">Cours Udemy</h3>
+<p>Pourquoi un autre cours ?
+En fait, je ne l&rsquo;ai pas suivi complètement, pour celui-ci je ne l&rsquo;ai utilisé que pour la partie Labs / Exercices pratiques.</p>
+<p>Je ne peux donc pas juger de la qualité du contenu théorique du cours.</p>
+<p>Mais la partie pratique est très bien faite, et m&rsquo;a permis de renforcer mes connaissances et de m&rsquo;exercer encore plus.</p>
+<p>De plus, il est assez régulier d&rsquo;avoir des réductions sur Udemy, et de pouvoir avoir accès au cours pour presque rien.</p>
+<h3 id="killersh">Killer.sh</h3>
+<p>Killer.sh, c&rsquo;est pas très rassurant comme nom !! ;-)
+C&rsquo;est quoi ? C&rsquo;est juste un simulateur de CKA (et CKAD) au <strong>TOP</strong> !</p>
+<p>Il propose des examens blanc de la  forme que l&rsquo;examens ( 24 questions, 3h)  mais un poil plus dur.</p>
+<p>C&rsquo;est payant, mais ça vaut le coup ! Vous aurez accès à deux session de 36h. Vous pouvez donc faire le test  de 3H plusieurs fois par session, mais attention ce sont les mêmes questions à chaque fois.</p>
+<p>A la fin de l&rsquo;examen de 3h, vous aurez également accès à <strong>une</strong> solution possible. Intéressant pour comparer avec la vôtre, mais surtout de comprendre vos erreurs / lacunes.</p>
+<p>Personnellement, j&rsquo;ai passé la première session à la fin de mon cours sur LinuxAcademy pour voir ou j&rsquo;en étais. Lors de mon premier essai, je n&rsquo;ai pas pu finir dans les temps, et je ne suis pas certain que j&rsquo;aurais réussi l&rsquo;examen du coup.</p>
+<p>Et j&rsquo;ai ensuite renforcé les sujets pour lesquels j&rsquo;avais des difficultés (via les labs du cours Udemy et en montant un cluster sur AWS pour jouer).</p>
+<p>Et le jour J, j&rsquo;ai donc utilisé ma 2ème session Killer.sh le matin pour me remettre dans le bon état d&rsquo;esprit. J&rsquo;ai réussi à tout finir en moins de 3h sur Killer.sh ce qui était rassurant.
+De plus, cette fois  j&rsquo;ai pu avoir une idée du score que j&rsquo;aurais fait : 85%.
+Car entre fin Mai et Fin Juillet, Killer.sh avait ajouté la fonctionnalité de scoring).</p>
+<p>Bref de quoi me rassurer pour l&rsquo;examen !</p>
+<h2 id="cka---le-jour-j">CKA - le Jour J</h2>
+<p>Après toute cette organisation est finalement arrivé le grand jour.</p>
+<p>J&rsquo;avais planifié mon examen dans l&rsquo;après-midi (16h).
+A la fois pour avoir le temps de revoir (et refaire une session Killer.sh) au matin, mais également d&rsquo;avoir accès à ma pièce d&rsquo;examen !</p>
+<p>En effet, il faut une pièce isolée, personne ne pouvant être présent dans celle-ci en même temps que vous.
+Du coup j&rsquo;ai squatté la chambre de mon fils !
+Et il est rarement debout avant 10h durant les vacances ;-)</p>
+<p>Après les vérifications d&rsquo;usages avec votre surveillants en remote, l&rsquo;examen débute.
+Il y a plusieurs clusters, et il faut donc bien faire attention d&rsquo;être sur le bon.</p>
+<p>Pour ma part, pas de grosse difficulté, j&rsquo;ai fini quasi l&rsquo;entièreté de l&rsquo;examens en +- 2H, j&rsquo;ai pris ensuite 20min pour repasser sur chaque question afin de vérifier que chaque exercice était fait sur le bon cluster, vérifier que tout tourne toujours correctement, que les fichiers de résultats attendus sont au bon endroit avec le nom attendu sans coquilles, &hellip;
+Et finalement j&rsquo;ai pris 10min de plus afin de régler la seule question que j&rsquo;avais marquée.
+Que je n&rsquo;arriverai finalement pas à terminer correctement
+Mais je prends le risque de faire sans cette question étant très confiant sur le reste.
+Mais donc mon maximum ne pouvait plus atteindre que 93/100.</p>
+<p>Après +/- 2h30, je clôture l&rsquo;examen.</p>
+<h2 id="cka---j1">CKA - J+1</h2>
+<p>Ce fut la partie la plus stressante !
+Attendre le resultat par email qui arrive sous 36h.
+Techniquement, il aura effectivement pris 33h !</p>
+<p>Mais j&rsquo;avais bien réussi !
+Résultat final : 90 / 100. Donc j&rsquo;ai dû faire une ou l&rsquo;autre faute tout de même :)</p>
+<p><a href="https://ti-user-certificates.s3.amazonaws.com/e0df7fbf-a057-42af-8a1f-590912be5460/312528d0-0fcf-5ba1-a0e9-d6dec2ec6c3d-gildas-cuisinier-certified-kubernetes-administrator-cka-certificate.pdf"><img src="cka/CKA.png" alt="CKA"></a></p>
+<h2 id="quelques-conseils">Quelques conseils</h2>
+<ol>
+<li>
+<p>Parmi les conseils que j&rsquo;ai souvent vu, c&rsquo;est de faire plusieurs fois le fameux <a href="https://github.com/kelseyhightower/kubernetes-the-hard-way">Kubernetes the Hard Ways</a>.
+Et bien, j&rsquo;ai fait sans. Je l&rsquo;ai bien sur parcouru, mais sans le mettre en place en pratique.
+L&rsquo;important c&rsquo;est de comprendre les concepts, et de savoir un peu jongler avec openssl si nécessaire.</p>
+</li>
+<li>
+<p><strong>Pratiquer ! pratiquer ! Pratiquer !</strong></p>
+<p>Le tout c&rsquo;est d&rsquo;être vraiment a l&rsquo;aise avec <code>kubectl</code>, de savoir créer des ressources avec les commandes impératives rapidement, et d&rsquo;éviter autant que possibler les copier / coller à partir de la documentation Kubernetes.</p>
+</li>
+<li>
+<p><strong>Configurer votre shell !</strong></p>
+</li>
+</ol>
+<ul>
+<li><code>source &lt;(kubectl completion bash)</code> pour activer l&rsquo;autocompletion ! Rien de tel pour aller vite et éviter les erreurs</li>
+<li><code>alias k=kubectl</code> pour aller encore plus vite</li>
+<li><code>complete -F __start_kubectl k</code> pour activer l&rsquo;autocompletion sur <code>k</code> aussi.</li>
+</ul>
+<ol start="4">
+<li>
+<p><strong>Examen blanc</strong></p>
+<p>Et pour ça, Killer.sh est ton ami !</p>
+<p>Sérieusement, je bosse pas pour eux et je suis pas sponsorisé par eux.  Mais je suis super content de leur service. Si tu sais faire rapidement et correctement le mock exam du site, le véritable examen te paraitra simple à coté.</p>
+</li>
+</ol>
+<p>Courage, bonne étude et bonne ch***e ! :)</p>
+
+  </div>
+ 
+  
+
+<div class="navigation navigation-single">
+    
+    <a href="/blog/2020/06/cka-challenge-1-configurer-un-kubectl-en-remote/" class="navigation-prev">
+      <i aria-hidden="true" class="fa fa-chevron-left"></i>
+      <span class="navigation-tittle">CKA - Challenge 1 - Configurer un kubectl en remote</span>
+    </a>
+    
+    
+</div>
+
+
+  
+
+  
+    
+        <div id="disqus_thread"></div>
+<script type="text/javascript">
+    
+
+    (function () {
+    if (location.hostname === "localhost" ||
+      location.hostname === "127.0.0.1" ||
+      location.hostname === "") {
+      return;
+    }
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    var disqus_shortname = 'gcuisinier-github';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || 
+      document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+<noscript>
+  Please enable JavaScript to view the
+  <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+</noscript>
+<a href="http://disqus.com/" class="dsq-brlink">comments powered by
+  <span class="logo-disqus">Disqus</span>
+</a>
+
+    
+
+
+</article>
+
+
+        </div>
+        
+    
+
+
+
+
+  
+  
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-132470679-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+<script defer src="https://use.fontawesome.com/releases/v5.11.2/js/all.js" integrity="sha384-b3ua1l97aVGAPEIe48b4TC60WUQbQaGi2jqAWM90y0OZXZeyaTCWtBTKtjW2GXG1" crossorigin="anonymous"></script>
+
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/highlight.min.js"></script>
+        
+    <script type="text/javascript">
+        
+        hljs.initHighlightingOnLoad();
+    </script>
+    
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.js"></script>
+<script type="text/javascript">
+  if (tocbot) {
+    tocbot.init({
+      
+      tocSelector: '.toc',
+      
+      contentSelector: '.post',
+      
+      headingSelector: 'h2, h3, h4',
+      collapseDepth: 4
+    });
+  }
+</script>
+
+
+
+    
+
+
+
+    </body>
+</html>
