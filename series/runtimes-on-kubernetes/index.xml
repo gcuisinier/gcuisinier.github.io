@@ -6,17 +6,17 @@
     <description>Recent content in Runtimes on Kubernetes on Gildas Cuisinier</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 25 Jan 2021 18:26:02 +0100</lastBuildDate>
+    <lastBuildDate>Mon, 01 Feb 2021 06:00:00 +0100</lastBuildDate>
     
 	<atom:link href="https://www.gcuisinier.net/series/runtimes-on-kubernetes/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Running Kubernetes node with Containerd</title>
-      <link>https://www.gcuisinier.net/blog/2021/01/running-kubernetes-node-with-containerd/</link>
-      <pubDate>Mon, 25 Jan 2021 18:26:02 +0100</pubDate>
+      <link>https://www.gcuisinier.net/blog/2021/02/running-kubernetes-node-with-containerd/</link>
+      <pubDate>Mon, 01 Feb 2021 06:00:00 +0100</pubDate>
       
-      <guid>https://www.gcuisinier.net/blog/2021/01/running-kubernetes-node-with-containerd/</guid>
+      <guid>https://www.gcuisinier.net/blog/2021/02/running-kubernetes-node-with-containerd/</guid>
       <description>Introduction In currently preparing my next Kubernetes Certification ( Certified Kubernetes Security Specialist ), and at the time when I am writing this blog post, it&amp;rsquo;s still based on Kubernetes 1.19. And the certification is still based on Docker.
 But the Kubernetes world is changing, and Docker support has been dropped with the Kubernetes 1.20.
 Moreover, in order to play with other more secure runtime, ContainerD is needed.
