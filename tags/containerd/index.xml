@@ -20,7 +20,7 @@
       <description>Introduction In currently preparing my next Kubernetes Certification ( Certified Kubernetes Security Specialist ), and at the time when I am writing this blog post, it&amp;rsquo;s still based on Kubernetes 1.19. And the certification is still based on Docker.
 But the Kubernetes world is changing, and Docker support has been dropped with the Kubernetes 1.20.
 Moreover, in order to play with other more secure runtime, ContainerD is needed.
-The this blog post, I will explain how I&amp;rsquo;ve setup a dedicated node that run with containerd.</description>
+In this blog post, I will explain how I&amp;rsquo;ve setup a dedicated node that run with containerd.</description>
     </item>
     
   </channel>

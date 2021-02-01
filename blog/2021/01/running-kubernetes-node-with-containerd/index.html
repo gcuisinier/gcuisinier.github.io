@@ -25,13 +25,13 @@
 <meta name="twitter:description" content="Introduction In currently preparing my next Kubernetes Certification ( Certified Kubernetes Security Specialist ), and at the time when I am writing this blog post, it&rsquo;s still based on Kubernetes 1.19. And the certification is still based on Docker.
 But the Kubernetes world is changing, and Docker support has been dropped with the Kubernetes 1.20.
 Moreover, in order to play with other more secure runtime, ContainerD is needed.
-The this blog post, I will explain how I&rsquo;ve setup a dedicated node that run with containerd."/>
+In this blog post, I will explain how I&rsquo;ve setup a dedicated node that run with containerd."/>
 
 <meta property="og:title" content="Running Kubernetes node with Containerd" />
 <meta property="og:description" content="Introduction In currently preparing my next Kubernetes Certification ( Certified Kubernetes Security Specialist ), and at the time when I am writing this blog post, it&rsquo;s still based on Kubernetes 1.19. And the certification is still based on Docker.
 But the Kubernetes world is changing, and Docker support has been dropped with the Kubernetes 1.20.
 Moreover, in order to play with other more secure runtime, ContainerD is needed.
-The this blog post, I will explain how I&rsquo;ve setup a dedicated node that run with containerd." />
+In this blog post, I will explain how I&rsquo;ve setup a dedicated node that run with containerd." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://www.gcuisinier.net/blog/2021/01/running-kubernetes-node-with-containerd/" />
 <meta property="article:published_time" content="2021-01-25T18:26:02+01:00" />
@@ -236,10 +236,10 @@ The this blog post, I will explain how I&rsquo;ve setup a dedicated node that ru
 And the certification is still based on Docker.</p>
 <p>But the Kubernetes world is changing, and Docker support has been dropped with the Kubernetes 1.20.</p>
 <p>Moreover, in order to play with other more secure runtime, ContainerD is needed.</p>
-<p>The this blog post, I will explain how I&rsquo;ve setup a dedicated node that run with containerd.
+<p>In this blog post, I will explain how I&rsquo;ve setup a dedicated node that run with containerd.
 Maybe my own way is not the best way to install and configure it, so don&rsquo;t hesitate to comment or contact me to improve my setup :)</p>
 <h2 id="install-the-packages">Install the packages</h2>
-<p>We are starting from a fresh Ubuntu 20.20 server, so first thing to do is to install the different binaries needed, both for Kubernetes  than for containerd.</p>
+<p>We are starting from a fresh Ubuntu 20.20 server, so first thing to do is to install the different binaries needed, both for Kubernetes than for containerd.</p>
 <p>So let&rsquo;s start by adding the configuration to the needed Ubuntu repositories :</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh"><span style="color:#75715e"># Add K8S Repository, needed to install kubeadm, kubelet and kubectl</span>
 curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -
@@ -256,7 +256,7 @@ sudo add-apt-repository    <span style="color:#e6db74">&#34;deb [arch=amd64] htt
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">sudo apt update
 apt install -y kubectl<span style="color:#f92672">=</span>1.19.6-00 kubeadm<span style="color:#f92672">=</span>1.19.6-00 kubelet<span style="color:#f92672">=</span>1.19.6-00 containerd.io
 </code></pre></div><h2 id="prepare-containerd">Prepare ContainerD</h2>
-<p>We can now start the configuration of the server  and also <code>containerd</code> itself</p>
+<p>We can now start the configuration of <code>containerd</code> itself</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh"><span style="color:#75715e"># Enable  Kernel Modules needed by containerd</span>
 sudo tee /etc/modules-load.d/containerd.conf <span style="color:#e6db74">&lt;&lt;EOF
 </span><span style="color:#e6db74">overlay
@@ -283,8 +283,8 @@ sudo sysctl --system
 
 sudo systemctl restart containerd
 </code></pre></div><h2 id="register-the-node">Register the node</h2>
-<p>At this stage, the node should be ready to be register in the cluster.</p>
-<p>We connect on a master node,  and create a bootstrap token and print the command to be executed on the worker node  :</p>
+<p>At this stage, the node should be ready to be registered in the cluster.</p>
+<p>So let&rsquo;s connect on a master node, create a bootstrap token and print the command to be executed on the worker node  :</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">kubeadm token create --print-join-command
 </code></pre></div><p>and then execute it on the new worker node :</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">kubeadm join 10.10.10.121:6443 --token &lt;output-token&gt;     --discovery-token-ca-cert-hash &lt;output-sha256&gt;
@@ -295,17 +295,17 @@ kubernetes-master-0   Ready    containerd://1.4.3
 kubernetes-worker-0   Ready    containerd://1.4.3
 </code></pre></div><p>Ok great, but let check and run a pod to be sure!</p>
 <h2 id="run-workload">Run workload</h2>
-<p>For that, it&rsquo;s simple, run  this command  :</p>
+<p>For that, it&rsquo;s simple, run this command  :</p>
 <pre><code>root@kubernetes-master-0:~$kubectl run sample --image=nginx
 pod/sample created
 </code></pre><p>Seems to be ok, but where is it running ?</p>
 <pre><code>root@kubernetes-master-0:~$k get pods -o wide
 NAME     READY   STATUS    RESTARTS   AGE   IP           NODE                  NOMINATED NODE   READINESS GATES
 sample   1/1     Running   0          25s   10.244.1.2   kubernetes-worker-0   &lt;none&gt;           &lt;none&gt;
-</code></pre><p>On the worker node ! Great that&rsquo;s work !</p>
+</code></pre><p>It&rsquo;s on the worker node ! Great that&rsquo;s work !</p>
 <h2 id="but--how-to-debug-">But .. how to debug ?</h2>
-<p>In normal situation, we should never connect into the worker node to debug, but sometime it can be usefull.
-In those situation, before we were able to connect and user docker to see what&rsquo;s running on the node but .. now :</p>
+<p>In normal situation, we should never connect into the worker node to debug, but sometimes it can be usefull.
+In those situations, before we were able to connect and use <code>Docker</code> to see what&rsquo;s running on the node but &hellip; now ?</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">kube@kubernetes-worker-0:~$ docker ps
 
 Command <span style="color:#e6db74">&#39;docker&#39;</span> not found, but can be installed with:
@@ -314,7 +314,7 @@ sudo snap install docker     <span style="color:#75715e"># version 19.03.11, or<
 sudo apt  install docker.io
 
 See <span style="color:#e6db74">&#39;snap info docker&#39;</span> <span style="color:#66d9ef">for</span> additional versions.
-</code></pre></div><p>Indeed, docker is not used anymore, so how can we see containers running on the host ?
+</code></pre></div><p>Indeed, Docker is not used anymore, so how can we see containers running on the host ?
 For that, the answer is <code>crictl</code>, so let&rsquo;s try :</p>
 <pre><code>kube@kubernetes-worker-0:~$ crictl ps
 FATA[0010] failed to connect: failed to connect: context deadline exceeded
@@ -343,8 +343,17 @@ docker.io/library/nginx               latest              f6d0b4767a6c4       53
 k8s.gcr.io/kube-proxy                 v1.19.7             9d368f4517bbe       49.3MB
 k8s.gcr.io/pause                      3.2                 80d28bedfe5de       300kB
 quay.io/coreos/flannel                v0.12.0             4e9f801d2217e       17.1MB
+</code></pre><p>And even list the pods instead of containers :</p>
+<pre><code>root@kubernetes-worker-0:~# crictl pods
+POD ID              CREATED             STATE               NAME                NAMESPACE           ATTEMPT
+8e33f7170a338       11 hours ago        Ready               sample              default             0
+08af77d2191dd       11 hours ago        Ready               canal-rs895         kube-system         0
+4ccdd921dfe19       11 hours ago        Ready               kube-proxy-x77z7    kube-system         0
+root@kubernetes-worker-0:~#
 </code></pre><h1 id="next-">Next ?</h1>
-<p>Now as we are able to run a worker node with containerd, we are ready to explore other runtime like gVisor or KataContainer !</p>
+<p>Now as we are able to run a worker node with containerd, we are ready to explore other runtime like gVisor or KataContainer !
+This will be the subject of a future post !</p>
+<p>See you soon :)</p>
 
   </div>
  
