@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Series on Gildas Cuisinier</title>
+    <link>https://www.gcuisinier.net/series/</link>
+    <description>Recent content in Series on Gildas Cuisinier</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 25 Jan 2021 18:26:02 +0100</lastBuildDate>
+    
+	<atom:link href="https://www.gcuisinier.net/series/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Runtimes on Kubernetes</title>
+      <link>https://www.gcuisinier.net/series/runtimes-on-kubernetes/</link>
+      <pubDate>Mon, 25 Jan 2021 18:26:02 +0100</pubDate>
+      
+      <guid>https://www.gcuisinier.net/series/runtimes-on-kubernetes/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

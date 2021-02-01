@@ -6,10 +6,22 @@
     <description>Recent content on Gildas Cuisinier</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 01 Aug 2020 09:45:55 +0200</lastBuildDate>
+    <lastBuildDate>Mon, 25 Jan 2021 18:26:02 +0100</lastBuildDate>
     
 	<atom:link href="https://www.gcuisinier.net/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Running Kubernetes node with Containerd</title>
+      <link>https://www.gcuisinier.net/blog/2021/01/running-kubernetes-node-with-containerd/</link>
+      <pubDate>Mon, 25 Jan 2021 18:26:02 +0100</pubDate>
+      
+      <guid>https://www.gcuisinier.net/blog/2021/01/running-kubernetes-node-with-containerd/</guid>
+      <description>Introduction In currently preparing my next Kubernetes Certification ( Certified Kubernetes Security Specialist ), and at the time when I am writing this blog post, it&amp;rsquo;s still based on Kubernetes 1.19. And the certification is still based on Docker.
+But the Kubernetes world is changing, and Docker support has been dropped with the Kubernetes 1.20.
+Moreover, in order to play with other more secure runtime, ContainerD is needed.
+The this blog post, I will explain how I&amp;rsquo;ve setup a dedicated node that run with containerd.</description>
+    </item>
     
     <item>
       <title>Comment j&#39;ai passé la certification Kubernetes Administrator</title>
